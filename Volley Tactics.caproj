@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Volley Tactics</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>130iejyd6wgjq</unique-id>
+    <saved-with-version>22100</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="JogadorVerde1" sid="947084640736983">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7930386769787079" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Green\playerGreen2.png">
+                        <collision-poly>
+                            <point x="0.181818" y="0.129032" />
+                            <point x="0.5" y="0" />
+                            <point x="0.818182" y="0.129032" />
+                            <point x="0.954545" y="0.483871" />
+                            <point x="0.818182" y="0.870968" />
+                            <point x="0.5" y="0.967742" />
+                            <point x="0.227273" y="0.83871" />
+                            <point x="0.0454545" y="0.483871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="JogadorVerde2" sid="7694804578681171">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1200468091859722" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Green\playerGreen2.png">
+                        <collision-poly>
+                            <point x="0.181818" y="0.129032" />
+                            <point x="0.5" y="0" />
+                            <point x="0.818182" y="0.129032" />
+                            <point x="0.954545" y="0.483871" />
+                            <point x="0.818182" y="0.870968" />
+                            <point x="0.5" y="0.967742" />
+                            <point x="0.227273" y="0.83871" />
+                            <point x="0.0454545" y="0.483871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="JogadorVerde3" sid="8223905418408307">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5710779091754472" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Green\playerGreen2.png">
+                        <collision-poly>
+                            <point x="0.181818" y="0.129032" />
+                            <point x="0.5" y="0" />
+                            <point x="0.818182" y="0.129032" />
+                            <point x="0.954545" y="0.483871" />
+                            <point x="0.818182" y="0.870968" />
+                            <point x="0.5" y="0.967742" />
+                            <point x="0.227273" y="0.83871" />
+                            <point x="0.0454545" y="0.483871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="JogadorAzul1" sid="2956865179068437">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1217636223136615" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Blue\playerBlue2.png">
+                        <collision-poly>
+                            <point x="0.181818" y="0.129032" />
+                            <point x="0.5" y="0" />
+                            <point x="0.818182" y="0.129032" />
+                            <point x="0.954545" y="0.483871" />
+                            <point x="0.818182" y="0.870968" />
+                            <point x="0.5" y="0.967742" />
+                            <point x="0.227273" y="0.83871" />
+                            <point x="0.0454545" y="0.483871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="JogadorAzul2" sid="3466071786075753">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2817881079028457" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Blue\playerBlue2.png">
+                        <collision-poly>
+                            <point x="0.181818" y="0.129032" />
+                            <point x="0.5" y="0" />
+                            <point x="0.818182" y="0.129032" />
+                            <point x="0.954545" y="0.483871" />
+                            <point x="0.818182" y="0.870968" />
+                            <point x="0.5" y="0.967742" />
+                            <point x="0.227273" y="0.83871" />
+                            <point x="0.0454545" y="0.483871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="JogadorAzul3" sid="1135861501984437">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1562301190193145" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Blue\playerBlue2.png">
+                        <collision-poly>
+                            <point x="0.181818" y="0.129032" />
+                            <point x="0.5" y="0" />
+                            <point x="0.818182" y="0.129032" />
+                            <point x="0.954545" y="0.483871" />
+                            <point x="0.818182" y="0.870968" />
+                            <point x="0.5" y="0.967742" />
+                            <point x="0.227273" y="0.83871" />
+                            <point x="0.0454545" y="0.483871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Quadra" sid="3377206322863098">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\Backgrounds\wood.png" />
+        </object-type>
+        <object-type name="Rede" sid="4934654503198991">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\Backgrounds\dirt.png" />
+        </object-type>
+        <object-type name="Bola" sid="5193789331711191">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="hit" sid="2450394292597781" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2225951918466541" speed="5">
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Balls\ballVolleyball.png">
+                        <collision-poly>
+                            <point x="0.157895" y="0.157895" />
+                            <point x="0.473684" y="0" />
+                            <point x="0.842105" y="0.157895" />
+                            <point x="1" y="0.473684" />
+                            <point x="0.842105" y="0.842105" />
+                            <point x="0.473684" y="1" />
+                            <point x="0.157895" y="0.842105" />
+                            <point x="0" y="0.473684" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="8366588841339316">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Botao" sid="3261368626494159">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9607324667478353" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Art\Onscreen controls (400 assets)\Sprites\lineDark\lineDark43.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.15" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.15" />
+                            <point x="1" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="6646997893503454">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Debug" sid="7216985986868257">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet IA.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="9">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="11" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
