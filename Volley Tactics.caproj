@@ -2,11 +2,11 @@
 <c2project>
     <name>Volley Tactics</name>
     <description></description>
-    <version>1.0.0.0</version>
-    <author></author>
-    <author-email></author-email>
+    <version>1.0.0</version>
+    <author>Igor Marcelo</author>
+    <author-email>igmarcelo@outlook.com</author-email>
     <author-website>http://</author-website>
-    <app-id>com.mycompany.myapp</app-id>
+    <app-id>br.com.oliveira.volleytactics</app-id>
     <unique-id>130iejyd6wgjq</unique-id>
     <saved-with-version>22100</saved-with-version>
     <used-plugins>
@@ -25,7 +25,7 @@
         <width>854</width>
         <height>480</height>
     </window-size>
-    <pixel-rounding>0</pixel-rounding>
+    <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
@@ -44,8 +44,11 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="JogadorVerde1" sid="947084640736983">
+        <object-type name="Player" sid="947084640736983">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="attack" sid="6363809833647392" type="boolean" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7930386769787079" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Green\playerGreen2.png">
@@ -63,86 +66,13 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="JogadorVerde2" sid="7694804578681171">
+        <object-type name="PlayerBot" sid="2956865179068437">
             <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1200468091859722" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Green\playerGreen2.png">
-                        <collision-poly>
-                            <point x="0.181818" y="0.129032" />
-                            <point x="0.5" y="0" />
-                            <point x="0.818182" y="0.129032" />
-                            <point x="0.954545" y="0.483871" />
-                            <point x="0.818182" y="0.870968" />
-                            <point x="0.5" y="0.967742" />
-                            <point x="0.227273" y="0.83871" />
-                            <point x="0.0454545" y="0.483871" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="JogadorVerde3" sid="8223905418408307">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5710779091754472" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Green\playerGreen2.png">
-                        <collision-poly>
-                            <point x="0.181818" y="0.129032" />
-                            <point x="0.5" y="0" />
-                            <point x="0.818182" y="0.129032" />
-                            <point x="0.954545" y="0.483871" />
-                            <point x="0.818182" y="0.870968" />
-                            <point x="0.5" y="0.967742" />
-                            <point x="0.227273" y="0.83871" />
-                            <point x="0.0454545" y="0.483871" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="JogadorAzul1" sid="2956865179068437">
-            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="attack" sid="9579015667639163" type="boolean" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1217636223136615" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Blue\playerBlue2.png">
-                        <collision-poly>
-                            <point x="0.181818" y="0.129032" />
-                            <point x="0.5" y="0" />
-                            <point x="0.818182" y="0.129032" />
-                            <point x="0.954545" y="0.483871" />
-                            <point x="0.818182" y="0.870968" />
-                            <point x="0.5" y="0.967742" />
-                            <point x="0.227273" y="0.83871" />
-                            <point x="0.0454545" y="0.483871" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="JogadorAzul2" sid="3466071786075753">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2817881079028457" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Blue\playerBlue2.png">
-                        <collision-poly>
-                            <point x="0.181818" y="0.129032" />
-                            <point x="0.5" y="0" />
-                            <point x="0.818182" y="0.129032" />
-                            <point x="0.954545" y="0.483871" />
-                            <point x="0.818182" y="0.870968" />
-                            <point x="0.5" y="0.967742" />
-                            <point x="0.227273" y="0.83871" />
-                            <point x="0.0454545" y="0.483871" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="JogadorAzul3" sid="1135861501984437">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1562301190193145" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Blue\playerBlue2.png">
                         <collision-poly>
                             <point x="0.181818" y="0.129032" />
@@ -223,7 +153,7 @@
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Event sheet IA.xml</event-sheet>
+        <event-sheet>Event sheet Functions Utils.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="9">

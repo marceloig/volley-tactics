@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Functions Utils</name>
+    <events>
+        <event-block sid="4475376684119237">
+            <conditions>
+                <condition id="0" name="On function" sid="9832606633947809" type="Function">
+                    <param id="0" name="Name">&quot;functionHit&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="47974448324655" type="Bola">
+                    <param id="0" name="Instance variable">hit</param>
+                    <param id="1" name="Value">random(1) &lt;= Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2902275304157331">
+            <conditions>
+                <condition id="0" name="On function" sid="4139432909733257" type="Function">
+                    <param id="0" name="Name">&quot;functionScore&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>
