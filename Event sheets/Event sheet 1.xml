@@ -4,11 +4,10 @@
     <name>Event sheet 1</name>
     <events>
         <include>Event sheet Functions</include>
-        <variable constant="0" name="returnFunction" sid="9671972869798162" static="0" type="number">0</variable>
         <variable constant="1" name="ERRO" sid="9148709054825553" static="0" type="number">0</variable>
         <variable constant="1" name="ACERTO" sid="7664870005551512" static="0" type="number">1</variable>
-        <variable comment="0.95" constant="1" name="PCT_SAQUE" sid="2017008752562948" static="0" type="number">1</variable>
-        <variable comment="0.95" constant="1" name="PCT_RECEPCAO" sid="6857354154389032" static="0" type="number">1</variable>
+        <variable constant="1" name="PCT_SAQUE" sid="2017008752562948" static="0" type="number">0.95</variable>
+        <variable constant="1" name="PCT_RECEPCAO" sid="6857354154389032" static="0" type="number">0.95</variable>
         <variable constant="1" name="PCT_LEVANTAMENTO" sid="4666299879866501" static="0" type="number">1</variable>
         <variable constant="1" name="PCT_ATAQUE" sid="8070471423794405" static="0" type="number">0.8</variable>
         <variable constant="1" name="PCT_BLOQUEIO" sid="2542691361557948" static="0" type="number">0.8</variable>
