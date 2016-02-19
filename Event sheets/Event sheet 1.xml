@@ -3,8 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <variable constant="1" name="PCT_SAQUE" sid="2017008752562948" static="0" type="number">0.95</variable>
-        <variable constant="1" name="PCT_RECEPCAO" sid="6857354154389032" static="0" type="number">0.95</variable>
+        <include>Event sheet Functions</include>
+        <variable constant="0" name="returnFunction" sid="9671972869798162" static="0" type="number">0</variable>
+        <variable constant="1" name="ERRO" sid="9148709054825553" static="0" type="number">0</variable>
+        <variable constant="1" name="ACERTO" sid="7664870005551512" static="0" type="number">1</variable>
+        <variable comment="0.95" constant="1" name="PCT_SAQUE" sid="2017008752562948" static="0" type="number">1</variable>
+        <variable comment="0.95" constant="1" name="PCT_RECEPCAO" sid="6857354154389032" static="0" type="number">1</variable>
         <variable constant="1" name="PCT_LEVANTAMENTO" sid="4666299879866501" static="0" type="number">1</variable>
         <variable constant="1" name="PCT_ATAQUE" sid="8070471423794405" static="0" type="number">0.8</variable>
         <variable constant="1" name="PCT_BLOQUEIO" sid="2542691361557948" static="0" type="number">0.8</variable>
@@ -16,7 +20,7 @@
         <variable comment="estado representando o saque na partida" constant="1" name="SAQUE" sid="8554473755258839" static="0" type="text">functionSaque</variable>
         <event-block sid="7706779348516822">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="5829544601505789" type="System" />
+                <condition id="-25" name="On loader layout complete" sid="5829544601505789" type="System" />
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="6333147462112441" type="System">
@@ -60,47 +64,19 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="5296586363115999" type="System">
+                    <param id="0" name="Variable">stateGame</param>
+                    <param id="1" name="Value">RECEPCAO</param>
+                </action>
                 <action id="0" name="Call function" sid="433229918216538" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
                     <param id="1" name="Parameter {n}">PCT_SAQUE</param>
                 </action>
+                <action id="0" name="Call function" sid="4425094895703245" type="Function">
+                    <param id="0" name="Name">&quot;functionAction&quot;</param>
+                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}stateGame</param>
+                </action>
             </actions>
-            <sub-events>
-                <event-block sid="4884184814675106">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="928105107907514" type="Bola">
-                            <param id="0" name="Instance variable">hit</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="4548426485125911" type="System">
-                            <param id="0" name="Variable">stateGame</param>
-                            <param id="1" name="Value">RECEPCAO</param>
-                        </action>
-                        <action id="0" name="Call function" sid="2543984014864608" type="Function">
-                            <param id="0" name="Name">&quot;functionCallback&quot;</param>
-                            <param id="1" name="Parameter {n}">stateGame</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1992687350206462">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="710534111985467" type="Bola">
-                            <param id="0" name="Instance variable">hit</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="7039742181579206" type="Function">
-                            <param id="0" name="Name">&quot;functionScore&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="2115661073544544">
             <conditions>
@@ -109,53 +85,25 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-14" name="Toggle boolean" sid="1674662843558464" type="PlayerBot">
+                    <param id="0" name="Instance variable">attack</param>
+                </action>
+                <action id="-14" name="Toggle boolean" sid="8350254257444269" type="Player">
+                    <param id="0" name="Instance variable">attack</param>
+                </action>
+                <action id="-9" name="Set value" sid="2053543860639502" type="System">
+                    <param id="0" name="Variable">stateGame</param>
+                    <param id="1" name="Value">LEVANTAMENTO</param>
+                </action>
                 <action id="0" name="Call function" sid="4598170815953901" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
                     <param id="1" name="Parameter {n}">PCT_RECEPCAO</param>
                 </action>
+                <action id="0" name="Call function" sid="284662004126959" type="Function">
+                    <param id="0" name="Name">&quot;functionAction&quot;</param>
+                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}stateGame</param>
+                </action>
             </actions>
-            <sub-events>
-                <event-block sid="5087754231483473">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4276653359457612" type="Bola">
-                            <param id="0" name="Instance variable">hit</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-14" name="Toggle boolean" sid="1674662843558464" type="PlayerBot">
-                            <param id="0" name="Instance variable">attack</param>
-                        </action>
-                        <action id="-14" name="Toggle boolean" sid="8350254257444269" type="Player">
-                            <param id="0" name="Instance variable">attack</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="2053543860639502" type="System">
-                            <param id="0" name="Variable">stateGame</param>
-                            <param id="1" name="Value">LEVANTAMENTO</param>
-                        </action>
-                        <action id="0" name="Call function" sid="7947489302607632" type="Function">
-                            <param id="0" name="Name">&quot;functionCallback&quot;</param>
-                            <param id="1" name="Parameter {n}">stateGame</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2868807721948119">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="5330904335866361" type="Bola">
-                            <param id="0" name="Instance variable">hit</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="8612903146522965" type="Function">
-                            <param id="0" name="Name">&quot;functionScore&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="2895692248993468">
             <conditions>
@@ -164,47 +112,19 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="8519571952361719" type="System">
+                    <param id="0" name="Variable">stateGame</param>
+                    <param id="1" name="Value">ATAQUE</param>
+                </action>
                 <action id="0" name="Call function" sid="7074312731678179" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
                     <param id="1" name="Parameter {n}">PCT_LEVANTAMENTO</param>
                 </action>
+                <action id="0" name="Call function" sid="6778856416435069" type="Function">
+                    <param id="0" name="Name">&quot;functionAction&quot;</param>
+                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}stateGame</param>
+                </action>
             </actions>
-            <sub-events>
-                <event-block sid="9820785945288157">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8441666226825201" type="Bola">
-                            <param id="0" name="Instance variable">hit</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="8519571952361719" type="System">
-                            <param id="0" name="Variable">stateGame</param>
-                            <param id="1" name="Value">ATAQUE</param>
-                        </action>
-                        <action id="0" name="Call function" sid="9682703885101783" type="Function">
-                            <param id="0" name="Name">&quot;functionCallback&quot;</param>
-                            <param id="1" name="Parameter {n}">stateGame</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3234249332980831">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6605124218549489" type="Bola">
-                            <param id="0" name="Instance variable">hit</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="5991602243006416" type="Function">
-                            <param id="0" name="Name">&quot;functionScore&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="2348124206610235">
             <conditions>
@@ -213,47 +133,19 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="6987051650938602" type="System">
+                    <param id="0" name="Variable">stateGame</param>
+                    <param id="1" name="Value">BLOQUEIO</param>
+                </action>
                 <action id="0" name="Call function" sid="9980549685369825" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
                     <param id="1" name="Parameter {n}">PCT_ATAQUE</param>
                 </action>
+                <action id="0" name="Call function" sid="1489011038579453" type="Function">
+                    <param id="0" name="Name">&quot;functionAction&quot;</param>
+                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}stateGame</param>
+                </action>
             </actions>
-            <sub-events>
-                <event-block sid="7194762073285216">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8889983087228217" type="Bola">
-                            <param id="0" name="Instance variable">hit</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="6987051650938602" type="System">
-                            <param id="0" name="Variable">stateGame</param>
-                            <param id="1" name="Value">BLOQUEIO</param>
-                        </action>
-                        <action id="0" name="Call function" sid="6837248022094433" type="Function">
-                            <param id="0" name="Name">&quot;functionCallback&quot;</param>
-                            <param id="1" name="Parameter {n}">stateGame</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5460094513155882">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="9217681689367905" type="Bola">
-                            <param id="0" name="Instance variable">hit</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="1242433446840633" type="Function">
-                            <param id="0" name="Name">&quot;functionScore&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="8039089355799321">
             <conditions>
@@ -262,47 +154,19 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="2208737995626869" type="System">
+                    <param id="0" name="Variable">stateGame</param>
+                    <param id="1" name="Value">RECEPCAO</param>
+                </action>
                 <action id="0" name="Call function" sid="1189540764576008" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
                     <param id="1" name="Parameter {n}">PCT_BLOQUEIO</param>
                 </action>
+                <action id="0" name="Call function" sid="2600336881361212" type="Function">
+                    <param id="0" name="Name">&quot;functionAction&quot;</param>
+                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}stateGame</param>
+                </action>
             </actions>
-            <sub-events>
-                <event-block sid="9150264454256539">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="80160456331106" type="Bola">
-                            <param id="0" name="Instance variable">hit</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="2208737995626869" type="System">
-                            <param id="0" name="Variable">stateGame</param>
-                            <param id="1" name="Value">RECEPCAO</param>
-                        </action>
-                        <action id="0" name="Call function" sid="853377607796665" type="Function">
-                            <param id="0" name="Name">&quot;functionCallback&quot;</param>
-                            <param id="1" name="Parameter {n}">stateGame</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4326143423379178">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="9818156769023403" type="Bola">
-                            <param id="0" name="Instance variable">hit</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="9316018293838531" type="Function">
-                            <param id="0" name="Name">&quot;functionScore&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

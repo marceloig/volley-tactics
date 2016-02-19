@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
@@ -143,8 +144,25 @@
         <object-type name="Function" sid="6646997893503454">
             <plugin id="Function" />
         </object-type>
-        <object-type name="Debug" sid="7216985986868257">
+        <object-type name="ScorePlayer" sid="2564120533962623">
             <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="score" sid="7217503947465631" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="ScoreBot" sid="2360682733329178">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="score" sid="418571821497084" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="SpriteFontTeamPlayer" sid="1355229100501354">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="SpriteFontTeamBot" sid="6926034340869848">
+            <plugin id="Spritefont2" />
+            <texture />
         </object-type>
     </object-folder>
     <families />
@@ -153,7 +171,7 @@
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Event sheet Functions Utils.xml</event-sheet>
+        <event-sheet>Event sheet Functions.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="9">

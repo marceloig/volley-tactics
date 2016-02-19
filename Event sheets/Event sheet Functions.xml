@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Functions</name>
+    <events>
+        <event-block sid="3025269056472071">
+            <conditions>
+                <condition id="0" name="On function" sid="375531894134652" type="Function">
+                    <param id="0" name="Name">&quot;functionHit&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="855846235487835" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4428135961486982">
+            <conditions>
+                <condition id="0" name="On function" sid="649922921784005" type="Function">
+                    <param id="0" name="Name">&quot;functionScore&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2868705481986779" type="System">
+                    <param id="0" name="Variable">stateGame</param>
+                    <param id="1" name="Value">SAQUE</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2163131481675585">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="7740948736812621" type="Player">
+                            <param id="0" name="Instance variable">attack</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="6544091041778521" type="ScorePlayer">
+                            <param id="0" name="Instance variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1077847247773135" type="ScorePlayer">
+                            <param id="0" name="Text">ScorePlayer.score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6260670025433082">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5620151561711394" type="PlayerBot">
+                            <param id="0" name="Instance variable">attack</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="9929154779781773" type="ScoreBot">
+                            <param id="0" name="Instance variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3368571810591962" type="ScoreBot">
+                            <param id="0" name="Text">ScoreBot.score</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8722732695781988">
+            <conditions>
+                <condition id="0" name="On function" sid="3377117717321445" type="Function">
+                    <param id="0" name="Name">&quot;functionAction&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9033747784206198">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="496192574355825" type="System">
+                            <param id="0" name="Variable">ACERTO</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3102268469751946" type="Function">
+                            <param id="0" name="Name">&quot;functionCallback&quot;</param>
+                            <param id="1" name="Parameter {n}">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2924189749176001">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8351221161732771" type="System">
+                            <param id="0" name="Variable">ERRO</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="4947017234411652" type="PlayerBot">
+                            <param id="0" name="Instance variable">attack</param>
+                        </action>
+                        <action id="-14" name="Toggle boolean" sid="9379975729963985" type="Player">
+                            <param id="0" name="Instance variable">attack</param>
+                        </action>
+                        <action id="0" name="Call function" sid="138123690520223" type="Function">
+                            <param id="0" name="Name">&quot;functionScore&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
