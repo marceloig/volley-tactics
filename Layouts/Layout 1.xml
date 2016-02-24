@@ -2,7 +2,7 @@
 <c2layout>
     <name>Layout 1</name>
     <sid>3161490289913195</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Event sheet Partida</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
@@ -72,7 +72,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Jogo" sid="9198461951952456">
+        <layer name="Layer Jogo" sid="9198461951952456">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -88,7 +88,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Player" uid="1">
+                <instance type="Jogador" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -97,6 +97,20 @@
                     </properties>
                     <instance-variables>
                         <attack>false</attack>
+                        <pct_saque_voador>0.35</pct_saque_voador>
+                        <pct_saque_normal>0</pct_saque_normal>
+                        <pct_recepcao_normal>0</pct_recepcao_normal>
+                        <pct_recepcao_voador>0.5</pct_recepcao_voador>
+                        <pct_levantamento>0</pct_levantamento>
+                        <pct_atq_cortada_1>0</pct_atq_cortada_1>
+                        <pct_atq_cortada_2>0.2</pct_atq_cortada_2>
+                        <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
+                        <pct_atq_efeito_1>-0.2</pct_atq_efeito_1>
+                        <pct_atq_efeito_2>0.2</pct_atq_efeito_2>
+                        <pct_atq_efeito_3>0.35</pct_atq_efeito_3>
+                        <pct_atq_bloq_1>0.45</pct_atq_bloq_1>
+                        <pct_atq_bloq_2>0.2</pct_atq_bloq_2>
+                        <pct_atq_bloq_3>0.1</pct_atq_bloq_3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -113,7 +127,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PlayerBot" uid="4">
+                <instance type="JogadorBot" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -122,6 +136,20 @@
                     </properties>
                     <instance-variables>
                         <attack>false</attack>
+                        <pct_saque_voador>0.35</pct_saque_voador>
+                        <pct_saque_normal>0</pct_saque_normal>
+                        <pct_recepcao_normal>0</pct_recepcao_normal>
+                        <pct_recepcao_voador>0.5</pct_recepcao_voador>
+                        <pct_levantamento>0</pct_levantamento>
+                        <pct_atq_cortada_1>0</pct_atq_cortada_1>
+                        <pct_atq_cortada_2>0.2</pct_atq_cortada_2>
+                        <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
+                        <pct_atq_efeito_1>-0.2</pct_atq_efeito_1>
+                        <pct_atq_efeito_2>0.2</pct_atq_efeito_2>
+                        <pct_atq_efeito_3>0.35</pct_atq_efeito_3>
+                        <pct_atq_bloq_1>0.45</pct_atq_bloq_1>
+                        <pct_atq_bloq_2>0.2</pct_atq_bloq_2>
+                        <pct_atq_bloq_3>0.1</pct_atq_bloq_3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -163,7 +191,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PlayerBot" uid="5">
+                <instance type="JogadorBot" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -172,6 +200,20 @@
                     </properties>
                     <instance-variables>
                         <attack>false</attack>
+                        <pct_saque_voador>0.35</pct_saque_voador>
+                        <pct_saque_normal>0</pct_saque_normal>
+                        <pct_recepcao_normal>0</pct_recepcao_normal>
+                        <pct_recepcao_voador>0.5</pct_recepcao_voador>
+                        <pct_levantamento>0</pct_levantamento>
+                        <pct_atq_cortada_1>0</pct_atq_cortada_1>
+                        <pct_atq_cortada_2>0.2</pct_atq_cortada_2>
+                        <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
+                        <pct_atq_efeito_1>-0.2</pct_atq_efeito_1>
+                        <pct_atq_efeito_2>0.2</pct_atq_efeito_2>
+                        <pct_atq_efeito_3>0.35</pct_atq_efeito_3>
+                        <pct_atq_bloq_1>0.45</pct_atq_bloq_1>
+                        <pct_atq_bloq_2>0.2</pct_atq_bloq_2>
+                        <pct_atq_bloq_3>0.1</pct_atq_bloq_3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -188,7 +230,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PlayerBot" uid="6">
+                <instance type="JogadorBot" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -197,6 +239,20 @@
                     </properties>
                     <instance-variables>
                         <attack>false</attack>
+                        <pct_saque_voador>0.35</pct_saque_voador>
+                        <pct_saque_normal>0</pct_saque_normal>
+                        <pct_recepcao_normal>0</pct_recepcao_normal>
+                        <pct_recepcao_voador>0.5</pct_recepcao_voador>
+                        <pct_levantamento>0</pct_levantamento>
+                        <pct_atq_cortada_1>0</pct_atq_cortada_1>
+                        <pct_atq_cortada_2>0.2</pct_atq_cortada_2>
+                        <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
+                        <pct_atq_efeito_1>-0.2</pct_atq_efeito_1>
+                        <pct_atq_efeito_2>0.2</pct_atq_efeito_2>
+                        <pct_atq_efeito_3>0.35</pct_atq_efeito_3>
+                        <pct_atq_bloq_1>0.45</pct_atq_bloq_1>
+                        <pct_atq_bloq_2>0.2</pct_atq_bloq_2>
+                        <pct_atq_bloq_3>0.1</pct_atq_bloq_3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -213,7 +269,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player" uid="2">
+                <instance type="Jogador" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -222,6 +278,20 @@
                     </properties>
                     <instance-variables>
                         <attack>false</attack>
+                        <pct_saque_voador>0.35</pct_saque_voador>
+                        <pct_saque_normal>0</pct_saque_normal>
+                        <pct_recepcao_normal>0</pct_recepcao_normal>
+                        <pct_recepcao_voador>0.5</pct_recepcao_voador>
+                        <pct_levantamento>0</pct_levantamento>
+                        <pct_atq_cortada_1>0</pct_atq_cortada_1>
+                        <pct_atq_cortada_2>0.2</pct_atq_cortada_2>
+                        <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
+                        <pct_atq_efeito_1>-0.2</pct_atq_efeito_1>
+                        <pct_atq_efeito_2>0.2</pct_atq_efeito_2>
+                        <pct_atq_efeito_3>0.35</pct_atq_efeito_3>
+                        <pct_atq_bloq_1>0.45</pct_atq_bloq_1>
+                        <pct_atq_bloq_2>0.2</pct_atq_bloq_2>
+                        <pct_atq_bloq_3>0.1</pct_atq_bloq_3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -238,7 +308,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player" uid="3">
+                <instance type="Jogador" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -247,6 +317,20 @@
                     </properties>
                     <instance-variables>
                         <attack>false</attack>
+                        <pct_saque_voador>0.35</pct_saque_voador>
+                        <pct_saque_normal>0</pct_saque_normal>
+                        <pct_recepcao_normal>0</pct_recepcao_normal>
+                        <pct_recepcao_voador>0.5</pct_recepcao_voador>
+                        <pct_levantamento>0</pct_levantamento>
+                        <pct_atq_cortada_1>0</pct_atq_cortada_1>
+                        <pct_atq_cortada_2>0.2</pct_atq_cortada_2>
+                        <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
+                        <pct_atq_efeito_1>-0.2</pct_atq_efeito_1>
+                        <pct_atq_efeito_2>0.2</pct_atq_efeito_2>
+                        <pct_atq_efeito_3>0.35</pct_atq_efeito_3>
+                        <pct_atq_bloq_1>0.45</pct_atq_bloq_1>
+                        <pct_atq_bloq_2>0.2</pct_atq_bloq_2>
+                        <pct_atq_bloq_3>0.1</pct_atq_bloq_3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -260,47 +344,6 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.516129017</hotspotY>
                         <angle>-1.57079649</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="Controle" sid="4560336742469473">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="Botao" uid="10">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>674</x>
-                        <y>429</y>
-                        <z>0</z>
-                        <width>80</width>
-                        <height>80</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -383,7 +426,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpriteFontTeamPlayer" uid="14">
+                <instance type="SpriteFontTimeJogador" uid="14">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
@@ -413,7 +456,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpriteFontTeamBot" uid="15">
+                <instance type="SpriteFontTimeBot" uid="15">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
@@ -439,6 +482,125 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Layer Controle" sid="4560336742469473">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="BotaoAcao" uid="10">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>731</x>
+                        <y>435</y>
+                        <z>0</z>
+                        <width>80</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BotaoNormal" uid="16">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <pct_valor_jogador>0</pct_valor_jogador>
+                        <pct_valor_bot>0</pct_valor_bot>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>670</x>
+                        <y>390</y>
+                        <z>0</z>
+                        <width>39.686267853</width>
+                        <height>39.686267853</height>
+                        <depth>0</depth>
+                        <hotspotX>0.476744175</hotspotX>
+                        <hotspotY>0.476744175</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BotaoEspecial1" uid="17">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <pct_valor_jogador>0</pct_valor_jogador>
+                        <pct_valor_bot>0</pct_valor_bot>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>730</x>
+                        <y>350</y>
+                        <z>0</z>
+                        <width>42.988368988</width>
+                        <height>42.988368988</height>
+                        <depth>0</depth>
+                        <hotspotX>0.476744175</hotspotX>
+                        <hotspotY>0.476744175</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BotaoEspecial2" uid="18">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <pct_valor_jogador>0</pct_valor_jogador>
+                        <pct_valor_bot>0</pct_valor_bot>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>793</x>
+                        <y>385</y>
+                        <z>0</z>
+                        <width>43.954521179</width>
+                        <height>43.954521179</height>
+                        <depth>0</depth>
+                        <hotspotX>0.476744175</hotspotX>
+                        <hotspotY>0.476744175</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

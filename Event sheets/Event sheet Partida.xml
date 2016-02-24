@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>Event sheet Partida</name>
     <events>
         <include>Event sheet Functions</include>
         <variable constant="1" name="ERRO" sid="9148709054825553" static="0" type="number">0</variable>
@@ -17,16 +17,23 @@
         <variable constant="1" name="LEVANTAMENTO" sid="343199370034121" static="0" type="text">functionLevantamento</variable>
         <variable constant="1" name="RECEPCAO" sid="1216784330032802" static="0" type="text">functionRecepcao</variable>
         <variable comment="estado representando o saque na partida" constant="1" name="SAQUE" sid="8554473755258839" static="0" type="text">functionSaque</variable>
-        <event-block sid="7706779348516822">
+        <event-block sid="1537760293943302">
             <conditions>
-                <condition id="-25" name="On loader layout complete" sid="5829544601505789" type="System" />
+                <condition id="3" name="On touched object" sid="9044747159780563" type="Touch">
+                    <param id="0" name="Object">BotaoNormal</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="1743589980060297">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="9342851651724776" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="6333147462112441" type="System">
-                    <param id="0" name="Variable">stateGame</param>
-                    <param id="1" name="Value">SAQUE</param>
+                <action id="2" name="Call expression" sid="2084310039314925" type="Function">
+                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,SAQUE)</param>
                 </action>
-                <action id="-14" name="Toggle boolean" sid="697662443079135" type="Player">
+                <action id="-14" name="Toggle boolean" sid="3270631180972768" type="Jogador">
                     <param id="0" name="Instance variable">attack</param>
                 </action>
             </actions>
@@ -34,12 +41,12 @@
         <event-block sid="9346033420171161">
             <conditions>
                 <condition id="3" name="On touched object" sid="9822836681641003" type="Touch">
-                    <param id="0" name="Object">Botao</param>
+                    <param id="0" name="Object">BotaoAcao</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="1669197905905838" type="Function">
-                    <param id="0" name="Name">&quot;functionCallback&quot;</param>
+                    <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
                     <param id="1" name="Parameter {n}">stateGame</param>
                 </action>
             </actions>
@@ -47,7 +54,7 @@
         <event-block sid="315527919897952">
             <conditions>
                 <condition id="0" name="On function" sid="1892259465613649" type="Function">
-                    <param id="0" name="Name">&quot;functionCallback&quot;</param>
+                    <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -63,9 +70,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="5296586363115999" type="System">
-                    <param id="0" name="Variable">stateGame</param>
-                    <param id="1" name="Value">RECEPCAO</param>
+                <action id="2" name="Call expression" sid="6984249456828988" type="Function">
+                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,RECEPCAO)</param>
                 </action>
                 <action id="0" name="Call function" sid="433229918216538" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
@@ -84,15 +90,14 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-14" name="Toggle boolean" sid="1674662843558464" type="PlayerBot">
+                <action id="-14" name="Toggle boolean" sid="1674662843558464" type="JogadorBot">
                     <param id="0" name="Instance variable">attack</param>
                 </action>
-                <action id="-14" name="Toggle boolean" sid="8350254257444269" type="Player">
+                <action id="-14" name="Toggle boolean" sid="8350254257444269" type="Jogador">
                     <param id="0" name="Instance variable">attack</param>
                 </action>
-                <action id="-9" name="Set value" sid="2053543860639502" type="System">
-                    <param id="0" name="Variable">stateGame</param>
-                    <param id="1" name="Value">LEVANTAMENTO</param>
+                <action id="2" name="Call expression" sid="669155296583549" type="Function">
+                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,LEVANTAMENTO)</param>
                 </action>
                 <action id="0" name="Call function" sid="4598170815953901" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
@@ -111,9 +116,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="8519571952361719" type="System">
-                    <param id="0" name="Variable">stateGame</param>
-                    <param id="1" name="Value">ATAQUE</param>
+                <action id="2" name="Call expression" sid="951359203630499" type="Function">
+                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,ATAQUE)</param>
                 </action>
                 <action id="0" name="Call function" sid="7074312731678179" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
@@ -132,9 +136,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="6987051650938602" type="System">
-                    <param id="0" name="Variable">stateGame</param>
-                    <param id="1" name="Value">BLOQUEIO</param>
+                <action id="2" name="Call expression" sid="6956529278032386" type="Function">
+                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,BLOQUEIO)</param>
                 </action>
                 <action id="0" name="Call function" sid="9980549685369825" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
@@ -153,9 +156,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="2208737995626869" type="System">
-                    <param id="0" name="Variable">stateGame</param>
-                    <param id="1" name="Value">RECEPCAO</param>
+                <action id="2" name="Call expression" sid="1986629209695384" type="Function">
+                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,RECEPCAO)</param>
                 </action>
                 <action id="0" name="Call function" sid="1189540764576008" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>

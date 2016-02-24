@@ -30,7 +30,7 @@
             <sub-events>
                 <event-block sid="2163131481675585">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="7740948736812621" type="Player">
+                        <condition id="-8" name="Is boolean instance variable set" sid="7740948736812621" type="Jogador">
                             <param id="0" name="Instance variable">attack</param>
                         </condition>
                     </conditions>
@@ -46,7 +46,7 @@
                 </event-block>
                 <event-block sid="6260670025433082">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="5620151561711394" type="PlayerBot">
+                        <condition id="-8" name="Is boolean instance variable set" sid="5620151561711394" type="JogadorBot">
                             <param id="0" name="Instance variable">attack</param>
                         </condition>
                     </conditions>
@@ -80,7 +80,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="3102268469751946" type="Function">
-                            <param id="0" name="Name">&quot;functionCallback&quot;</param>
+                            <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
                             <param id="1" name="Parameter {n}">Function.Param(1)</param>
                         </action>
                     </actions>
@@ -94,10 +94,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-14" name="Toggle boolean" sid="4947017234411652" type="PlayerBot">
+                        <action id="-14" name="Toggle boolean" sid="4947017234411652" type="JogadorBot">
                             <param id="0" name="Instance variable">attack</param>
                         </action>
-                        <action id="-14" name="Toggle boolean" sid="9379975729963985" type="Player">
+                        <action id="-14" name="Toggle boolean" sid="9379975729963985" type="Jogador">
                             <param id="0" name="Instance variable">attack</param>
                         </action>
                         <action id="0" name="Call function" sid="138123690520223" type="Function">
@@ -105,6 +105,71 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2689718782566116">
+            <conditions>
+                <condition id="0" name="On function" sid="289660252050996" type="Function">
+                    <param id="0" name="Name">&quot;functionStateGame&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7307817859979772" type="System">
+                    <param id="0" name="Variable">stateGame</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8326652928495095">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7312495472807431" type="System">
+                            <param id="0" name="Variable">stateGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">SAQUE</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="1692388583627395">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3823133908377852" type="System">
+                            <param id="0" name="Variable">stateGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">RECEPCAO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="4878716112032396">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7341260379695969" type="System">
+                            <param id="0" name="Variable">stateGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">LEVANTAMENTO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="2616320793324176">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6046980788082412" type="System">
+                            <param id="0" name="Variable">stateGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">ATAQUE</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="1166071569206074">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7538755913917075" type="System">
+                            <param id="0" name="Variable">stateGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">BLOQUEIO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-block>
