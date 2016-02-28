@@ -3,6 +3,19 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet Functions</name>
     <events>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_SIMPLES" sid="1471466717271263" static="0" type="text">BLOQUEIO_SIMPLES</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_DUPLO" sid="7385235398533945" static="0" type="text">BLOQUEIO_DUPLO</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_TRIPLO" sid="4130204608096574" static="0" type="text">BLOQUEIO_TRIPLO</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_DEFESA" sid="8923303595678676" static="0" type="text">BLOQUEIO_DEFESA</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_ATAQUE" sid="4338904964879663" static="0" type="text">BLOQUEIO_ATAQUE</variable>
+        <variable constant="1" name="FUNDAMENTO_ATAQUE_BLOQUEIO" sid="6259210137520166" static="0" type="text">ATAQUE_BLOQUEIO</variable>
+        <variable constant="1" name="FUNDAMENTO_ATAQUE_EFEITO" sid="8468021051602044" static="0" type="text">ATAQUE_EFEITO</variable>
+        <variable constant="1" name="FUNDAMENTO_ATAQUE_CORTADA" sid="9779618448960489" static="0" type="text">ATAQUE_CORTADA</variable>
+        <variable constant="1" name="FUNDAMENTO_LEVANTAMENTO" sid="2353033053844279" static="0" type="text">LEVANTAMENTO</variable>
+        <variable constant="1" name="FUNDAMENTO_RECEPCAO_VOADOR" sid="82651691057474" static="0" type="text">RECEPCAO_VOADOR</variable>
+        <variable constant="1" name="FUNDAMENTO_RECEPCAO_NORMAL" sid="4167766552554176" static="0" type="text">RECEPCAO_NORMAL</variable>
+        <variable constant="1" name="FUNDAMENTO_SAQUE_VOADOR" sid="1930567130824392" static="0" type="text">SAQUE_VOADOR</variable>
+        <variable constant="1" name="FUNDAMENTO_SAQUE_NORMAL" sid="8756259567240841" static="0" type="text">SAQUE_NORMAL</variable>
         <event-block sid="3025269056472071">
             <conditions>
                 <condition id="0" name="On function" sid="375531894134652" type="Function">
@@ -14,6 +27,108 @@
                     <param id="0" name="Value">random(1) &lt;= Function.Param(0)</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="6354188055049759">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="3515603301002595" type="Function">
+                            <param id="0" name="Index">1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_SAQUE_NORMAL</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="4048196068560868">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="1858337251278881" type="Function">
+                            <param id="0" name="Index">1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_SAQUE_VOADOR</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="8298152748394062">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="5824180620518044" type="Function">
+                            <param id="0" name="Index">1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_RECEPCAO_NORMAL</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="8266087616608376">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="2268414944885139" type="Function">
+                            <param id="0" name="Index">1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_RECEPCAO_VOADOR</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="1723132061763365">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="3518794626195584" type="Function">
+                            <param id="0" name="Index">1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_LEVANTAMENTO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="381130787580251">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="6916442108983151" type="Function">
+                            <param id="0" name="Index">1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="5646204251618822">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="1617933595650973" type="Function">
+                            <param id="0" name="Index">1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="2294314418693303">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="8672207371683398" type="Function">
+                            <param id="0" name="Index">1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="9973965052833539">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="9893814412454043" type="Function">
+                            <param id="0" name="Index">1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_ATAQUE</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="2084714039564911">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="2155940762466065" type="Function">
+                            <param id="0" name="Index">1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_DEFESA</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="4428135961486982">
             <conditions>
@@ -31,7 +146,7 @@
                 <event-block sid="2163131481675585">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="7740948736812621" type="Jogador">
-                            <param id="0" name="Instance variable">attack</param>
+                            <param id="0" name="Instance variable">ataque</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -47,7 +162,7 @@
                 <event-block sid="6260670025433082">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="5620151561711394" type="JogadorBot">
-                            <param id="0" name="Instance variable">attack</param>
+                            <param id="0" name="Instance variable">ataque</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -95,10 +210,10 @@
                     </conditions>
                     <actions>
                         <action id="-14" name="Toggle boolean" sid="4947017234411652" type="JogadorBot">
-                            <param id="0" name="Instance variable">attack</param>
+                            <param id="0" name="Instance variable">ataque</param>
                         </action>
                         <action id="-14" name="Toggle boolean" sid="9379975729963985" type="Jogador">
-                            <param id="0" name="Instance variable">attack</param>
+                            <param id="0" name="Instance variable">ataque</param>
                         </action>
                         <action id="0" name="Call function" sid="138123690520223" type="Function">
                             <param id="0" name="Name">&quot;functionScore&quot;</param>
@@ -129,7 +244,22 @@
                             <param id="2" name="Value">SAQUE</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="4893723834944816" type="BotaoEspecial2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3945572853958038" type="BotaoEspecial1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4512128113739" type="BotaoNormal">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_SAQUE_NORMAL</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9049133724249132" type="BotaoEspecial1">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_SAQUE_VOADOR</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="1692388583627395">
                     <conditions>
@@ -139,7 +269,22 @@
                             <param id="2" name="Value">RECEPCAO</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="3763184744300385" type="BotaoEspecial2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1996624998323357" type="BotaoEspecial1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3694325134225641" type="BotaoNormal">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_RECEPCAO_NORMAL</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9579037705630707" type="BotaoEspecial1">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_RECEPCAO_VOADOR</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="4878716112032396">
                     <conditions>
@@ -149,7 +294,18 @@
                             <param id="2" name="Value">LEVANTAMENTO</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6152437329936287" type="BotaoEspecial1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="297171921467711" type="BotaoEspecial2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7084155345786467" type="BotaoNormal">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_LEVANTAMENTO</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="2616320793324176">
                     <conditions>
@@ -159,7 +315,26 @@
                             <param id="2" name="Value">ATAQUE</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="838476747983378" type="BotaoEspecial1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7999312115217265" type="BotaoEspecial2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1560996706877878" type="BotaoNormal">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8612414967846127" type="BotaoEspecial1">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="176043284369006" type="BotaoEspecial2">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="1166071569206074">
                     <conditions>
@@ -169,9 +344,73 @@
                             <param id="2" name="Value">BLOQUEIO</param>
                         </condition>
                     </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7032353794486562" type="BotaoEspecial1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6562920184526735" type="BotaoNormal">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_BLOQUEIO_ATAQUE</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5734313194728791" type="BotaoEspecial1">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_BLOQUEIO_DEFESA</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3236582904597653">
+            <conditions>
+                <condition id="0" name="On function" sid="6908094064357667" type="Function">
+                    <param id="0" name="Name">&quot;functionFundamentoBloqueio&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5186961530995624">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="4749061105720833" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_SIMPLES</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="4990218398765609">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="4615022683443432" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_DUPLO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="1332718521238652">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="9788734872994719" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_TRIPLO</param>
+                        </condition>
+                    </conditions>
                     <actions />
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="8333617279469657">
+            <conditions>
+                <condition id="0" name="On function" sid="5800684583251987" type="Function">
+                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="9860993518858133" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= Function.Param(0)</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

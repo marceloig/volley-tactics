@@ -48,7 +48,7 @@
         <object-type name="Jogador" sid="947084640736983">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="attack" sid="6363809833647392" type="boolean" />
+                <instance-variable name="ataque" sid="6363809833647392" type="boolean" />
                 <instance-variable name="pct_saque_voador" sid="467038791466403" type="number" />
                 <instance-variable name="pct_saque_normal" sid="6841224428475758" type="number" />
                 <instance-variable name="pct_recepcao_normal" sid="2604477702543929" type="number" />
@@ -84,7 +84,7 @@
         <object-type name="JogadorBot" sid="2956865179068437">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="attack" sid="9579015667639163" type="boolean" />
+                <instance-variable name="ataque" sid="9579015667639163" type="boolean" />
                 <instance-variable name="pct_saque_voador" sid="1206805796295347" type="number" />
                 <instance-variable name="pct_saque_normal" sid="3054042002606073" type="number" />
                 <instance-variable name="pct_recepcao_normal" sid="5193522350722752" type="number" />
@@ -197,6 +197,7 @@
             <instance-variables>
                 <instance-variable name="pct_valor_jogador" sid="8205144886383772" type="number" />
                 <instance-variable name="pct_valor_bot" sid="5100720841421381" type="number" />
+                <instance-variable name="fundamento" sid="7916515117584885" type="string" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9894170199128666" speed="5">
@@ -220,6 +221,7 @@
             <instance-variables>
                 <instance-variable name="pct_valor_jogador" sid="7194846250148543" type="number" />
                 <instance-variable name="pct_valor_bot" sid="1440395536398925" type="number" />
+                <instance-variable name="fundamento" sid="4624438322518147" type="string" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1249714566266319" speed="5">
@@ -243,6 +245,7 @@
             <instance-variables>
                 <instance-variable name="pct_valor_jogador" sid="6882675105763437" type="number" />
                 <instance-variable name="pct_valor_bot" sid="6249134808006866" type="number" />
+                <instance-variable name="fundamento" sid="2424564332934621" type="string" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4471431195977249" speed="5">

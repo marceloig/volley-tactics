@@ -13,6 +13,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">Layout 1</layout>
         <event-sheet order="1">Event sheet Partida</event-sheet>
         <event-sheet active="1" order="2">Event sheet Functions</event-sheet>
+        <event-sheet order="3">Event sheet Inicio</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

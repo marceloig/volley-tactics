@@ -96,7 +96,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <attack>false</attack>
+                        <ataque>true</ataque>
                         <pct_saque_voador>0.35</pct_saque_voador>
                         <pct_saque_normal>0</pct_saque_normal>
                         <pct_recepcao_normal>0</pct_recepcao_normal>
@@ -135,7 +135,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <attack>false</attack>
+                        <ataque>false</ataque>
                         <pct_saque_voador>0.35</pct_saque_voador>
                         <pct_saque_normal>0</pct_saque_normal>
                         <pct_recepcao_normal>0</pct_recepcao_normal>
@@ -199,7 +199,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <attack>false</attack>
+                        <ataque>false</ataque>
                         <pct_saque_voador>0.35</pct_saque_voador>
                         <pct_saque_normal>0</pct_saque_normal>
                         <pct_recepcao_normal>0</pct_recepcao_normal>
@@ -238,7 +238,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <attack>false</attack>
+                        <ataque>false</ataque>
                         <pct_saque_voador>0.35</pct_saque_voador>
                         <pct_saque_normal>0</pct_saque_normal>
                         <pct_recepcao_normal>0</pct_recepcao_normal>
@@ -277,7 +277,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <attack>false</attack>
+                        <ataque>true</ataque>
                         <pct_saque_voador>0.35</pct_saque_voador>
                         <pct_saque_normal>0</pct_saque_normal>
                         <pct_recepcao_normal>0</pct_recepcao_normal>
@@ -316,7 +316,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <attack>false</attack>
+                        <ataque>true</ataque>
                         <pct_saque_voador>0.35</pct_saque_voador>
                         <pct_saque_normal>0</pct_saque_normal>
                         <pct_recepcao_normal>0</pct_recepcao_normal>
@@ -537,6 +537,7 @@
                     <instance-variables>
                         <pct_valor_jogador>0</pct_valor_jogador>
                         <pct_valor_bot>0</pct_valor_bot>
+                        <fundamento></fundamento>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -563,6 +564,7 @@
                     <instance-variables>
                         <pct_valor_jogador>0</pct_valor_jogador>
                         <pct_valor_bot>0</pct_valor_bot>
+                        <fundamento></fundamento>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -589,6 +591,7 @@
                     <instance-variables>
                         <pct_valor_jogador>0</pct_valor_jogador>
                         <pct_valor_bot>0</pct_valor_bot>
+                        <fundamento></fundamento>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
