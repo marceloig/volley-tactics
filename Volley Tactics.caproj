@@ -53,6 +53,7 @@
                 <instance-variable name="pct_saque_normal" sid="6841224428475758" type="number" />
                 <instance-variable name="pct_recepcao_normal" sid="2604477702543929" type="number" />
                 <instance-variable name="pct_recepcao_voador" sid="8678506867651875" type="number" />
+                <instance-variable name="pct_recepcao_atq" sid="1489750966974487" type="number" />
                 <instance-variable name="pct_levantamento" sid="1683644525398869" type="number" />
                 <instance-variable name="pct_atq_cortada_1" sid="5764310041615344" type="number" />
                 <instance-variable name="pct_atq_cortada_2" sid="9252858422668065" type="number" />
@@ -89,6 +90,7 @@
                 <instance-variable name="pct_saque_normal" sid="3054042002606073" type="number" />
                 <instance-variable name="pct_recepcao_normal" sid="5193522350722752" type="number" />
                 <instance-variable name="pct_recepcao_voador" sid="9903687475223772" type="number" />
+                <instance-variable name="pct_recepcao_atq" sid="2393437954478773" type="number" />
                 <instance-variable name="pct_levantamento" sid="1925831870286235" type="number" />
                 <instance-variable name="pct_atq_cortada_1" sid="3201823142629573" type="number" />
                 <instance-variable name="pct_atq_cortada_2" sid="6305762905918305" type="number" />
@@ -99,6 +101,7 @@
                 <instance-variable name="pct_atq_bloq_1" sid="6224113344871106" type="number" />
                 <instance-variable name="pct_atq_bloq_2" sid="4498736891944095" type="number" />
                 <instance-variable name="pct_atq_bloq_3" sid="1180227789920099" type="number" />
+                <instance-variable name="estadoJogo" sid="9089735068812124" type="string" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1217636223136615" speed="5">

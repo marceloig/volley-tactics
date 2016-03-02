@@ -97,20 +97,21 @@
                     </properties>
                     <instance-variables>
                         <ataque>true</ataque>
-                        <pct_saque_voador>0.35</pct_saque_voador>
-                        <pct_saque_normal>0</pct_saque_normal>
-                        <pct_recepcao_normal>0</pct_recepcao_normal>
-                        <pct_recepcao_voador>0.5</pct_recepcao_voador>
-                        <pct_levantamento>0</pct_levantamento>
-                        <pct_atq_cortada_1>0</pct_atq_cortada_1>
-                        <pct_atq_cortada_2>0.2</pct_atq_cortada_2>
+                        <pct_saque_voador>0.6</pct_saque_voador>
+                        <pct_saque_normal>0.95</pct_saque_normal>
+                        <pct_recepcao_normal>0.95</pct_recepcao_normal>
+                        <pct_recepcao_voador>0.75</pct_recepcao_voador>
+                        <pct_recepcao_atq>0.7</pct_recepcao_atq>
+                        <pct_levantamento>1</pct_levantamento>
+                        <pct_atq_cortada_1>0.8</pct_atq_cortada_1>
+                        <pct_atq_cortada_2>0.6</pct_atq_cortada_2>
                         <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
-                        <pct_atq_efeito_1>-0.2</pct_atq_efeito_1>
-                        <pct_atq_efeito_2>0.2</pct_atq_efeito_2>
-                        <pct_atq_efeito_3>0.35</pct_atq_efeito_3>
-                        <pct_atq_bloq_1>0.45</pct_atq_bloq_1>
-                        <pct_atq_bloq_2>0.2</pct_atq_bloq_2>
-                        <pct_atq_bloq_3>0.1</pct_atq_bloq_3>
+                        <pct_atq_efeito_1>1</pct_atq_efeito_1>
+                        <pct_atq_efeito_2>0.6</pct_atq_efeito_2>
+                        <pct_atq_efeito_3>0.45</pct_atq_efeito_3>
+                        <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
+                        <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
+                        <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -136,20 +137,22 @@
                     </properties>
                     <instance-variables>
                         <ataque>false</ataque>
-                        <pct_saque_voador>0.35</pct_saque_voador>
-                        <pct_saque_normal>0</pct_saque_normal>
-                        <pct_recepcao_normal>0</pct_recepcao_normal>
-                        <pct_recepcao_voador>0.5</pct_recepcao_voador>
-                        <pct_levantamento>0</pct_levantamento>
-                        <pct_atq_cortada_1>0</pct_atq_cortada_1>
-                        <pct_atq_cortada_2>0.2</pct_atq_cortada_2>
+                        <pct_saque_voador>0.6</pct_saque_voador>
+                        <pct_saque_normal>0.95</pct_saque_normal>
+                        <pct_recepcao_normal>0.95</pct_recepcao_normal>
+                        <pct_recepcao_voador>0.75</pct_recepcao_voador>
+                        <pct_recepcao_atq>0.7</pct_recepcao_atq>
+                        <pct_levantamento>1</pct_levantamento>
+                        <pct_atq_cortada_1>0.8</pct_atq_cortada_1>
+                        <pct_atq_cortada_2>0.6</pct_atq_cortada_2>
                         <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
-                        <pct_atq_efeito_1>-0.2</pct_atq_efeito_1>
-                        <pct_atq_efeito_2>0.2</pct_atq_efeito_2>
-                        <pct_atq_efeito_3>0.35</pct_atq_efeito_3>
-                        <pct_atq_bloq_1>0.45</pct_atq_bloq_1>
-                        <pct_atq_bloq_2>0.2</pct_atq_bloq_2>
-                        <pct_atq_bloq_3>0.1</pct_atq_bloq_3>
+                        <pct_atq_efeito_1>1</pct_atq_efeito_1>
+                        <pct_atq_efeito_2>0.6</pct_atq_efeito_2>
+                        <pct_atq_efeito_3>0.45</pct_atq_efeito_3>
+                        <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
+                        <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
+                        <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
+                        <estadoJogo></estadoJogo>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -200,20 +203,22 @@
                     </properties>
                     <instance-variables>
                         <ataque>false</ataque>
-                        <pct_saque_voador>0.35</pct_saque_voador>
-                        <pct_saque_normal>0</pct_saque_normal>
-                        <pct_recepcao_normal>0</pct_recepcao_normal>
-                        <pct_recepcao_voador>0.5</pct_recepcao_voador>
-                        <pct_levantamento>0</pct_levantamento>
-                        <pct_atq_cortada_1>0</pct_atq_cortada_1>
-                        <pct_atq_cortada_2>0.2</pct_atq_cortada_2>
+                        <pct_saque_voador>0.6</pct_saque_voador>
+                        <pct_saque_normal>0.95</pct_saque_normal>
+                        <pct_recepcao_normal>0.95</pct_recepcao_normal>
+                        <pct_recepcao_voador>0.75</pct_recepcao_voador>
+                        <pct_recepcao_atq>0.7</pct_recepcao_atq>
+                        <pct_levantamento>1</pct_levantamento>
+                        <pct_atq_cortada_1>0.8</pct_atq_cortada_1>
+                        <pct_atq_cortada_2>0.6</pct_atq_cortada_2>
                         <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
-                        <pct_atq_efeito_1>-0.2</pct_atq_efeito_1>
-                        <pct_atq_efeito_2>0.2</pct_atq_efeito_2>
-                        <pct_atq_efeito_3>0.35</pct_atq_efeito_3>
-                        <pct_atq_bloq_1>0.45</pct_atq_bloq_1>
-                        <pct_atq_bloq_2>0.2</pct_atq_bloq_2>
-                        <pct_atq_bloq_3>0.1</pct_atq_bloq_3>
+                        <pct_atq_efeito_1>1</pct_atq_efeito_1>
+                        <pct_atq_efeito_2>0.6</pct_atq_efeito_2>
+                        <pct_atq_efeito_3>0.45</pct_atq_efeito_3>
+                        <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
+                        <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
+                        <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
+                        <estadoJogo></estadoJogo>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -239,20 +244,22 @@
                     </properties>
                     <instance-variables>
                         <ataque>false</ataque>
-                        <pct_saque_voador>0.35</pct_saque_voador>
-                        <pct_saque_normal>0</pct_saque_normal>
-                        <pct_recepcao_normal>0</pct_recepcao_normal>
-                        <pct_recepcao_voador>0.5</pct_recepcao_voador>
-                        <pct_levantamento>0</pct_levantamento>
-                        <pct_atq_cortada_1>0</pct_atq_cortada_1>
-                        <pct_atq_cortada_2>0.2</pct_atq_cortada_2>
+                        <pct_saque_voador>0.6</pct_saque_voador>
+                        <pct_saque_normal>0.95</pct_saque_normal>
+                        <pct_recepcao_normal>0.95</pct_recepcao_normal>
+                        <pct_recepcao_voador>0.75</pct_recepcao_voador>
+                        <pct_recepcao_atq>0.7</pct_recepcao_atq>
+                        <pct_levantamento>1</pct_levantamento>
+                        <pct_atq_cortada_1>0.8</pct_atq_cortada_1>
+                        <pct_atq_cortada_2>0.6</pct_atq_cortada_2>
                         <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
-                        <pct_atq_efeito_1>-0.2</pct_atq_efeito_1>
-                        <pct_atq_efeito_2>0.2</pct_atq_efeito_2>
-                        <pct_atq_efeito_3>0.35</pct_atq_efeito_3>
-                        <pct_atq_bloq_1>0.45</pct_atq_bloq_1>
-                        <pct_atq_bloq_2>0.2</pct_atq_bloq_2>
-                        <pct_atq_bloq_3>0.1</pct_atq_bloq_3>
+                        <pct_atq_efeito_1>1</pct_atq_efeito_1>
+                        <pct_atq_efeito_2>0.6</pct_atq_efeito_2>
+                        <pct_atq_efeito_3>0.45</pct_atq_efeito_3>
+                        <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
+                        <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
+                        <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
+                        <estadoJogo></estadoJogo>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -278,20 +285,21 @@
                     </properties>
                     <instance-variables>
                         <ataque>true</ataque>
-                        <pct_saque_voador>0.35</pct_saque_voador>
-                        <pct_saque_normal>0</pct_saque_normal>
-                        <pct_recepcao_normal>0</pct_recepcao_normal>
-                        <pct_recepcao_voador>0.5</pct_recepcao_voador>
-                        <pct_levantamento>0</pct_levantamento>
-                        <pct_atq_cortada_1>0</pct_atq_cortada_1>
-                        <pct_atq_cortada_2>0.2</pct_atq_cortada_2>
+                        <pct_saque_voador>0.6</pct_saque_voador>
+                        <pct_saque_normal>0.95</pct_saque_normal>
+                        <pct_recepcao_normal>0.95</pct_recepcao_normal>
+                        <pct_recepcao_voador>0.75</pct_recepcao_voador>
+                        <pct_recepcao_atq>0.7</pct_recepcao_atq>
+                        <pct_levantamento>1</pct_levantamento>
+                        <pct_atq_cortada_1>0.8</pct_atq_cortada_1>
+                        <pct_atq_cortada_2>0.6</pct_atq_cortada_2>
                         <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
-                        <pct_atq_efeito_1>-0.2</pct_atq_efeito_1>
-                        <pct_atq_efeito_2>0.2</pct_atq_efeito_2>
-                        <pct_atq_efeito_3>0.35</pct_atq_efeito_3>
-                        <pct_atq_bloq_1>0.45</pct_atq_bloq_1>
-                        <pct_atq_bloq_2>0.2</pct_atq_bloq_2>
-                        <pct_atq_bloq_3>0.1</pct_atq_bloq_3>
+                        <pct_atq_efeito_1>1</pct_atq_efeito_1>
+                        <pct_atq_efeito_2>0.6</pct_atq_efeito_2>
+                        <pct_atq_efeito_3>0.45</pct_atq_efeito_3>
+                        <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
+                        <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
+                        <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -317,20 +325,21 @@
                     </properties>
                     <instance-variables>
                         <ataque>true</ataque>
-                        <pct_saque_voador>0.35</pct_saque_voador>
-                        <pct_saque_normal>0</pct_saque_normal>
-                        <pct_recepcao_normal>0</pct_recepcao_normal>
-                        <pct_recepcao_voador>0.5</pct_recepcao_voador>
-                        <pct_levantamento>0</pct_levantamento>
-                        <pct_atq_cortada_1>0</pct_atq_cortada_1>
-                        <pct_atq_cortada_2>0.2</pct_atq_cortada_2>
+                        <pct_saque_voador>0.6</pct_saque_voador>
+                        <pct_saque_normal>0.95</pct_saque_normal>
+                        <pct_recepcao_normal>0.95</pct_recepcao_normal>
+                        <pct_recepcao_voador>0.75</pct_recepcao_voador>
+                        <pct_recepcao_atq>0.7</pct_recepcao_atq>
+                        <pct_levantamento>1</pct_levantamento>
+                        <pct_atq_cortada_1>0.8</pct_atq_cortada_1>
+                        <pct_atq_cortada_2>0.6</pct_atq_cortada_2>
                         <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
-                        <pct_atq_efeito_1>-0.2</pct_atq_efeito_1>
-                        <pct_atq_efeito_2>0.2</pct_atq_efeito_2>
-                        <pct_atq_efeito_3>0.35</pct_atq_efeito_3>
-                        <pct_atq_bloq_1>0.45</pct_atq_bloq_1>
-                        <pct_atq_bloq_2>0.2</pct_atq_bloq_2>
-                        <pct_atq_bloq_3>0.1</pct_atq_bloq_3>
+                        <pct_atq_efeito_1>1</pct_atq_efeito_1>
+                        <pct_atq_efeito_2>0.6</pct_atq_efeito_2>
+                        <pct_atq_efeito_3>0.45</pct_atq_efeito_3>
+                        <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
+                        <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
+                        <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

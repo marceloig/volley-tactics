@@ -18,7 +18,6 @@
         <variable comment="estado representando o saque na partida" constant="1" name="SAQUE" sid="8554473755258839" static="0" type="text">functionSaque</variable>
         <variable comment="Estado do jogo durante a disputa (saque, defesa, ataque, bloqueio)" constant="0" name="stateGame" sid="9993113023338776" static="0" type="text"></variable>
         <variable comment="fundamento escolhido para cada fase da partida" constant="0" name="fundamento" sid="6860286309622506" static="0" type="text"></variable>
-        <variable constant="0" name="pct_fundamento" sid="3410683377408902" static="0" type="number">0</variable>
         <event-block sid="1743589980060297">
             <conditions>
                 <condition id="-25" name="On loader layout complete" sid="9342851651724776" type="System" />
