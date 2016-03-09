@@ -29,6 +29,9 @@
                 <action id="-14" name="Toggle boolean" sid="3270631180972768" type="Jogador">
                     <param id="0" name="Instance variable">ataque</param>
                 </action>
+                <action id="-15" name="Set visible" sid="2514252078141771" type="BotaoAcao">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="4374317228765692" title="Eventos Botoes">
@@ -44,6 +47,9 @@
                             <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
                             <param id="1" name="Parameter {n}">stateGame</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="1195298612534012" type="BotaoAcao">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2349117911224056">
@@ -56,6 +62,9 @@
                         <action id="-9" name="Set value" sid="6299606974329502" type="System">
                             <param id="0" name="Variable">fundamento</param>
                             <param id="1" name="Value">BotaoNormal.fundamento</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4460899163136134" type="BotaoAcao">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -70,6 +79,9 @@
                             <param id="0" name="Variable">fundamento</param>
                             <param id="1" name="Value">BotaoEspecial1.fundamento</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="753917378691616" type="BotaoAcao">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="8116933683993202">
@@ -82,6 +94,9 @@
                         <action id="-9" name="Set value" sid="1863172365782565" type="System">
                             <param id="0" name="Variable">fundamento</param>
                             <param id="1" name="Value">BotaoEspecial2.fundamento</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5817076240757012" type="BotaoAcao">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -111,7 +126,7 @@
                 </action>
                 <action id="0" name="Call function" sid="433229918216538" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">PCT_SAQUE{###}fundamento</param>
+                    <param id="1" name="Parameter {n}">fundamento</param>
                 </action>
                 <action id="0" name="Call function" sid="4425094895703245" type="Function">
                     <param id="0" name="Name">&quot;functionAction&quot;</param>
@@ -135,9 +150,9 @@
                 <action id="2" name="Call expression" sid="669155296583549" type="Function">
                     <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,LEVANTAMENTO)</param>
                 </action>
-                <action id="0" name="Call function" sid="4598170815953901" type="Function">
+                <action id="0" name="Call function" sid="6614963349635496" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">PCT_RECEPCAO</param>
+                    <param id="1" name="Parameter {n}">fundamento</param>
                 </action>
                 <action id="0" name="Call function" sid="284662004126959" type="Function">
                     <param id="0" name="Name">&quot;functionAction&quot;</param>
@@ -155,9 +170,9 @@
                 <action id="2" name="Call expression" sid="951359203630499" type="Function">
                     <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,ATAQUE)</param>
                 </action>
-                <action id="0" name="Call function" sid="7074312731678179" type="Function">
+                <action id="0" name="Call function" sid="8912095237051717" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">PCT_LEVANTAMENTO</param>
+                    <param id="1" name="Parameter {n}">fundamento</param>
                 </action>
                 <action id="0" name="Call function" sid="6778856416435069" type="Function">
                     <param id="0" name="Name">&quot;functionAction&quot;</param>
@@ -175,9 +190,9 @@
                 <action id="2" name="Call expression" sid="6956529278032386" type="Function">
                     <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,BLOQUEIO)</param>
                 </action>
-                <action id="0" name="Call function" sid="9980549685369825" type="Function">
+                <action id="0" name="Call function" sid="6301778186575082" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">PCT_ATAQUE</param>
+                    <param id="1" name="Parameter {n}">fundamento</param>
                 </action>
                 <action id="0" name="Call function" sid="1489011038579453" type="Function">
                     <param id="0" name="Name">&quot;functionAction&quot;</param>
@@ -195,9 +210,9 @@
                 <action id="2" name="Call expression" sid="1986629209695384" type="Function">
                     <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,RECEPCAO)</param>
                 </action>
-                <action id="0" name="Call function" sid="1189540764576008" type="Function">
+                <action id="0" name="Call function" sid="2184794916141146" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">PCT_BLOQUEIO</param>
+                    <param id="1" name="Parameter {n}">fundamento</param>
                 </action>
                 <action id="0" name="Call function" sid="2600336881361212" type="Function">
                     <param id="0" name="Name">&quot;functionAction&quot;</param>

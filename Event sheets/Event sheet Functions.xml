@@ -28,11 +28,7 @@
                             <param id="0" name="Name">&quot;functionHit&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action disabled="1" id="1" name="Set return value" sid="855846235487835" type="Function">
-                            <param id="0" name="Value">random(1) &lt;= Function.Param(0)</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="6354188055049759">
                             <conditions>
@@ -43,13 +39,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="948141690846296" type="System">
-                                    <param id="0" name="Variable">pct_jogador</param>
-                                    <param id="1" name="Value">Jogador.pct_saque_normal</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="8104124732640906" type="System">
-                                    <param id="0" name="Variable">pct_bot</param>
-                                    <param id="1" name="Value">JogadorBot.pct_saque_normal</param>
+                                <action id="1" name="Set return value" sid="8535113376456382" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_saque_normal)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -62,13 +53,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="9941670718015658" type="System">
-                                    <param id="0" name="Variable">pct_jogador</param>
-                                    <param id="1" name="Value">Jogador.pct_saque_voador</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="8092207439890652" type="System">
-                                    <param id="0" name="Variable">pct_bot</param>
-                                    <param id="1" name="Value">JogadorBot.pct_saque_voador</param>
+                                <action id="1" name="Set return value" sid="715464897452806" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_saque_voador)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -81,13 +67,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="7021932408598483" type="System">
-                                    <param id="0" name="Variable">pct_jogador</param>
-                                    <param id="1" name="Value">Jogador.pct_recepcao_normal</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="6304251890765499" type="System">
-                                    <param id="0" name="Variable">pct_bot</param>
-                                    <param id="1" name="Value">JogadorBot.pct_recepcao_normal</param>
+                                <action id="1" name="Set return value" sid="8500793288090383" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_recepcao_normal)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -100,13 +81,22 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="1244694890641921" type="System">
-                                    <param id="0" name="Variable">pct_jogador</param>
-                                    <param id="1" name="Value">Jogador.pct_recepcao_voador</param>
+                                <action id="1" name="Set return value" sid="8366385964597716" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_recepcao_voador)</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="4239872158329504" type="System">
-                                    <param id="0" name="Variable">pct_bot</param>
-                                    <param id="1" name="Value">JogadorBot.pct_recepcao_voador</param>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4120996894148261">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="8759321367957958" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">FUNDAMENTO_RECEPCAO_ATAQUE</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="4311796001516608" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_recepcao_atq)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -119,13 +109,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="8245776632323042" type="System">
-                                    <param id="0" name="Variable">pct_jogador</param>
-                                    <param id="1" name="Value">Jogador.pct_levantamento</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="3543018460324343" type="System">
-                                    <param id="0" name="Variable">pct_bot</param>
-                                    <param id="1" name="Value">JogadorBot.pct_levantamento</param>
+                                <action id="1" name="Set return value" sid="8716605389479668" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_levantamento)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -192,9 +177,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="4040959054645724" type="Function">
-                                    <param id="0" name="Name">&quot;functionFundamentoBloqueio&quot;</param>
-                                    <param id="1" name="Parameter {n}">Function.Param(1)</param>
+                                <action id="1" name="Set return value" sid="6370595006666806" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;functionFundamentoBloqueio&quot;, Function.Param(1))</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -207,9 +191,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="4915684047978988" type="Function">
-                                    <param id="0" name="Name">&quot;functionFundamentoBloqueio&quot;</param>
-                                    <param id="1" name="Parameter {n}">Function.Param(1)</param>
+                                <action id="1" name="Set return value" sid="4258086461034316" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;functionFundamentoBloqueio&quot;, Function.Param(1))</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -241,7 +224,11 @@
                                             <param id="2" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="5632624954801851" type="Function">
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_cortada_1)</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                                 <event-block sid="1128168215901803">
                                     <conditions>
@@ -251,7 +238,11 @@
                                             <param id="2" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="9458365453770678" type="Function">
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_efeito_1)</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                                 <event-block sid="3089777035662144">
                                     <conditions>
@@ -261,7 +252,11 @@
                                             <param id="2" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="1106329484243983" type="Function">
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_bloq_1)</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -283,7 +278,11 @@
                                             <param id="2" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="8760439736776425" type="Function">
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_cortada_2)</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                                 <event-block sid="9571353566694389">
                                     <conditions>
@@ -293,7 +292,11 @@
                                             <param id="2" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="774238223001314" type="Function">
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_efeito_2)</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                                 <event-block sid="264951514085101">
                                     <conditions>
@@ -303,7 +306,11 @@
                                             <param id="2" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="9900920443020797" type="Function">
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_bloq_2)</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -325,7 +332,11 @@
                                             <param id="2" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="5507096403754441" type="Function">
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_cortada_3)</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                                 <event-block sid="5046025250068886">
                                     <conditions>
@@ -335,7 +346,11 @@
                                             <param id="2" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="1009325879421689" type="Function">
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_efeito_3)</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                                 <event-block sid="4835890290731406">
                                     <conditions>
@@ -345,7 +360,11 @@
                                             <param id="2" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="8425118465788468" type="Function">
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_bloq_3)</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -417,7 +436,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="3102268469751946" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="3102268469751946" type="Function">
                             <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
                             <param id="1" name="Parameter {n}">Function.Param(1)</param>
                         </action>
