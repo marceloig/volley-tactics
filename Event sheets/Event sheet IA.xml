@@ -1,23 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet Functions</name>
+    <name>Event sheet IA</name>
     <events>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_SIMPLES" sid="1471466717271263" static="0" type="text">BLOQUEIO_SIMPLES</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_DUPLO" sid="7385235398533945" static="0" type="text">BLOQUEIO_DUPLO</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_TRIPLO" sid="4130204608096574" static="0" type="text">BLOQUEIO_TRIPLO</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_DEFESA" sid="8923303595678676" static="0" type="text">BLOQUEIO_DEFESA</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_ATAQUE" sid="4338904964879663" static="0" type="text">BLOQUEIO_ATAQUE</variable>
-        <variable constant="1" name="FUNDAMENTO_ATAQUE_BLOQUEIO" sid="6259210137520166" static="0" type="text">ATAQUE_BLOQUEIO</variable>
-        <variable constant="1" name="FUNDAMENTO_ATAQUE_EFEITO" sid="8468021051602044" static="0" type="text">ATAQUE_EFEITO</variable>
-        <variable constant="1" name="FUNDAMENTO_ATAQUE_CORTADA" sid="9779618448960489" static="0" type="text">ATAQUE_CORTADA</variable>
-        <variable constant="1" name="FUNDAMENTO_LEVANTAMENTO" sid="2353033053844279" static="0" type="text">LEVANTAMENTO</variable>
-        <variable constant="1" name="FUNDAMENTO_RECEPCAO_VOADOR" sid="82651691057474" static="0" type="text">RECEPCAO_VOADOR</variable>
-        <variable constant="1" name="FUNDAMENTO_RECEPCAO_NORMAL" sid="4167766552554176" static="0" type="text">RECEPCAO_NORMAL</variable>
-        <variable constant="1" name="FUNDAMENTO_RECEPCAO_ATAQUE" sid="1659506433136747" static="0" type="text">RECEPCAO_ATAQUE</variable>
-        <variable constant="1" name="FUNDAMENTO_SAQUE_VOADOR" sid="1930567130824392" static="0" type="text">SAQUE_VOADOR</variable>
-        <variable constant="1" name="FUNDAMENTO_SAQUE_NORMAL" sid="8756259567240841" static="0" type="text">SAQUE_NORMAL</variable>
-        <event-group description="" sid="6938574088893514" title="Eventos execução de fundamentos">
+        <event-block sid="4384516843332086">
+            <conditions>
+                <condition id="0" name="On function" sid="1677143854138449" type="Function">
+                    <param id="0" name="Name">&quot;functionIA&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2946204869144715">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6405068091316061" type="System">
+                            <param id="0" name="Variable">stateGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">RECEPCAO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2550811139931032" type="Function">
+                            <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;functionRecepcaoBot&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="720814064700183">
+            <conditions>
+                <condition id="0" name="On function" sid="6160175510546006" type="Function">
+                    <param id="0" name="Name">&quot;functionRecepcaoBot&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="9119168838940874" type="AtributosBot">
+                    <param id="0" name="Instance variable">ataque</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="2292981062047425" type="Jogador">
+                    <param id="0" name="Instance variable">ataque</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="2" name="Call expression" sid="2556333351702787" type="Function">
+                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,LEVANTAMENTO)</param>
+                </action>
+                <action id="0" name="Call function" sid="97566836504988" type="Function">
+                    <param id="0" name="Name">&quot;functionHitBot&quot;</param>
+                    <param id="1" name="Parameter {n}">fundamento</param>
+                </action>
+                <action id="0" name="Call function" sid="5266616101077554" type="Function">
+                    <param id="0" name="Name">&quot;functionAction&quot;</param>
+                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}stateGame</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="2695687764357527" title="Eventos execução de fundamentos do Bot">
             <sub-events>
                 <variable constant="0" name="pct_jogador" sid="7039823171155103" static="0" type="number">0</variable>
                 <variable constant="0" name="pct_bot" sid="1851240574215028" static="0" type="number">0</variable>
@@ -25,7 +64,7 @@
                 <event-block sid="3025269056472071">
                     <conditions>
                         <condition id="0" name="On function" sid="375531894134652" type="Function">
-                            <param id="0" name="Name">&quot;functionHit&quot;</param>
+                            <param id="0" name="Name">&quot;functionHitBot&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -178,7 +217,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="6370595006666806" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionFundamentoBloqueio&quot;, Function.Param(1))</param>
+                                    <param id="0" name="Value">Function.Call(&quot;functionFundamentoBloqueioBot&quot;, Function.Param(1))</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -192,7 +231,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="4258086461034316" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionFundamentoBloqueio&quot;, Function.Param(1))</param>
+                                    <param id="0" name="Value">Function.Call(&quot;functionFundamentoBloqueioBot&quot;, Function.Param(1))</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -201,7 +240,7 @@
                 <event-block sid="3236582904597653">
                     <conditions>
                         <condition id="0" name="On function" sid="6908094064357667" type="Function">
-                            <param id="0" name="Name">&quot;functionFundamentoBloqueio&quot;</param>
+                            <param id="0" name="Name">&quot;functionFundamentoBloqueioBot&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -226,7 +265,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="5632624954801851" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_cortada_1)</param>
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_cortada_1)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -240,7 +279,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="9458365453770678" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_efeito_1)</param>
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_efeito_1)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -254,7 +293,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="1106329484243983" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_bloq_1)</param>
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_bloq_1)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -280,7 +319,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="8760439736776425" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_cortada_2)</param>
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_cortada_2)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -294,7 +333,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="774238223001314" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_efeito_2)</param>
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_efeito_2)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -308,7 +347,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="9900920443020797" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_bloq_2)</param>
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_bloq_2)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -334,7 +373,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="5507096403754441" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_cortada_3)</param>
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_cortada_3)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -348,7 +387,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="1009325879421689" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_efeito_3)</param>
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_efeito_3)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -362,7 +401,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set return value" sid="8425118465788468" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, Jogador.pct_atq_bloq_3)</param>
+                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_bloq_3)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -372,243 +411,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="4428135961486982">
-            <conditions>
-                <condition id="0" name="On function" sid="649922921784005" type="Function">
-                    <param id="0" name="Name">&quot;functionScore&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="2868705481986779" type="System">
-                    <param id="0" name="Variable">stateGame</param>
-                    <param id="1" name="Value">SAQUE</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="2163131481675585">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="7740948736812621" type="Jogador">
-                            <param id="0" name="Instance variable">ataque</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Add to" sid="6544091041778521" type="ScorePlayer">
-                            <param id="0" name="Instance variable">score</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="1077847247773135" type="ScorePlayer">
-                            <param id="0" name="Text">ScorePlayer.score</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6260670025433082">
-                    <conditions />
-                    <actions>
-                        <action id="-11" name="Add to" sid="9929154779781773" type="ScoreBot">
-                            <param id="0" name="Instance variable">score</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="3368571810591962" type="ScoreBot">
-                            <param id="0" name="Text">ScoreBot.score</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="8722732695781988">
-            <conditions>
-                <condition id="0" name="On function" sid="3377117717321445" type="Function">
-                    <param id="0" name="Name">&quot;functionAction&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="9033747784206198">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="496192574355825" type="System">
-                            <param id="0" name="Variable">ACERTO</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">Function.Param(0)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="0" name="Call function" sid="3102268469751946" type="Function">
-                            <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
-                            <param id="1" name="Parameter {n}">Function.Param(1)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2924189749176001">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="8351221161732771" type="System">
-                            <param id="0" name="Variable">ERRO</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">Function.Param(0)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-14" name="Toggle boolean" sid="9379975729963985" type="Jogador">
-                            <param id="0" name="Instance variable">ataque</param>
-                        </action>
-                        <action id="-14" name="Toggle boolean" sid="776169943958471" type="AtributosBot">
-                            <param id="0" name="Instance variable">ataque</param>
-                        </action>
-                        <action id="0" name="Call function" sid="138123690520223" type="Function">
-                            <param id="0" name="Name">&quot;functionScore&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="2689718782566116">
-            <conditions>
-                <condition id="0" name="On function" sid="289660252050996" type="Function">
-                    <param id="0" name="Name">&quot;functionStateGame&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="7307817859979772" type="System">
-                    <param id="0" name="Variable">stateGame</param>
-                    <param id="1" name="Value">Function.Param(0)</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="8326652928495095">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="7312495472807431" type="System">
-                            <param id="0" name="Variable">stateGame</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">SAQUE</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="4893723834944816" type="BotaoEspecial2">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="3945572853958038" type="BotaoEspecial1">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="4512128113739" type="BotaoNormal">
-                            <param id="0" name="Instance variable">fundamento</param>
-                            <param id="1" name="Value">FUNDAMENTO_SAQUE_NORMAL</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="9049133724249132" type="BotaoEspecial1">
-                            <param id="0" name="Instance variable">fundamento</param>
-                            <param id="1" name="Value">FUNDAMENTO_SAQUE_VOADOR</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1692388583627395">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="3823133908377852" type="System">
-                            <param id="0" name="Variable">stateGame</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">RECEPCAO</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="3763184744300385" type="BotaoEspecial2">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="1996624998323357" type="BotaoEspecial1">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="3694325134225641" type="BotaoNormal">
-                            <param id="0" name="Instance variable">fundamento</param>
-                            <param id="1" name="Value">FUNDAMENTO_RECEPCAO_NORMAL</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="9579037705630707" type="BotaoEspecial1">
-                            <param id="0" name="Instance variable">fundamento</param>
-                            <param id="1" name="Value">FUNDAMENTO_RECEPCAO_VOADOR</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4878716112032396">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="7341260379695969" type="System">
-                            <param id="0" name="Variable">stateGame</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">LEVANTAMENTO</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="6152437329936287" type="BotaoEspecial1">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="297171921467711" type="BotaoEspecial2">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="7084155345786467" type="BotaoNormal">
-                            <param id="0" name="Instance variable">fundamento</param>
-                            <param id="1" name="Value">FUNDAMENTO_LEVANTAMENTO</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2616320793324176">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="6046980788082412" type="System">
-                            <param id="0" name="Variable">stateGame</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">ATAQUE</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="838476747983378" type="BotaoEspecial1">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="7999312115217265" type="BotaoEspecial2">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="1560996706877878" type="BotaoNormal">
-                            <param id="0" name="Instance variable">fundamento</param>
-                            <param id="1" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="8612414967846127" type="BotaoEspecial1">
-                            <param id="0" name="Instance variable">fundamento</param>
-                            <param id="1" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="176043284369006" type="BotaoEspecial2">
-                            <param id="0" name="Instance variable">fundamento</param>
-                            <param id="1" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1166071569206074">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="7538755913917075" type="System">
-                            <param id="0" name="Variable">stateGame</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">BLOQUEIO</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="7032353794486562" type="BotaoEspecial1">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="6562920184526735" type="BotaoNormal">
-                            <param id="0" name="Instance variable">fundamento</param>
-                            <param id="1" name="Value">FUNDAMENTO_BLOQUEIO_ATAQUE</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="5734313194728791" type="BotaoEspecial1">
-                            <param id="0" name="Instance variable">fundamento</param>
-                            <param id="1" name="Value">FUNDAMENTO_BLOQUEIO_DEFESA</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="8333617279469657">
-            <conditions>
-                <condition id="0" name="On function" sid="5800684583251987" type="Function">
-                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="1" name="Set return value" sid="9860993518858133" type="Function">
-                    <param id="0" name="Value">random(1) &lt;= Function.Param(0)</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

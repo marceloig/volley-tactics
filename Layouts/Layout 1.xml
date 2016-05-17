@@ -130,7 +130,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="JogadorBot" uid="4">
+                <instance type="JogadorAzulBot" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -138,9 +138,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ataque>false</ataque>
-                        <pct_saque_voador>0.6</pct_saque_voador>
-                        <pct_saque_normal>0.95</pct_saque_normal>
+                        <pct_saque_voador>0.95</pct_saque_voador>
+                        <pct_saque_normal>0.6</pct_saque_normal>
                         <pct_recepcao_normal>0.95</pct_recepcao_normal>
                         <pct_recepcao_voador>0.75</pct_recepcao_voador>
                         <pct_recepcao_bloq_atq>0.7</pct_recepcao_bloq_atq>
@@ -155,8 +154,8 @@
                         <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
                         <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
                         <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
-                        <estadoJogo></estadoJogo>
                         <pct_bloq_atq>0.7</pct_bloq_atq>
+                        <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -198,7 +197,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="JogadorBot" uid="5">
+                <instance type="JogadorAzulBot" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -206,9 +205,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ataque>false</ataque>
-                        <pct_saque_voador>0.6</pct_saque_voador>
-                        <pct_saque_normal>0.95</pct_saque_normal>
+                        <pct_saque_voador>0.95</pct_saque_voador>
+                        <pct_saque_normal>0.6</pct_saque_normal>
                         <pct_recepcao_normal>0.95</pct_recepcao_normal>
                         <pct_recepcao_voador>0.75</pct_recepcao_voador>
                         <pct_recepcao_bloq_atq>0.7</pct_recepcao_bloq_atq>
@@ -223,8 +221,8 @@
                         <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
                         <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
                         <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
-                        <estadoJogo></estadoJogo>
                         <pct_bloq_atq>0.7</pct_bloq_atq>
+                        <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -241,7 +239,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="JogadorBot" uid="6">
+                <instance type="JogadorAzulBot" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -249,9 +247,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ataque>false</ataque>
-                        <pct_saque_voador>0.6</pct_saque_voador>
-                        <pct_saque_normal>0.95</pct_saque_normal>
+                        <pct_saque_voador>0.95</pct_saque_voador>
+                        <pct_saque_normal>0.6</pct_saque_normal>
                         <pct_recepcao_normal>0.95</pct_recepcao_normal>
                         <pct_recepcao_voador>0.75</pct_recepcao_voador>
                         <pct_recepcao_bloq_atq>0.7</pct_recepcao_bloq_atq>
@@ -266,8 +263,8 @@
                         <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
                         <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
                         <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
-                        <estadoJogo></estadoJogo>
                         <pct_bloq_atq>0.7</pct_bloq_atq>
+                        <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -625,6 +622,28 @@
                         <depth>0</depth>
                         <hotspotX>0.476744175</hotspotX>
                         <hotspotY>0.476744175</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="19">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>787</x>
+                        <y>203</y>
+                        <z>0</z>
+                        <width>250</width>
+                        <height>250</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

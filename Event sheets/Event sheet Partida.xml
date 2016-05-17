@@ -141,10 +141,10 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-14" name="Toggle boolean" sid="1674662843558464" type="JogadorBot">
+                <action id="-14" name="Toggle boolean" sid="8350254257444269" type="Jogador">
                     <param id="0" name="Instance variable">ataque</param>
                 </action>
-                <action id="-14" name="Toggle boolean" sid="8350254257444269" type="Jogador">
+                <action id="-14" name="Toggle boolean" sid="3431075343669393" type="AtributosBot">
                     <param id="0" name="Instance variable">ataque</param>
                 </action>
                 <action id="2" name="Call expression" sid="669155296583549" type="Function">

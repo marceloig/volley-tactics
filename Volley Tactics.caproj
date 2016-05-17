@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>br.com.oliveira.volleytactics</app-id>
     <unique-id>130iejyd6wgjq</unique-id>
-    <saved-with-version>22100</saved-with-version>
+    <saved-with-version>22700</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -84,29 +84,8 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="JogadorBot" sid="2956865179068437">
+        <object-type name="JogadorAzulBot" sid="2956865179068437">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="ataque" sid="9579015667639163" type="boolean" />
-                <instance-variable name="pct_saque_voador" sid="1206805796295347" type="number" />
-                <instance-variable name="pct_saque_normal" sid="3054042002606073" type="number" />
-                <instance-variable name="pct_recepcao_normal" sid="5193522350722752" type="number" />
-                <instance-variable name="pct_recepcao_voador" sid="9903687475223772" type="number" />
-                <instance-variable name="pct_recepcao_bloq_atq" sid="7823272535998949" type="number" />
-                <instance-variable name="pct_recepcao_atq" sid="2393437954478773" type="number" />
-                <instance-variable name="pct_levantamento" sid="1925831870286235" type="number" />
-                <instance-variable name="pct_atq_cortada_1" sid="3201823142629573" type="number" />
-                <instance-variable name="pct_atq_cortada_2" sid="6305762905918305" type="number" />
-                <instance-variable name="pct_atq_cortada_3" sid="1968455635934822" type="number" />
-                <instance-variable name="pct_atq_efeito_1" sid="1368719555302418" type="number" />
-                <instance-variable name="pct_atq_efeito_2" sid="6391152800690283" type="number" />
-                <instance-variable name="pct_atq_efeito_3" sid="513725013945196" type="number" />
-                <instance-variable name="pct_atq_bloq_1" sid="6224113344871106" type="number" />
-                <instance-variable name="pct_atq_bloq_2" sid="4498736891944095" type="number" />
-                <instance-variable name="pct_atq_bloq_3" sid="1180227789920099" type="number" />
-                <instance-variable name="estadoJogo" sid="9089735068812124" type="string" />
-                <instance-variable name="pct_bloq_atq" sid="2366466747620171" type="number" />
-            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1217636223136615" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Blue\playerBlue2.png">
@@ -271,8 +250,47 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite" sid="8410662608660581">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1015214853866818" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="TimeAzulBot" plugin-id="Sprite" sid="9860605807957146">
+            <members>
+                <member>JogadorAzulBot</member>
+            </members>
+        </family>
+        <family name="AtributosBot" plugin-id="Sprite" sid="5121456702819963">
+            <members>
+                <member>JogadorAzulBot</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="pct_saque_voador" sid="9075168115090956" type="number" />
+                <instance-variable name="pct_saque_normal" sid="6174354296337909" type="number" />
+                <instance-variable name="pct_recepcao_normal" sid="9064495574373037" type="number" />
+                <instance-variable name="pct_recepcao_voador" sid="3695708888848461" type="number" />
+                <instance-variable name="pct_recepcao_bloq_atq" sid="5880246101513327" type="number" />
+                <instance-variable name="pct_recepcao_atq" sid="9642441329561951" type="number" />
+                <instance-variable name="pct_levantamento" sid="9427286954637762" type="number" />
+                <instance-variable name="pct_atq_cortada_1" sid="4601826051943179" type="number" />
+                <instance-variable name="pct_atq_cortada_2" sid="821463563235955" type="number" />
+                <instance-variable name="pct_atq_cortada_3" sid="2284237096722276" type="number" />
+                <instance-variable name="pct_atq_efeito_1" sid="9401843605637334" type="number" />
+                <instance-variable name="pct_atq_efeito_2" sid="4542453902361178" type="number" />
+                <instance-variable name="pct_atq_efeito_3" sid="1579907872219059" type="number" />
+                <instance-variable name="pct_atq_bloq_1" sid="8086782993474913" type="number" />
+                <instance-variable name="pct_atq_bloq_2" sid="5473983035387726" type="number" />
+                <instance-variable name="pct_atq_bloq_3" sid="3098161541003056" type="number" />
+                <instance-variable name="pct_bloq_atq" sid="4703911892980489" type="number" />
+                <instance-variable name="ataque" sid="7656590097188247" type="boolean" />
+            </instance-variables>
+        </family>
+    </families>
     <layout-folder>
         <layout>Layout 1.xml</layout>
     </layout-folder>
@@ -280,6 +298,7 @@
         <event-sheet>Event sheet Partida.xml</event-sheet>
         <event-sheet>Event sheet Functions.xml</event-sheet>
         <event-sheet>Event sheet Inicio.xml</event-sheet>
+        <event-sheet>Event sheet IA.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="9">
