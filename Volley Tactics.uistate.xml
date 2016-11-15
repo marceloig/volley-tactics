@@ -11,9 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Layout 1</layout>
-        <event-sheet order="1">Event sheet Partida</event-sheet>
-        <event-sheet order="2">Event sheet Functions</event-sheet>
-        <event-sheet active="1" order="3">Event sheet IA</event-sheet>
+        <event-sheet order="2">Event sheet Partida</event-sheet>
+        <event-sheet active="1" order="1">Event sheet Functions</event-sheet>
+        <event-sheet order="3">Event sheet IA</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -23,7 +23,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1">
         <family expanded="1" name="TimeAzulBot" />
-        <family expanded="1" name="AtributosBot" />
+        <family expanded="1" name="Bot" />
+        <family expanded="1" name="TimeVerde" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -34,12 +35,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Jogador/" />
-        <folder expanded="1" path="animation-folder/JogadorAzulBot/" />
+        <folder expanded="1" path="animation-folder/AtacanteBot/" />
         <folder expanded="1" path="animation-folder/Bola/" />
         <folder expanded="1" path="animation-folder/BotaoAcao/" />
         <folder expanded="1" path="animation-folder/BotaoNormal/" />
         <folder expanded="1" path="animation-folder/BotaoEspecial1/" />
         <folder expanded="1" path="animation-folder/BotaoEspecial2/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
     </folders-expanded>
 </c2uistate>

@@ -96,24 +96,23 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ataque>false</ataque>
-                        <pct_saque_voador>0.6</pct_saque_voador>
-                        <pct_saque_normal>0.95</pct_saque_normal>
-                        <pct_recepcao_normal>0.95</pct_recepcao_normal>
-                        <pct_recepcao_voador>0.8</pct_recepcao_voador>
-                        <pct_recepcao_atq>0.5</pct_recepcao_atq>
-                        <pct_recepcao_bloq_atq>0.7</pct_recepcao_bloq_atq>
-                        <pct_levantamento>1</pct_levantamento>
-                        <pct_atq_cortada_1>0.8</pct_atq_cortada_1>
-                        <pct_atq_cortada_2>0.6</pct_atq_cortada_2>
-                        <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
-                        <pct_atq_efeito_1>1</pct_atq_efeito_1>
-                        <pct_atq_efeito_2>0.6</pct_atq_efeito_2>
-                        <pct_atq_efeito_3>0.45</pct_atq_efeito_3>
-                        <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
-                        <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
-                        <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
-                        <pct_bloq_atq>0.7</pct_bloq_atq>
+                        <pct_saque_medio>0.6</pct_saque_medio>
+                        <pct_saque_simples>0.95</pct_saque_simples>
+                        <pct_recepcao_simples>0.95</pct_recepcao_simples>
+                        <pct_recepcao_media>0.8</pct_recepcao_media>
+                        <pct_recepcao_ataque>0.5</pct_recepcao_ataque>
+                        <pct_recepcao_bloqueio_ataque>0.7</pct_recepcao_bloqueio_ataque>
+                        <pct_levantamento_>1</pct_levantamento_>
+                        <pct_ataque_cortada_1>0.8</pct_ataque_cortada_1>
+                        <pct_ataque_cortada_2>0.6</pct_ataque_cortada_2>
+                        <pct_ataque_cortada_3>0.4</pct_ataque_cortada_3>
+                        <pct_ataque_efeito_1>1</pct_ataque_efeito_1>
+                        <pct_ataque_efeito_2>0.6</pct_ataque_efeito_2>
+                        <pct_ataque_efeito_3>0.45</pct_ataque_efeito_3>
+                        <pct_ataque_bloqueio_1>0.35</pct_ataque_bloqueio_1>
+                        <pct_ataque_bloqueio_2>0.6</pct_ataque_bloqueio_2>
+                        <pct_ataque_bloqueio_3>0.7</pct_ataque_bloqueio_3>
+                        <pct_bloqueio_ataque>0.7</pct_bloqueio_ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -130,7 +129,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="JogadorAzulBot" uid="4">
+                <instance type="AtacanteBot" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -138,8 +137,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <pct_saque_voador>0.95</pct_saque_voador>
-                        <pct_saque_normal>0.6</pct_saque_normal>
+                        <pct_saque_simples>0.95</pct_saque_simples>
+                        <pct_saque_medio>0.6</pct_saque_medio>
                         <pct_recepcao_normal>0.95</pct_recepcao_normal>
                         <pct_recepcao_voador>0.75</pct_recepcao_voador>
                         <pct_recepcao_bloq_atq>0.7</pct_recepcao_bloq_atq>
@@ -155,6 +154,7 @@
                         <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
                         <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
                         <pct_bloq_atq>0.7</pct_bloq_atq>
+                        <ataq>false</ataq>
                         <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -197,7 +197,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="JogadorAzulBot" uid="5">
+                <instance type="AtacanteBot" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -205,8 +205,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <pct_saque_voador>0.95</pct_saque_voador>
-                        <pct_saque_normal>0.6</pct_saque_normal>
+                        <pct_saque_simples>0.95</pct_saque_simples>
+                        <pct_saque_medio>0.6</pct_saque_medio>
                         <pct_recepcao_normal>0.95</pct_recepcao_normal>
                         <pct_recepcao_voador>0.75</pct_recepcao_voador>
                         <pct_recepcao_bloq_atq>0.7</pct_recepcao_bloq_atq>
@@ -222,6 +222,7 @@
                         <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
                         <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
                         <pct_bloq_atq>0.7</pct_bloq_atq>
+                        <ataq>false</ataq>
                         <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -239,7 +240,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="JogadorAzulBot" uid="6">
+                <instance type="AtacanteBot" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -247,8 +248,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <pct_saque_voador>0.95</pct_saque_voador>
-                        <pct_saque_normal>0.6</pct_saque_normal>
+                        <pct_saque_simples>0.95</pct_saque_simples>
+                        <pct_saque_medio>0.6</pct_saque_medio>
                         <pct_recepcao_normal>0.95</pct_recepcao_normal>
                         <pct_recepcao_voador>0.75</pct_recepcao_voador>
                         <pct_recepcao_bloq_atq>0.7</pct_recepcao_bloq_atq>
@@ -264,6 +265,7 @@
                         <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
                         <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
                         <pct_bloq_atq>0.7</pct_bloq_atq>
+                        <ataq>false</ataq>
                         <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -289,24 +291,23 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ataque>false</ataque>
-                        <pct_saque_voador>0.6</pct_saque_voador>
-                        <pct_saque_normal>0.95</pct_saque_normal>
-                        <pct_recepcao_normal>0.95</pct_recepcao_normal>
-                        <pct_recepcao_voador>0.8</pct_recepcao_voador>
-                        <pct_recepcao_atq>0.5</pct_recepcao_atq>
-                        <pct_recepcao_bloq_atq>0.7</pct_recepcao_bloq_atq>
-                        <pct_levantamento>1</pct_levantamento>
-                        <pct_atq_cortada_1>0.8</pct_atq_cortada_1>
-                        <pct_atq_cortada_2>0.6</pct_atq_cortada_2>
-                        <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
-                        <pct_atq_efeito_1>1</pct_atq_efeito_1>
-                        <pct_atq_efeito_2>0.6</pct_atq_efeito_2>
-                        <pct_atq_efeito_3>0.45</pct_atq_efeito_3>
-                        <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
-                        <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
-                        <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
-                        <pct_bloq_atq>0.7</pct_bloq_atq>
+                        <pct_saque_medio>0.6</pct_saque_medio>
+                        <pct_saque_simples>0.95</pct_saque_simples>
+                        <pct_recepcao_simples>0.95</pct_recepcao_simples>
+                        <pct_recepcao_media>0.8</pct_recepcao_media>
+                        <pct_recepcao_ataque>0.5</pct_recepcao_ataque>
+                        <pct_recepcao_bloqueio_ataque>0.7</pct_recepcao_bloqueio_ataque>
+                        <pct_levantamento_>1</pct_levantamento_>
+                        <pct_ataque_cortada_1>0.8</pct_ataque_cortada_1>
+                        <pct_ataque_cortada_2>0.6</pct_ataque_cortada_2>
+                        <pct_ataque_cortada_3>0.4</pct_ataque_cortada_3>
+                        <pct_ataque_efeito_1>1</pct_ataque_efeito_1>
+                        <pct_ataque_efeito_2>0.6</pct_ataque_efeito_2>
+                        <pct_ataque_efeito_3>0.45</pct_ataque_efeito_3>
+                        <pct_ataque_bloqueio_1>0.35</pct_ataque_bloqueio_1>
+                        <pct_ataque_bloqueio_2>0.6</pct_ataque_bloqueio_2>
+                        <pct_ataque_bloqueio_3>0.7</pct_ataque_bloqueio_3>
+                        <pct_bloqueio_ataque>0.7</pct_bloqueio_ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -331,24 +332,23 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ataque>false</ataque>
-                        <pct_saque_voador>0.6</pct_saque_voador>
-                        <pct_saque_normal>0.95</pct_saque_normal>
-                        <pct_recepcao_normal>0.95</pct_recepcao_normal>
-                        <pct_recepcao_voador>0.8</pct_recepcao_voador>
-                        <pct_recepcao_atq>0.5</pct_recepcao_atq>
-                        <pct_recepcao_bloq_atq>0.7</pct_recepcao_bloq_atq>
-                        <pct_levantamento>1</pct_levantamento>
-                        <pct_atq_cortada_1>0.8</pct_atq_cortada_1>
-                        <pct_atq_cortada_2>0.6</pct_atq_cortada_2>
-                        <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
-                        <pct_atq_efeito_1>1</pct_atq_efeito_1>
-                        <pct_atq_efeito_2>0.6</pct_atq_efeito_2>
-                        <pct_atq_efeito_3>0.45</pct_atq_efeito_3>
-                        <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
-                        <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
-                        <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
-                        <pct_bloq_atq>0.7</pct_bloq_atq>
+                        <pct_saque_medio>0.6</pct_saque_medio>
+                        <pct_saque_simples>0.95</pct_saque_simples>
+                        <pct_recepcao_simples>0.95</pct_recepcao_simples>
+                        <pct_recepcao_media>0.8</pct_recepcao_media>
+                        <pct_recepcao_ataque>0.5</pct_recepcao_ataque>
+                        <pct_recepcao_bloqueio_ataque>0.7</pct_recepcao_bloqueio_ataque>
+                        <pct_levantamento_>1</pct_levantamento_>
+                        <pct_ataque_cortada_1>0.8</pct_ataque_cortada_1>
+                        <pct_ataque_cortada_2>0.6</pct_ataque_cortada_2>
+                        <pct_ataque_cortada_3>0.4</pct_ataque_cortada_3>
+                        <pct_ataque_efeito_1>1</pct_ataque_efeito_1>
+                        <pct_ataque_efeito_2>0.6</pct_ataque_efeito_2>
+                        <pct_ataque_efeito_3>0.45</pct_ataque_efeito_3>
+                        <pct_ataque_bloqueio_1>0.35</pct_ataque_bloqueio_1>
+                        <pct_ataque_bloqueio_2>0.6</pct_ataque_bloqueio_2>
+                        <pct_ataque_bloqueio_3>0.7</pct_ataque_bloqueio_3>
+                        <pct_bloqueio_ataque>0.7</pct_bloqueio_ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -626,24 +626,29 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="19">
+                <instance type="TextoAcao" uid="19">
                     <properties>
+                        <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>787</x>
-                        <y>203</y>
+                        <x>635</x>
+                        <y>287</y>
                         <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
+                        <width>200</width>
+                        <height>30</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

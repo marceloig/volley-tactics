@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet IA</name>
     <events>
+        <include>Event sheet Partida</include>
+        <include>Event sheet Functions</include>
         <event-block sid="4384516843332086">
             <conditions>
                 <condition id="0" name="On function" sid="1677143854138449" type="Function">
@@ -14,7 +16,7 @@
                 <event-block sid="2946204869144715">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="6405068091316061" type="System">
-                            <param id="0" name="Variable">stateGame</param>
+                            <param id="0" name="Variable">STATE_GAME</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">RECEPCAO</param>
                         </condition>
@@ -35,377 +37,268 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="9119168838940874" type="AtributosBot">
-                    <param id="0" name="Instance variable">ataque</param>
+                <action id="-13" name="Set boolean" sid="9119168838940874" type="TimeAzulBot">
+                    <param id="0" name="Instance variable">ataq</param>
                     <param id="1" name="Value">1</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="2292981062047425" type="Jogador">
-                    <param id="0" name="Instance variable">ataque</param>
-                    <param id="1" name="Value">0</param>
                 </action>
                 <action id="2" name="Call expression" sid="2556333351702787" type="Function">
                     <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,LEVANTAMENTO)</param>
                 </action>
+                <action id="0" name="Call function" sid="9452459688390867" type="Function">
+                    <param id="0" name="Name">&quot;functionFundamentoRecepcaoBot&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
                 <action id="0" name="Call function" sid="97566836504988" type="Function">
                     <param id="0" name="Name">&quot;functionHitBot&quot;</param>
-                    <param id="1" name="Parameter {n}">fundamento</param>
+                    <param id="1" name="Parameter {n}">fundamentoBotXXXXXXXXX</param>
                 </action>
                 <action id="0" name="Call function" sid="5266616101077554" type="Function">
                     <param id="0" name="Name">&quot;functionAction&quot;</param>
-                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}stateGame</param>
+                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}STATE_GAME</param>
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="2695687764357527" title="Eventos execução de fundamentos do Bot">
+        <event-group description="" sid="7592135523576276" title="Funções com os fundamentos de jogadas do Bot">
             <sub-events>
-                <variable constant="0" name="pct_jogador" sid="7039823171155103" static="0" type="number">0</variable>
-                <variable constant="0" name="pct_bot" sid="1851240574215028" static="0" type="number">0</variable>
-                <variable constant="0" name="fundamento_ataque" sid="7565891129744683" static="0" type="text"></variable>
-                <event-block sid="3025269056472071">
+                <variable constant="0" name="valueSort" sid="8973971085485359" static="0" type="number">0</variable>
+                <event-block sid="915094155214766">
                     <conditions>
-                        <condition id="0" name="On function" sid="375531894134652" type="Function">
-                            <param id="0" name="Name">&quot;functionHitBot&quot;</param>
+                        <condition id="0" name="On function" sid="7149867729739342" type="Function">
+                            <param id="0" name="Name">&quot;functionSortFundamento&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="1" name="Set return value" sid="3970440563090967" type="Function">
+                            <param id="0" name="Value">round(random(Function.Param(0)))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5856730602601678">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8069601259548298" type="Function">
+                            <param id="0" name="Name">&quot;functionFundamentoSaqueBot&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6613957189250033" type="Function">
+                            <param id="0" name="Name">&quot;functionSortFundamento&quot;</param>
+                            <param id="1" name="Parameter {n}">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6653004355186337" type="System">
+                            <param id="0" name="Variable">valueSort</param>
+                            <param id="1" name="Value">Function.ReturnValue</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="6354188055049759">
+                        <event-block sid="310179711612522">
                             <conditions>
-                                <condition id="1" name="Compare parameter" sid="3515603301002595" type="Function">
-                                    <param id="0" name="Index">0</param>
+                                <condition id="-14" name="Compare variable" sid="7917352661932285" type="System">
+                                    <param id="0" name="Variable">valueSort</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_SAQUE_NORMAL</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set return value" sid="8535113376456382" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_saque_normal)</param>
+                                <action id="-9" name="Set value" sid="6312784469797107" type="System">
+                                    <param id="0" name="Variable">FUNDAMENTO</param>
+                                    <param id="1" name="Value">FUNDAMENTO_SAQUE_SIMPLES</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="4048196068560868">
+                        <event-block sid="1404767308029489">
                             <conditions>
-                                <condition id="1" name="Compare parameter" sid="1858337251278881" type="Function">
-                                    <param id="0" name="Index">0</param>
+                                <condition id="-14" name="Compare variable" sid="9258117981636395" type="System">
+                                    <param id="0" name="Variable">valueSort</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_SAQUE_VOADOR</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set return value" sid="715464897452806" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_saque_voador)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8298152748394062">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="5824180620518044" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_RECEPCAO_NORMAL</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="8500793288090383" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_recepcao_normal)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8266087616608376">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="2268414944885139" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_RECEPCAO_VOADOR</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="8366385964597716" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_recepcao_voador)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4120996894148261">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="8759321367957958" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_RECEPCAO_ATAQUE</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="4311796001516608" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_recepcao_atq)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1723132061763365">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="3518794626195584" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_LEVANTAMENTO</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="8716605389479668" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_levantamento)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="381130787580251">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="6916442108983151" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="8328636127151056" type="System">
-                                    <param id="0" name="Variable">fundamento_ataque</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="1" name="Set return value" sid="6568585349756249" type="Function">
-                                    <param id="0" name="Value">ACERTO</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="5646204251618822">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="1617933595650973" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="4819960565566728" type="System">
-                                    <param id="0" name="Variable">fundamento_ataque</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="1" name="Set return value" sid="4003905108084075" type="Function">
-                                    <param id="0" name="Value">ACERTO</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2294314418693303">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="8672207371683398" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="8896785556439827" type="System">
-                                    <param id="0" name="Variable">fundamento_ataque</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="1" name="Set return value" sid="7547553163851782" type="Function">
-                                    <param id="0" name="Value">ACERTO</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9973965052833539">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="9893814412454043" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_ATAQUE</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="6370595006666806" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionFundamentoBloqueioBot&quot;, Function.Param(1))</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2084714039564911">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="2155940762466065" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_DEFESA</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set return value" sid="4258086461034316" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionFundamentoBloqueioBot&quot;, Function.Param(1))</param>
+                                <action id="-9" name="Set value" sid="9049211489102384" type="System">
+                                    <param id="0" name="Variable">FUNDAMENTO</param>
+                                    <param id="1" name="Value">FUNDAMENTO_SAQUE_MEDIO</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="3236582904597653">
+                <event-block sid="4858340867400407">
                     <conditions>
-                        <condition id="0" name="On function" sid="6908094064357667" type="Function">
+                        <condition id="0" name="On function" sid="166084751308365" type="Function">
+                            <param id="0" name="Name">&quot;functionFundamentoRecepcaoBot&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="412125432038888" type="Function">
+                            <param id="0" name="Name">&quot;functionSortFundamento&quot;</param>
+                            <param id="1" name="Parameter {n}">2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4573694672783784">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4765203679769945" type="System">
+                                    <param id="0" name="Variable">valueSort</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6445664000135952" type="System">
+                                    <param id="0" name="Variable">FUNDAMENTO</param>
+                                    <param id="1" name="Value">FUNDAMENTO_RECEPCAO_NORMAL</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4147682882730512">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="174553902412574" type="System">
+                                    <param id="0" name="Variable">valueSort</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2479016828342023" type="System">
+                                    <param id="0" name="Variable">FUNDAMENTO</param>
+                                    <param id="1" name="Value">FUNDAMENTO_RECEPCAO_VOADOR</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8292636165439536">
+                    <conditions>
+                        <condition id="0" name="On function" sid="463573199395136" type="Function">
+                            <param id="0" name="Name">&quot;functionFundamentoLevantamentoBot&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="501554090532534" type="Function">
+                            <param id="0" name="Name">&quot;functionSortFundamento&quot;</param>
+                            <param id="1" name="Parameter {n}">3</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3197951292067468">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6369161479549939" type="System">
+                                    <param id="0" name="Variable">valueSort</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1123187792112371" type="System">
+                                    <param id="0" name="Variable">FUNDAMENTO</param>
+                                    <param id="1" name="Value">FUNDAMENTO_LEVANTAMENTO</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7854555736201685">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7046763627379486" type="Function">
+                            <param id="0" name="Name">&quot;functionFundamentoAtaqueBot&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="708936726664094" type="Function">
+                            <param id="0" name="Name">&quot;functionSortFundamento&quot;</param>
+                            <param id="1" name="Parameter {n}">3</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4243955568159939">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7349085692264182" type="System">
+                                    <param id="0" name="Variable">valueSort</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2318091053403805" type="System">
+                                    <param id="0" name="Variable">FUNDAMENTO</param>
+                                    <param id="1" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1626172145551499">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7697848675955401" type="System">
+                                    <param id="0" name="Variable">valueSort</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="67136773824657" type="System">
+                                    <param id="0" name="Variable">FUNDAMENTO</param>
+                                    <param id="1" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7682918439601743">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4837626944647339" type="System">
+                                    <param id="0" name="Variable">valueSort</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7720978627700916" type="System">
+                                    <param id="0" name="Variable">FUNDAMENTO</param>
+                                    <param id="1" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7315608658667829">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1992498489849295" type="Function">
                             <param id="0" name="Name">&quot;functionFundamentoBloqueioBot&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Call function" sid="864440113953690" type="Function">
+                            <param id="0" name="Name">&quot;functionSortFundamento&quot;</param>
+                            <param id="1" name="Parameter {n}">2</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="5186961530995624">
+                        <event-block sid="8780429765443986">
                             <conditions>
-                                <condition id="1" name="Compare parameter" sid="4749061105720833" type="Function">
-                                    <param id="0" name="Index">0</param>
+                                <condition id="-14" name="Compare variable" sid="2572222715850831" type="System">
+                                    <param id="0" name="Variable">valueSort</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_SIMPLES</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="2492907914837272">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="9176018118354226" type="System">
-                                            <param id="0" name="Variable">fundamento_ataque</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set return value" sid="5632624954801851" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_cortada_1)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="1128168215901803">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="6691312452731084" type="System">
-                                            <param id="0" name="Variable">fundamento_ataque</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set return value" sid="9458365453770678" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_efeito_1)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3089777035662144">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="9224855287230594" type="System">
-                                            <param id="0" name="Variable">fundamento_ataque</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set return value" sid="1106329484243983" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_bloq_1)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="-9" name="Set value" sid="9674193038806434" type="System">
+                                    <param id="0" name="Variable">FUNDAMENTO</param>
+                                    <param id="1" name="Value">FUNDAMENTO_BLOQUEIO_DEFESA</param>
+                                </action>
+                            </actions>
                         </event-block>
-                        <event-block sid="4990218398765609">
+                        <event-block sid="2210252123235521">
                             <conditions>
-                                <condition id="1" name="Compare parameter" sid="4615022683443432" type="Function">
-                                    <param id="0" name="Index">0</param>
+                                <condition id="-14" name="Compare variable" sid="544652932803884" type="System">
+                                    <param id="0" name="Variable">valueSort</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_DUPLO</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="4637666856127807">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="7727322860064232" type="System">
-                                            <param id="0" name="Variable">fundamento_ataque</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set return value" sid="8760439736776425" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_cortada_2)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="9571353566694389">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="1101472198663859" type="System">
-                                            <param id="0" name="Variable">fundamento_ataque</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set return value" sid="774238223001314" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_efeito_2)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="264951514085101">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="1014563593196207" type="System">
-                                            <param id="0" name="Variable">fundamento_ataque</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set return value" sid="9900920443020797" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_bloq_2)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="1332718521238652">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="9788734872994719" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_TRIPLO</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="8962877594645805">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="1603018307062917" type="System">
-                                            <param id="0" name="Variable">fundamento_ataque</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set return value" sid="5507096403754441" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_cortada_3)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="5046025250068886">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="6258206034639624" type="System">
-                                            <param id="0" name="Variable">fundamento_ataque</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set return value" sid="1009325879421689" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_efeito_3)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="4835890290731406">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="3779489805220841" type="System">
-                                            <param id="0" name="Variable">fundamento_ataque</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set return value" sid="8425118465788468" type="Function">
-                                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, AtributosBot.pct_atq_bloq_3)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2264299780799873" type="System">
+                                    <param id="0" name="Variable">FUNDAMENTO</param>
+                                    <param id="1" name="Value">FUNDAMENTO_BLOQUEIO_ATAQUE</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

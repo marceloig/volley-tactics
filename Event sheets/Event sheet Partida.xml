@@ -16,18 +16,16 @@
         <variable constant="1" name="LEVANTAMENTO" sid="343199370034121" static="0" type="text">functionLevantamento</variable>
         <variable constant="1" name="RECEPCAO" sid="1216784330032802" static="0" type="text">functionRecepcao</variable>
         <variable comment="estado representando o saque na partida" constant="1" name="SAQUE" sid="8554473755258839" static="0" type="text">functionSaque</variable>
-        <variable comment="Estado do jogo durante a disputa (saque, defesa, ataque, bloqueio)" constant="0" name="stateGame" sid="9993113023338776" static="0" type="text"></variable>
-        <variable comment="fundamento escolhido para cada fase da partida" constant="0" name="fundamento" sid="6860286309622506" static="0" type="text"></variable>
+        <variable comment="Estado do jogo durante a disputa (saque, defesa, ataque, bloqueio)" constant="0" name="STATE_GAME" sid="9993113023338776" static="0" type="text"></variable>
+        <variable comment="fundamento escolhido para cada fase da partida" constant="0" name="FUNDAMENTO" sid="6860286309622506" static="0" type="text"></variable>
+        <variable comment="fundamento escolhido pelo bot para cada fase da partida" constant="0" name="fundamentoBotXXXXXXXXX" sid="6828926549258983" static="0" type="text"></variable>
         <event-block sid="1743589980060297">
             <conditions>
                 <condition id="-25" name="On loader layout complete" sid="9342851651724776" type="System" />
             </conditions>
             <actions>
                 <action id="2" name="Call expression" sid="2084310039314925" type="Function">
-                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,SAQUE)</param>
-                </action>
-                <action id="-14" name="Toggle boolean" sid="3270631180972768" type="Jogador">
-                    <param id="0" name="Instance variable">ataque</param>
+                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,SAQUE,0)</param>
                 </action>
                 <action id="-15" name="Set visible" sid="2514252078141771" type="BotaoAcao">
                     <param id="0" name="Visibility">0</param>
@@ -45,7 +43,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="1669197905905838" type="Function">
                             <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
-                            <param id="1" name="Parameter {n}">stateGame</param>
+                            <param id="1" name="Parameter {n}">STATE_GAME{###}ACAO_JOGADOR</param>
                         </action>
                         <action id="-15" name="Set visible" sid="1195298612534012" type="BotaoAcao">
                             <param id="0" name="Visibility">0</param>
@@ -60,11 +58,14 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="6299606974329502" type="System">
-                            <param id="0" name="Variable">fundamento</param>
+                            <param id="0" name="Variable">FUNDAMENTO</param>
                             <param id="1" name="Value">BotaoNormal.fundamento</param>
                         </action>
                         <action id="-15" name="Set visible" sid="4460899163136134" type="BotaoAcao">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="325678486410168" type="TextoAcao">
+                            <param id="0" name="Text">BotaoNormal.fundamento</param>
                         </action>
                     </actions>
                 </event-block>
@@ -76,11 +77,14 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="9033175251260116" type="System">
-                            <param id="0" name="Variable">fundamento</param>
+                            <param id="0" name="Variable">FUNDAMENTO</param>
                             <param id="1" name="Value">BotaoEspecial1.fundamento</param>
                         </action>
                         <action id="-15" name="Set visible" sid="753917378691616" type="BotaoAcao">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="283870400478430" type="TextoAcao">
+                            <param id="0" name="Text">BotaoEspecial1.fundamento</param>
                         </action>
                     </actions>
                 </event-block>
@@ -92,11 +96,14 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="1863172365782565" type="System">
-                            <param id="0" name="Variable">fundamento</param>
+                            <param id="0" name="Variable">FUNDAMENTO</param>
                             <param id="1" name="Value">BotaoEspecial2.fundamento</param>
                         </action>
                         <action id="-15" name="Set visible" sid="5817076240757012" type="BotaoAcao">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="592171459246932" type="TextoAcao">
+                            <param id="0" name="Text">BotaoEspecial2.fundamento</param>
                         </action>
                     </actions>
                 </event-block>
@@ -110,7 +117,7 @@
             </conditions>
             <actions>
                 <action id="2" name="Call expression" sid="1798724475826724" type="Function">
-                    <param id="0" name="Expression">Function.Call(Function.Param(0))</param>
+                    <param id="0" name="Expression">Function.Call(Function.Param(0), Function.Param(1))</param>
                 </action>
             </actions>
         </event-block>
@@ -126,11 +133,11 @@
                 </action>
                 <action id="0" name="Call function" sid="433229918216538" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">fundamento</param>
+                    <param id="1" name="Parameter {n}">FUNDAMENTO</param>
                 </action>
                 <action id="0" name="Call function" sid="4425094895703245" type="Function">
                     <param id="0" name="Name">&quot;functionAction&quot;</param>
-                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}stateGame</param>
+                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}STATE_GAME{###}Function.Param(0)</param>
                 </action>
             </actions>
         </event-block>
@@ -141,22 +148,16 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-14" name="Toggle boolean" sid="8350254257444269" type="Jogador">
-                    <param id="0" name="Instance variable">ataque</param>
-                </action>
-                <action id="-14" name="Toggle boolean" sid="3431075343669393" type="AtributosBot">
-                    <param id="0" name="Instance variable">ataque</param>
-                </action>
                 <action id="2" name="Call expression" sid="669155296583549" type="Function">
                     <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,LEVANTAMENTO)</param>
                 </action>
                 <action id="0" name="Call function" sid="6614963349635496" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">fundamento</param>
+                    <param id="1" name="Parameter {n}">FUNDAMENTO</param>
                 </action>
-                <action id="0" name="Call function" sid="284662004126959" type="Function">
+                <action id="0" name="Call function" sid="590151289391054" type="Function">
                     <param id="0" name="Name">&quot;functionAction&quot;</param>
-                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}stateGame</param>
+                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}STATE_GAME{###}Function.Param(0)</param>
                 </action>
             </actions>
         </event-block>
@@ -172,11 +173,11 @@
                 </action>
                 <action id="0" name="Call function" sid="8912095237051717" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">fundamento</param>
+                    <param id="1" name="Parameter {n}">FUNDAMENTO</param>
                 </action>
-                <action id="0" name="Call function" sid="6778856416435069" type="Function">
+                <action id="0" name="Call function" sid="761167897252833" type="Function">
                     <param id="0" name="Name">&quot;functionAction&quot;</param>
-                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}stateGame</param>
+                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}STATE_GAME{###}Function.Param(0)</param>
                 </action>
             </actions>
         </event-block>
@@ -192,11 +193,11 @@
                 </action>
                 <action id="0" name="Call function" sid="6301778186575082" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">fundamento</param>
+                    <param id="1" name="Parameter {n}">FUNDAMENTO</param>
                 </action>
-                <action id="0" name="Call function" sid="1489011038579453" type="Function">
+                <action id="0" name="Call function" sid="725201690236638" type="Function">
                     <param id="0" name="Name">&quot;functionAction&quot;</param>
-                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}stateGame</param>
+                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}STATE_GAME{###}Function.Param(0)</param>
                 </action>
             </actions>
         </event-block>
@@ -212,11 +213,11 @@
                 </action>
                 <action id="0" name="Call function" sid="2184794916141146" type="Function">
                     <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">fundamento</param>
+                    <param id="1" name="Parameter {n}">FUNDAMENTO</param>
                 </action>
-                <action id="0" name="Call function" sid="2600336881361212" type="Function">
+                <action id="0" name="Call function" sid="761436730394272" type="Function">
                     <param id="0" name="Name">&quot;functionAction&quot;</param>
-                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}stateGame</param>
+                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}STATE_GAME{###}Function.Param(0)</param>
                 </action>
             </actions>
         </event-block>
