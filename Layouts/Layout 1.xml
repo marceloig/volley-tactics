@@ -102,7 +102,7 @@
                         <pct_recepcao_media>0.8</pct_recepcao_media>
                         <pct_recepcao_ataque>0.5</pct_recepcao_ataque>
                         <pct_recepcao_bloqueio_ataque>0.7</pct_recepcao_bloqueio_ataque>
-                        <pct_levantamento_>1</pct_levantamento_>
+                        <pct_levantamento>1</pct_levantamento>
                         <pct_ataque_cortada_1>0.8</pct_ataque_cortada_1>
                         <pct_ataque_cortada_2>0.6</pct_ataque_cortada_2>
                         <pct_ataque_cortada_3>0.4</pct_ataque_cortada_3>
@@ -112,7 +112,9 @@
                         <pct_ataque_bloqueio_1>0.35</pct_ataque_bloqueio_1>
                         <pct_ataque_bloqueio_2>0.6</pct_ataque_bloqueio_2>
                         <pct_ataque_bloqueio_3>0.7</pct_ataque_bloqueio_3>
-                        <pct_bloqueio_ataque>0.7</pct_bloqueio_ataque>
+                        <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
+                        <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
+                        <teamId>team-green</teamId>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -139,22 +141,24 @@
                     <instance-variables>
                         <pct_saque_simples>0.95</pct_saque_simples>
                         <pct_saque_medio>0.6</pct_saque_medio>
-                        <pct_recepcao_normal>0.95</pct_recepcao_normal>
-                        <pct_recepcao_voador>0.75</pct_recepcao_voador>
-                        <pct_recepcao_bloq_atq>0.7</pct_recepcao_bloq_atq>
-                        <pct_recepcao_atq>0.7</pct_recepcao_atq>
+                        <pct_recepcao_simples>0.95</pct_recepcao_simples>
+                        <pct_recepcao_media>0.75</pct_recepcao_media>
+                        <pct_recepcao_bloqueio_ataque>0.7</pct_recepcao_bloqueio_ataque>
+                        <pct_recepcao_ataque>0.7</pct_recepcao_ataque>
                         <pct_levantamento>1</pct_levantamento>
-                        <pct_atq_cortada_1>0.8</pct_atq_cortada_1>
-                        <pct_atq_cortada_2>0.6</pct_atq_cortada_2>
-                        <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
-                        <pct_atq_efeito_1>1</pct_atq_efeito_1>
-                        <pct_atq_efeito_2>0.6</pct_atq_efeito_2>
-                        <pct_atq_efeito_3>0.45</pct_atq_efeito_3>
-                        <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
-                        <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
-                        <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
-                        <pct_bloq_atq>0.7</pct_bloq_atq>
+                        <pct_ataque_cortada_1>0.8</pct_ataque_cortada_1>
+                        <pct_ataque_cortada_2>0.6</pct_ataque_cortada_2>
+                        <pct_ataque_cortada_3>0.4</pct_ataque_cortada_3>
+                        <pct_ataque_efeito_1>1</pct_ataque_efeito_1>
+                        <pct_ataque_efeito_2>0.6</pct_ataque_efeito_2>
+                        <pct_ataque_efeito_3>0.45</pct_ataque_efeito_3>
+                        <pct_ataque_bloqueio_1>0.35</pct_ataque_bloqueio_1>
+                        <pct_ataque_bloqueio_2>0.6</pct_ataque_bloqueio_2>
+                        <pct_ataque_bloqueio_3>0.7</pct_ataque_bloqueio_3>
+                        <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
+                        <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <ataq>false</ataq>
+                        <teamId>team-blue</teamId>
                         <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -181,6 +185,7 @@
                     </properties>
                     <instance-variables>
                         <hit>0</hit>
+                        <team></team>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -207,22 +212,24 @@
                     <instance-variables>
                         <pct_saque_simples>0.95</pct_saque_simples>
                         <pct_saque_medio>0.6</pct_saque_medio>
-                        <pct_recepcao_normal>0.95</pct_recepcao_normal>
-                        <pct_recepcao_voador>0.75</pct_recepcao_voador>
-                        <pct_recepcao_bloq_atq>0.7</pct_recepcao_bloq_atq>
-                        <pct_recepcao_atq>0.7</pct_recepcao_atq>
+                        <pct_recepcao_simples>0.95</pct_recepcao_simples>
+                        <pct_recepcao_media>0.75</pct_recepcao_media>
+                        <pct_recepcao_bloqueio_ataque>0.7</pct_recepcao_bloqueio_ataque>
+                        <pct_recepcao_ataque>0.7</pct_recepcao_ataque>
                         <pct_levantamento>1</pct_levantamento>
-                        <pct_atq_cortada_1>0.8</pct_atq_cortada_1>
-                        <pct_atq_cortada_2>0.6</pct_atq_cortada_2>
-                        <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
-                        <pct_atq_efeito_1>1</pct_atq_efeito_1>
-                        <pct_atq_efeito_2>0.6</pct_atq_efeito_2>
-                        <pct_atq_efeito_3>0.45</pct_atq_efeito_3>
-                        <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
-                        <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
-                        <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
-                        <pct_bloq_atq>0.7</pct_bloq_atq>
+                        <pct_ataque_cortada_1>0.8</pct_ataque_cortada_1>
+                        <pct_ataque_cortada_2>0.6</pct_ataque_cortada_2>
+                        <pct_ataque_cortada_3>0.4</pct_ataque_cortada_3>
+                        <pct_ataque_efeito_1>1</pct_ataque_efeito_1>
+                        <pct_ataque_efeito_2>0.6</pct_ataque_efeito_2>
+                        <pct_ataque_efeito_3>0.45</pct_ataque_efeito_3>
+                        <pct_ataque_bloqueio_1>0.35</pct_ataque_bloqueio_1>
+                        <pct_ataque_bloqueio_2>0.6</pct_ataque_bloqueio_2>
+                        <pct_ataque_bloqueio_3>0.7</pct_ataque_bloqueio_3>
+                        <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
+                        <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <ataq>false</ataq>
+                        <teamId>team-blue</teamId>
                         <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -250,22 +257,24 @@
                     <instance-variables>
                         <pct_saque_simples>0.95</pct_saque_simples>
                         <pct_saque_medio>0.6</pct_saque_medio>
-                        <pct_recepcao_normal>0.95</pct_recepcao_normal>
-                        <pct_recepcao_voador>0.75</pct_recepcao_voador>
-                        <pct_recepcao_bloq_atq>0.7</pct_recepcao_bloq_atq>
-                        <pct_recepcao_atq>0.7</pct_recepcao_atq>
+                        <pct_recepcao_simples>0.95</pct_recepcao_simples>
+                        <pct_recepcao_media>0.75</pct_recepcao_media>
+                        <pct_recepcao_bloqueio_ataque>0.7</pct_recepcao_bloqueio_ataque>
+                        <pct_recepcao_ataque>0.7</pct_recepcao_ataque>
                         <pct_levantamento>1</pct_levantamento>
-                        <pct_atq_cortada_1>0.8</pct_atq_cortada_1>
-                        <pct_atq_cortada_2>0.6</pct_atq_cortada_2>
-                        <pct_atq_cortada_3>0.4</pct_atq_cortada_3>
-                        <pct_atq_efeito_1>1</pct_atq_efeito_1>
-                        <pct_atq_efeito_2>0.6</pct_atq_efeito_2>
-                        <pct_atq_efeito_3>0.45</pct_atq_efeito_3>
-                        <pct_atq_bloq_1>0.35</pct_atq_bloq_1>
-                        <pct_atq_bloq_2>0.6</pct_atq_bloq_2>
-                        <pct_atq_bloq_3>0.7</pct_atq_bloq_3>
-                        <pct_bloq_atq>0.7</pct_bloq_atq>
+                        <pct_ataque_cortada_1>0.8</pct_ataque_cortada_1>
+                        <pct_ataque_cortada_2>0.6</pct_ataque_cortada_2>
+                        <pct_ataque_cortada_3>0.4</pct_ataque_cortada_3>
+                        <pct_ataque_efeito_1>1</pct_ataque_efeito_1>
+                        <pct_ataque_efeito_2>0.6</pct_ataque_efeito_2>
+                        <pct_ataque_efeito_3>0.45</pct_ataque_efeito_3>
+                        <pct_ataque_bloqueio_1>0.35</pct_ataque_bloqueio_1>
+                        <pct_ataque_bloqueio_2>0.6</pct_ataque_bloqueio_2>
+                        <pct_ataque_bloqueio_3>0.7</pct_ataque_bloqueio_3>
+                        <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
+                        <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <ataq>false</ataq>
+                        <teamId>team-blue</teamId>
                         <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -297,7 +306,7 @@
                         <pct_recepcao_media>0.8</pct_recepcao_media>
                         <pct_recepcao_ataque>0.5</pct_recepcao_ataque>
                         <pct_recepcao_bloqueio_ataque>0.7</pct_recepcao_bloqueio_ataque>
-                        <pct_levantamento_>1</pct_levantamento_>
+                        <pct_levantamento>1</pct_levantamento>
                         <pct_ataque_cortada_1>0.8</pct_ataque_cortada_1>
                         <pct_ataque_cortada_2>0.6</pct_ataque_cortada_2>
                         <pct_ataque_cortada_3>0.4</pct_ataque_cortada_3>
@@ -307,7 +316,9 @@
                         <pct_ataque_bloqueio_1>0.35</pct_ataque_bloqueio_1>
                         <pct_ataque_bloqueio_2>0.6</pct_ataque_bloqueio_2>
                         <pct_ataque_bloqueio_3>0.7</pct_ataque_bloqueio_3>
-                        <pct_bloqueio_ataque>0.7</pct_bloqueio_ataque>
+                        <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
+                        <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
+                        <teamId>team-green</teamId>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -338,7 +349,7 @@
                         <pct_recepcao_media>0.8</pct_recepcao_media>
                         <pct_recepcao_ataque>0.5</pct_recepcao_ataque>
                         <pct_recepcao_bloqueio_ataque>0.7</pct_recepcao_bloqueio_ataque>
-                        <pct_levantamento_>1</pct_levantamento_>
+                        <pct_levantamento>1</pct_levantamento>
                         <pct_ataque_cortada_1>0.8</pct_ataque_cortada_1>
                         <pct_ataque_cortada_2>0.6</pct_ataque_cortada_2>
                         <pct_ataque_cortada_3>0.4</pct_ataque_cortada_3>
@@ -348,7 +359,9 @@
                         <pct_ataque_bloqueio_1>0.35</pct_ataque_bloqueio_1>
                         <pct_ataque_bloqueio_2>0.6</pct_ataque_bloqueio_2>
                         <pct_ataque_bloqueio_3>0.7</pct_ataque_bloqueio_3>
-                        <pct_bloqueio_ataque>0.7</pct_bloqueio_ataque>
+                        <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
+                        <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
+                        <teamId>team-green</teamId>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

@@ -95,6 +95,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="hit" sid="2450394292597781" type="number" />
+                <instance-variable name="team" sid="733945790207634" type="string" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2225951918466541" speed="5">
@@ -235,29 +236,31 @@
         </object-type>
     </object-folder>
     <families>
-        <family name="TimeAzulBot" plugin-id="Sprite" sid="5121456702819963">
+        <family name="TimeAzul" plugin-id="Sprite" sid="5121456702819963">
             <members>
                 <member>AtacanteBot</member>
             </members>
             <instance-variables>
                 <instance-variable name="pct_saque_simples" sid="9075168115090956" type="number" />
                 <instance-variable name="pct_saque_medio" sid="6174354296337909" type="number" />
-                <instance-variable name="pct_recepcao_normal" sid="9064495574373037" type="number" />
-                <instance-variable name="pct_recepcao_voador" sid="3695708888848461" type="number" />
-                <instance-variable name="pct_recepcao_bloq_atq" sid="5880246101513327" type="number" />
-                <instance-variable name="pct_recepcao_atq" sid="9642441329561951" type="number" />
+                <instance-variable name="pct_recepcao_simples" sid="9064495574373037" type="number" />
+                <instance-variable name="pct_recepcao_media" sid="3695708888848461" type="number" />
+                <instance-variable name="pct_recepcao_bloqueio_ataque" sid="5880246101513327" type="number" />
+                <instance-variable name="pct_recepcao_ataque" sid="9642441329561951" type="number" />
                 <instance-variable name="pct_levantamento" sid="9427286954637762" type="number" />
-                <instance-variable name="pct_atq_cortada_1" sid="4601826051943179" type="number" />
-                <instance-variable name="pct_atq_cortada_2" sid="821463563235955" type="number" />
-                <instance-variable name="pct_atq_cortada_3" sid="2284237096722276" type="number" />
-                <instance-variable name="pct_atq_efeito_1" sid="9401843605637334" type="number" />
-                <instance-variable name="pct_atq_efeito_2" sid="4542453902361178" type="number" />
-                <instance-variable name="pct_atq_efeito_3" sid="1579907872219059" type="number" />
-                <instance-variable name="pct_atq_bloq_1" sid="8086782993474913" type="number" />
-                <instance-variable name="pct_atq_bloq_2" sid="5473983035387726" type="number" />
-                <instance-variable name="pct_atq_bloq_3" sid="3098161541003056" type="number" />
-                <instance-variable name="pct_bloq_atq" sid="4703911892980489" type="number" />
+                <instance-variable name="pct_ataque_cortada_1" sid="4601826051943179" type="number" />
+                <instance-variable name="pct_ataque_cortada_2" sid="821463563235955" type="number" />
+                <instance-variable name="pct_ataque_cortada_3" sid="2284237096722276" type="number" />
+                <instance-variable name="pct_ataque_efeito_1" sid="9401843605637334" type="number" />
+                <instance-variable name="pct_ataque_efeito_2" sid="4542453902361178" type="number" />
+                <instance-variable name="pct_ataque_efeito_3" sid="1579907872219059" type="number" />
+                <instance-variable name="pct_ataque_bloqueio_1" sid="8086782993474913" type="number" />
+                <instance-variable name="pct_ataque_bloqueio_2" sid="5473983035387726" type="number" />
+                <instance-variable name="pct_ataque_bloqueio_3" sid="3098161541003056" type="number" />
+                <instance-variable name="pct_bloqueio_ataque" sid="4703911892980489" type="number" />
+                <instance-variable name="pct_bloqueio_defesa" sid="478135141798707" type="number" />
                 <instance-variable name="ataq" sid="7656590097188247" type="boolean" />
+                <instance-variable name="teamId" sid="808189769472437" type="string" />
             </instance-variables>
         </family>
         <family name="Bot" plugin-id="Sprite" sid="374980030046816">
@@ -279,7 +282,7 @@
                 <instance-variable name="pct_recepcao_media" sid="600865268855046" type="number" />
                 <instance-variable name="pct_recepcao_ataque" sid="897670612147213" type="number" />
                 <instance-variable name="pct_recepcao_bloqueio_ataque" sid="663382631081209" type="number" />
-                <instance-variable name="pct_levantamento_" sid="881115773715835" type="number" />
+                <instance-variable name="pct_levantamento" sid="881115773715835" type="number" />
                 <instance-variable name="pct_ataque_cortada_1" sid="773872097369304" type="number" />
                 <instance-variable name="pct_ataque_cortada_2" sid="460400253686620" type="number" />
                 <instance-variable name="pct_ataque_cortada_3" sid="217155004526025" type="number" />
@@ -290,6 +293,8 @@
                 <instance-variable name="pct_ataque_bloqueio_2" sid="408367716040582" type="number" />
                 <instance-variable name="pct_ataque_bloqueio_3" sid="124668587751464" type="number" />
                 <instance-variable name="pct_bloqueio_ataque" sid="503712587497371" type="number" />
+                <instance-variable name="pct_bloqueio_defesa" sid="957623797174898" type="number" />
+                <instance-variable name="teamId" sid="588268158657963" type="string" />
             </instance-variables>
         </family>
     </families>
@@ -301,6 +306,7 @@
         <event-sheet>Event sheet Functions.xml</event-sheet>
         <event-sheet>Event sheet Inicio.xml</event-sheet>
         <event-sheet>Event sheet IA.xml</event-sheet>
+        <event-sheet>Event sheet Global Variables.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="9">

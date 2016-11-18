@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Global Variables</name>
+    <events>
+        <variable constant="0" name="ACAO_BOT" sid="653815541684191" static="0" type="number">1</variable>
+        <variable constant="0" name="ACAO_JOGADOR" sid="558671260774642" static="0" type="number">0</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_SIMPLES" sid="1471466717271263" static="0" type="text">BLOQUEIO_SIMPLES</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_DUPLO" sid="7385235398533945" static="0" type="text">BLOQUEIO_DUPLO</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_TRIPLO" sid="4130204608096574" static="0" type="text">BLOQUEIO_TRIPLO</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_DEFESA" sid="8923303595678676" static="0" type="text">BLOQUEIO_DEFESA</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_ATAQUE" sid="4338904964879663" static="0" type="text">BLOQUEIO_ATAQUE</variable>
+        <variable constant="1" name="FUNDAMENTO_ATAQUE_BLOQUEIO" sid="6259210137520166" static="0" type="text">ATAQUE_BLOQUEIO</variable>
+        <variable constant="1" name="FUNDAMENTO_ATAQUE_EFEITO" sid="8468021051602044" static="0" type="text">ATAQUE_EFEITO</variable>
+        <variable constant="1" name="FUNDAMENTO_ATAQUE_CORTADA" sid="9779618448960489" static="0" type="text">ATAQUE_CORTADA</variable>
+        <variable constant="1" name="FUNDAMENTO_LEVANTAMENTO" sid="2353033053844279" static="0" type="text">LEVANTAMENTO</variable>
+        <variable constant="1" name="FUNDAMENTO_RECEPCAO_SIMPLES" sid="82651691057474" static="0" type="text">RECEPCAO_SIMPLES</variable>
+        <variable constant="1" name="FUNDAMENTO_RECEPCAO_MEDIA" sid="4167766552554176" static="0" type="text">RECEPCAO_MEDIA</variable>
+        <variable constant="1" name="FUNDAMENTO_RECEPCAO_ATAQUE" sid="1659506433136747" static="0" type="text">RECEPCAO_ATAQUE</variable>
+        <variable constant="1" name="FUNDAMENTO_SAQUE_MEDIO" sid="1930567130824392" static="0" type="text">SAQUE_MEDIO</variable>
+        <variable constant="1" name="FUNDAMENTO_SAQUE_SIMPLES" sid="8756259567240841" static="0" type="text">SAQUE_SIMPLES</variable>
+        <variable constant="1" name="ERRO" sid="9148709054825553" static="0" type="number">0</variable>
+        <variable constant="1" name="ACERTO" sid="7664870005551512" static="0" type="number">1</variable>
+        <variable constant="1" name="PCT_SAQUE" sid="2017008752562948" static="0" type="number">0.95</variable>
+        <variable constant="1" name="PCT_RECEPCAO" sid="6857354154389032" static="0" type="number">0.95</variable>
+        <variable constant="1" name="PCT_LEVANTAMENTO" sid="4666299879866501" static="0" type="number">1</variable>
+        <variable constant="1" name="PCT_ATAQUE" sid="8070471423794405" static="0" type="number">0.8</variable>
+        <variable constant="1" name="PCT_BLOQUEIO" sid="2542691361557948" static="0" type="number">0.8</variable>
+        <variable constant="1" name="BLOQUEIO" sid="9543391729093401" static="0" type="text">functionBloqueio</variable>
+        <variable constant="1" name="ATAQUE" sid="4862942982097246" static="0" type="text">functionAtaque</variable>
+        <variable constant="1" name="LEVANTAMENTO" sid="343199370034121" static="0" type="text">functionLevantamento</variable>
+        <variable constant="1" name="RECEPCAO" sid="1216784330032802" static="0" type="text">functionRecepcao</variable>
+        <variable comment="estado representando o saque na partida" constant="1" name="SAQUE" sid="8554473755258839" static="0" type="text">functionSaque</variable>
+        <variable comment="Estado do jogo durante a disputa (saque, defesa, ataque, bloqueio)" constant="0" name="STATE_GAME" sid="9993113023338776" static="0" type="text"></variable>
+        <variable comment="fundamento escolhido para cada fase da partida" constant="0" name="FUNDAMENTO" sid="6860286309622506" static="0" type="text"></variable>
+        <variable comment="fundamento escolhido pelo bot para cada fase da partida" constant="0" name="fundamentoBotXXXXXXXXX" sid="6828926549258983" static="0" type="text"></variable>
+    </events>
+</c2eventsheet>

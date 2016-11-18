@@ -3,22 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet Functions</name>
     <events>
-        <variable constant="0" name="ACAO_BOT" sid="653815541684191" static="0" type="number">1</variable>
-        <variable constant="0" name="ACAO_JOGADOR" sid="558671260774642" static="0" type="number">0</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_SIMPLES" sid="1471466717271263" static="0" type="text">BLOQUEIO_SIMPLES</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_DUPLO" sid="7385235398533945" static="0" type="text">BLOQUEIO_DUPLO</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_TRIPLO" sid="4130204608096574" static="0" type="text">BLOQUEIO_TRIPLO</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_DEFESA" sid="8923303595678676" static="0" type="text">BLOQUEIO_DEFESA</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_ATAQUE" sid="4338904964879663" static="0" type="text">BLOQUEIO_ATAQUE</variable>
-        <variable constant="1" name="FUNDAMENTO_ATAQUE_BLOQUEIO" sid="6259210137520166" static="0" type="text">ATAQUE_BLOQUEIO</variable>
-        <variable constant="1" name="FUNDAMENTO_ATAQUE_EFEITO" sid="8468021051602044" static="0" type="text">ATAQUE_EFEITO</variable>
-        <variable constant="1" name="FUNDAMENTO_ATAQUE_CORTADA" sid="9779618448960489" static="0" type="text">ATAQUE_CORTADA</variable>
-        <variable constant="1" name="FUNDAMENTO_LEVANTAMENTO" sid="2353033053844279" static="0" type="text">LEVANTAMENTO</variable>
-        <variable constant="1" name="FUNDAMENTO_RECEPCAO_VOADOR" sid="82651691057474" static="0" type="text">RECEPCAO_VOADOR</variable>
-        <variable constant="1" name="FUNDAMENTO_RECEPCAO_NORMAL" sid="4167766552554176" static="0" type="text">RECEPCAO_NORMAL</variable>
-        <variable constant="1" name="FUNDAMENTO_RECEPCAO_ATAQUE" sid="1659506433136747" static="0" type="text">RECEPCAO_ATAQUE</variable>
-        <variable constant="1" name="FUNDAMENTO_SAQUE_MEDIO" sid="1930567130824392" static="0" type="text">SAQUE_MEDIO</variable>
-        <variable constant="1" name="FUNDAMENTO_SAQUE_SIMPLES" sid="8756259567240841" static="0" type="text">SAQUE_SIMPLES</variable>
+        <include>Event sheet Global Variables</include>
         <event-group description="" sid="6938574088893514" title="Eventos execução de fundamentos">
             <sub-events>
                 <variable constant="0" name="pct_jogador" sid="7039823171155103" static="0" type="number">0</variable>
@@ -30,7 +15,12 @@
                             <param id="0" name="Name">&quot;functionHit&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Call function" sid="215635389278300" type="Function">
+                            <param id="0" name="Name">&quot;functionGetPercentageTeam&quot;</param>
+                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="6354188055049759">
                             <conditions>
@@ -42,7 +32,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="8535113376456382" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzulBot.pct_saque_medio)</param>
+                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzul.pct_saque_medio)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -56,7 +46,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="715464897452806" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzulBot.pct_saque_simples)</param>
+                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzul.pct_saque_simples)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -65,12 +55,12 @@
                                 <condition id="1" name="Compare parameter" sid="5824180620518044" type="Function">
                                     <param id="0" name="Index">0</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_RECEPCAO_NORMAL</param>
+                                    <param id="2" name="Value">FUNDAMENTO_RECEPCAO_MEDIA</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="8500793288090383" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzulBot.pct_recepcao_normal)</param>
+                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzul.pct_recepcao_simples)</param>
                                 </action>
                                 <action id="1" name="Set return value" sid="6568585349756249" type="Function">
                                     <param id="0" name="Value">ACERTO</param>
@@ -82,12 +72,12 @@
                                 <condition id="1" name="Compare parameter" sid="2268414944885139" type="Function">
                                     <param id="0" name="Index">0</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FUNDAMENTO_RECEPCAO_VOADOR</param>
+                                    <param id="2" name="Value">FUNDAMENTO_RECEPCAO_SIMPLES</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="8366385964597716" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzulBot.pct_recepcao_voador)</param>
+                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzul.pct_recepcao_media)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -101,7 +91,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="4311796001516608" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzulBot.pct_recepcao_atq)</param>
+                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzul.pct_recepcao_ataque)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -115,7 +105,7 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="8716605389479668" type="Function">
-                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzulBot.pct_levantamento)</param>
+                                    <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzul.pct_levantamento)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -489,11 +479,11 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="3694325134225641" type="BotaoNormal">
                                     <param id="0" name="Instance variable">fundamento</param>
-                                    <param id="1" name="Value">FUNDAMENTO_RECEPCAO_NORMAL</param>
+                                    <param id="1" name="Value">FUNDAMENTO_RECEPCAO_MEDIA</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="9579037705630707" type="BotaoEspecial1">
                                     <param id="0" name="Instance variable">fundamento</param>
-                                    <param id="1" name="Value">FUNDAMENTO_RECEPCAO_VOADOR</param>
+                                    <param id="1" name="Value">FUNDAMENTO_RECEPCAO_SIMPLES</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -690,23 +680,549 @@
                 <action id="1" name="Set return value" sid="9860993518858133" type="Function">
                     <param id="0" name="Value">random(1) &lt;= Function.Param(0)</param>
                 </action>
-                <action id="0" name="Call function" sid="337332317622998" type="Function">
-                    <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
-                    <param id="1" name="Parameter {n}">STATE_GAME{###}ACAO_BOT</param>
-                </action>
-                <action id="0" name="Call function" sid="568857219729433" type="Function">
-                    <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
-                    <param id="1" name="Parameter {n}">STATE_GAME{###}ACAO_BOT</param>
-                </action>
-                <action id="0" name="Call function" sid="648356583530620" type="Function">
-                    <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
-                    <param id="1" name="Parameter {n}">STATE_GAME{###}ACAO_BOT</param>
-                </action>
-                <action id="0" name="Call function" sid="887709673410424" type="Function">
-                    <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
-                    <param id="1" name="Parameter {n}">STATE_GAME{###}ACAO_BOT</param>
-                </action>
             </actions>
+        </event-block>
+        <event-block sid="667262571059170">
+            <conditions>
+                <condition id="0" name="On function" sid="450117311359696" type="Function">
+                    <param id="0" name="Name">&quot;functionGetPercentageTeam&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="188628070063184">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="726988167302314" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_SAQUE_SIMPLES</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="426991874741444">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="136441162524567" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeAzul.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="363194006008984" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeAzul.pct_saque_simples</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="554781971198052" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="875605779217826">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="497598752231959" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeVerde.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="963104134843067" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeVerde.pct_saque_simples</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="421248825713438" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="907397524186755">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="998519674360665" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_SAQUE_MEDIO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="209005305352276">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="614278438494481" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeAzul.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="772843564927407" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeAzul.pct_saque_medio</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="788288604424279" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="215041646283072">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="762067411987812" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeVerde.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="674352321424144" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeVerde.pct_saque_medio</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="218744547218486" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="612507369695931">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="745350330925430" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_RECEPCAO_SIMPLES</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="923836488771177">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="937963188374217" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeAzul.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="885704472698380" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeAzul.pct_recepcao_simples</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="563654106733426" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="776489068670276">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="846067271318486" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeVerde.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="398413345318819" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeVerde.pct_recepcao_simples</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="507648364936450" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="711068882239639">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="627957886647544" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_RECEPCAO_MEDIA</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="177581927723739">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="655360744588667" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeAzul.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="665636120654580" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeAzul.pct_recepcao_media</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="377175092008969" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="216168687567731">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="157753397291783" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeVerde.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="565186461372171" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeVerde.pct_recepcao_media</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="351151363159761" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="250600836705209">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="913049746376731" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_RECEPCAO_ATAQUE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="317575350688480" type="Function">
+                            <param id="0" name="Value">Function.Call(&quot;functionAcerto&quot;, TimeAzul.pct_recepcao_ataque)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="313963711760289">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="991575505736737" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeAzul.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="676489534832758" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeAzul.pct_recepcao_ataque</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="517124775944531" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="171427455861374">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="433485679121368" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeVerde.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="667072093856053" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeVerde.pct_recepcao_ataque</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="868315667004013" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="619858172260399">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="780554438439264" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_LEVANTAMENTO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="223253241304270">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="920251270259299" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeAzul.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="271670799852286" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeAzul.pct_levantamento</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="497898331565388" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="307019354027825">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="999104646788211" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeVerde.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="499991377597299" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeVerde.pct_levantamento</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="573398012863726" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="125250040606006">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="693755714883737" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="873008457948774">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="768635191480858" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeAzul.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="825446008488471" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeAzul.pct_ataque_cortada_1</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="664440455992472" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="400250267167271">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="197093070354139" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeVerde.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="340785403424725" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeVerde.pct_ataque_cortada_1</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="992319591933583" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="800009951925889">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="436100886734928" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="656930833599126">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="799908481226900" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeAzul.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="495277782210840" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeAzul.pct_ataque_efeito_1</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="322924512264317" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="143052405067461">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="256670260201284" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeVerde.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="913154708008281" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeVerde.pct_ataque_efeito_1</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="767649588796596" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="347014608800646">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="674376357812051" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="743230318402791">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="727894755181246" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeAzul.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="919764198432994" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeAzul.pct_ataque_bloqueio_1</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="880578704026834" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="387817437029613">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="674611097029705" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeVerde.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="231812091925114" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeVerde.pct_ataque_bloqueio_1</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="347168173302222" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="486400841062461">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="925207859058180" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_ATAQUE</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="654654533088509">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="664302211118184" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeAzul.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="988793507442841" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeAzul.pct_bloqueio_ataque</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="181294270787025" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="352235923518029">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="695706089939647" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeVerde.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="871519567732500" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeVerde.pct_bloqueio_ataque</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="636216181298184" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="385934239564044">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="620260203103294" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_DEFESA</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="451854922491962">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="994685370933960" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeAzul.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="325367343694283" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeAzul.pct_bloqueio_defesa</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="290744044010654" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="343437311963403">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="238987019844562" type="Bola">
+                                    <param id="0" name="Instance variable">team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">TimeVerde.teamId</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="568988607210053" type="Function">
+                                    <param id="0" name="Name">&quot;functionAcerto&quot;</param>
+                                    <param id="1" name="Parameter {n}">TimeVerde.pct_bloqueio_defesa</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="800043525909980" type="Function">
+                                    <param id="0" name="Value">Function.ReturnValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

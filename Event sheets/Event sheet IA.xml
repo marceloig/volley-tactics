@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet IA</name>
     <events>
+        <include>Event sheet Global Variables</include>
         <include>Event sheet Partida</include>
         <include>Event sheet Functions</include>
         <event-block sid="4384516843332086">
@@ -37,7 +38,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="9119168838940874" type="TimeAzulBot">
+                <action id="-13" name="Set boolean" sid="9119168838940874" type="TimeAzul">
                     <param id="0" name="Instance variable">ataq</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -146,7 +147,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="6445664000135952" type="System">
                                     <param id="0" name="Variable">FUNDAMENTO</param>
-                                    <param id="1" name="Value">FUNDAMENTO_RECEPCAO_NORMAL</param>
+                                    <param id="1" name="Value">FUNDAMENTO_RECEPCAO_MEDIA</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -161,7 +162,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="2479016828342023" type="System">
                                     <param id="0" name="Variable">FUNDAMENTO</param>
-                                    <param id="1" name="Value">FUNDAMENTO_RECEPCAO_VOADOR</param>
+                                    <param id="1" name="Value">FUNDAMENTO_RECEPCAO_SIMPLES</param>
                                 </action>
                             </actions>
                         </event-block>

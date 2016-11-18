@@ -3,22 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet Partida</name>
     <events>
+        <include>Event sheet Global Variables</include>
         <include>Event sheet Functions</include>
-        <variable constant="1" name="ERRO" sid="9148709054825553" static="0" type="number">0</variable>
-        <variable constant="1" name="ACERTO" sid="7664870005551512" static="0" type="number">1</variable>
-        <variable constant="1" name="PCT_SAQUE" sid="2017008752562948" static="0" type="number">0.95</variable>
-        <variable constant="1" name="PCT_RECEPCAO" sid="6857354154389032" static="0" type="number">0.95</variable>
-        <variable constant="1" name="PCT_LEVANTAMENTO" sid="4666299879866501" static="0" type="number">1</variable>
-        <variable constant="1" name="PCT_ATAQUE" sid="8070471423794405" static="0" type="number">0.8</variable>
-        <variable constant="1" name="PCT_BLOQUEIO" sid="2542691361557948" static="0" type="number">0.8</variable>
-        <variable constant="1" name="BLOQUEIO" sid="9543391729093401" static="0" type="text">functionBloqueio</variable>
-        <variable constant="1" name="ATAQUE" sid="4862942982097246" static="0" type="text">functionAtaque</variable>
-        <variable constant="1" name="LEVANTAMENTO" sid="343199370034121" static="0" type="text">functionLevantamento</variable>
-        <variable constant="1" name="RECEPCAO" sid="1216784330032802" static="0" type="text">functionRecepcao</variable>
-        <variable comment="estado representando o saque na partida" constant="1" name="SAQUE" sid="8554473755258839" static="0" type="text">functionSaque</variable>
-        <variable comment="Estado do jogo durante a disputa (saque, defesa, ataque, bloqueio)" constant="0" name="STATE_GAME" sid="9993113023338776" static="0" type="text"></variable>
-        <variable comment="fundamento escolhido para cada fase da partida" constant="0" name="FUNDAMENTO" sid="6860286309622506" static="0" type="text"></variable>
-        <variable comment="fundamento escolhido pelo bot para cada fase da partida" constant="0" name="fundamentoBotXXXXXXXXX" sid="6828926549258983" static="0" type="text"></variable>
         <event-block sid="1743589980060297">
             <conditions>
                 <condition id="-25" name="On loader layout complete" sid="9342851651724776" type="System" />

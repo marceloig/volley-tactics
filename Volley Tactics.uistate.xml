@@ -11,9 +11,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Layout 1</layout>
+        <event-sheet active="1" order="4">Event sheet Functions</event-sheet>
         <event-sheet order="2">Event sheet Partida</event-sheet>
-        <event-sheet active="1" order="1">Event sheet Functions</event-sheet>
         <event-sheet order="3">Event sheet IA</event-sheet>
+        <event-sheet order="1">Event sheet Global Variables</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -22,7 +23,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="1" name="TimeAzulBot" />
+        <family expanded="1" name="TimeAzul" />
         <family expanded="1" name="Bot" />
         <family expanded="1" name="TimeVerde" />
     </families-expanded>
