@@ -114,7 +114,7 @@
                         <pct_ataque_bloqueio_3>0.7</pct_ataque_bloqueio_3>
                         <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
-                        <teamId>team-green</teamId>
+                        <functionTime>functionTimeVerde</functionTime>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -158,7 +158,7 @@
                         <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <ataq>false</ataq>
-                        <teamId>team-blue</teamId>
+                        <functionTime>functionTimeAzul</functionTime>
                         <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -229,7 +229,7 @@
                         <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <ataq>false</ataq>
-                        <teamId>team-blue</teamId>
+                        <functionTime>functionTimeAzul</functionTime>
                         <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -274,7 +274,7 @@
                         <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <ataq>false</ataq>
-                        <teamId>team-blue</teamId>
+                        <functionTime>functionTimeAzul</functionTime>
                         <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -318,7 +318,7 @@
                         <pct_ataque_bloqueio_3>0.7</pct_ataque_bloqueio_3>
                         <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
-                        <teamId>team-green</teamId>
+                        <functionTime>functionTimeVerde</functionTime>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -361,7 +361,7 @@
                         <pct_ataque_bloqueio_3>0.7</pct_ataque_bloqueio_3>
                         <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
-                        <teamId>team-green</teamId>
+                        <functionTime>functionTimeVerde</functionTime>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

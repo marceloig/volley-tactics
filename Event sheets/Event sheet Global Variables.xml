@@ -5,20 +5,20 @@
     <events>
         <variable constant="0" name="ACAO_BOT" sid="653815541684191" static="0" type="number">1</variable>
         <variable constant="0" name="ACAO_JOGADOR" sid="558671260774642" static="0" type="number">0</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_SIMPLES" sid="1471466717271263" static="0" type="text">BLOQUEIO_SIMPLES</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_DUPLO" sid="7385235398533945" static="0" type="text">BLOQUEIO_DUPLO</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_TRIPLO" sid="4130204608096574" static="0" type="text">BLOQUEIO_TRIPLO</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_DEFESA" sid="8923303595678676" static="0" type="text">BLOQUEIO_DEFESA</variable>
-        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_ATAQUE" sid="4338904964879663" static="0" type="text">BLOQUEIO_ATAQUE</variable>
-        <variable constant="1" name="FUNDAMENTO_ATAQUE_BLOQUEIO" sid="6259210137520166" static="0" type="text">ATAQUE_BLOQUEIO</variable>
-        <variable constant="1" name="FUNDAMENTO_ATAQUE_EFEITO" sid="8468021051602044" static="0" type="text">ATAQUE_EFEITO</variable>
-        <variable constant="1" name="FUNDAMENTO_ATAQUE_CORTADA" sid="9779618448960489" static="0" type="text">ATAQUE_CORTADA</variable>
-        <variable constant="1" name="FUNDAMENTO_LEVANTAMENTO" sid="2353033053844279" static="0" type="text">LEVANTAMENTO</variable>
-        <variable constant="1" name="FUNDAMENTO_RECEPCAO_SIMPLES" sid="82651691057474" static="0" type="text">RECEPCAO_SIMPLES</variable>
-        <variable constant="1" name="FUNDAMENTO_RECEPCAO_MEDIA" sid="4167766552554176" static="0" type="text">RECEPCAO_MEDIA</variable>
-        <variable constant="1" name="FUNDAMENTO_RECEPCAO_ATAQUE" sid="1659506433136747" static="0" type="text">RECEPCAO_ATAQUE</variable>
-        <variable constant="1" name="FUNDAMENTO_SAQUE_MEDIO" sid="1930567130824392" static="0" type="text">SAQUE_MEDIO</variable>
-        <variable constant="1" name="FUNDAMENTO_SAQUE_SIMPLES" sid="8756259567240841" static="0" type="text">SAQUE_SIMPLES</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_SIMPLES" sid="1471466717271263" static="0" type="text">functionBloqueioSimples</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_DUPLO" sid="7385235398533945" static="0" type="text">functionBloqueioDuplo</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_TRIPLO" sid="4130204608096574" static="0" type="text">functionBloqueioTriplo</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_DEFESA" sid="8923303595678676" static="0" type="text">functionBloqueioDefesa</variable>
+        <variable constant="1" name="FUNDAMENTO_BLOQUEIO_ATAQUE" sid="4338904964879663" static="0" type="text">functionBloqueioAtaque</variable>
+        <variable constant="1" name="FUNDAMENTO_ATAQUE_BLOQUEIO" sid="6259210137520166" static="0" type="text">functionAtaqueBloqueio</variable>
+        <variable constant="1" name="FUNDAMENTO_ATAQUE_EFEITO" sid="8468021051602044" static="0" type="text">functionAtaqueEfeito</variable>
+        <variable constant="1" name="FUNDAMENTO_ATAQUE_CORTADA" sid="9779618448960489" static="0" type="text">functionAtaqueCortada</variable>
+        <variable constant="1" name="FUNDAMENTO_LEVANTAMENTO" sid="2353033053844279" static="0" type="text">functionLevantamento</variable>
+        <variable constant="1" name="FUNDAMENTO_RECEPCAO_SIMPLES" sid="82651691057474" static="0" type="text">functionRecepcaoSimples</variable>
+        <variable constant="1" name="FUNDAMENTO_RECEPCAO_MEDIA" sid="4167766552554176" static="0" type="text">functionRecepcaoMedia</variable>
+        <variable constant="1" name="FUNDAMENTO_RECEPCAO_ATAQUE" sid="1659506433136747" static="0" type="text">functionRecepcaoAtaque</variable>
+        <variable constant="1" name="FUNDAMENTO_SAQUE_MEDIO" sid="1930567130824392" static="0" type="text">functionSaqueMedio</variable>
+        <variable constant="1" name="FUNDAMENTO_SAQUE_SIMPLES" sid="8756259567240841" static="0" type="text">functionSaqueSimples</variable>
         <variable constant="1" name="ERRO" sid="9148709054825553" static="0" type="number">0</variable>
         <variable constant="1" name="ACERTO" sid="7664870005551512" static="0" type="number">1</variable>
         <variable constant="1" name="PCT_SAQUE" sid="2017008752562948" static="0" type="number">0.95</variable>

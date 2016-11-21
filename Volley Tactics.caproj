@@ -260,7 +260,7 @@
                 <instance-variable name="pct_bloqueio_ataque" sid="4703911892980489" type="number" />
                 <instance-variable name="pct_bloqueio_defesa" sid="478135141798707" type="number" />
                 <instance-variable name="ataq" sid="7656590097188247" type="boolean" />
-                <instance-variable name="teamId" sid="808189769472437" type="string" />
+                <instance-variable name="functionTime" sid="808189769472437" type="string" />
             </instance-variables>
         </family>
         <family name="Bot" plugin-id="Sprite" sid="374980030046816">
@@ -294,7 +294,7 @@
                 <instance-variable name="pct_ataque_bloqueio_3" sid="124668587751464" type="number" />
                 <instance-variable name="pct_bloqueio_ataque" sid="503712587497371" type="number" />
                 <instance-variable name="pct_bloqueio_defesa" sid="957623797174898" type="number" />
-                <instance-variable name="teamId" sid="588268158657963" type="string" />
+                <instance-variable name="functionTime" sid="588268158657963" type="string" />
             </instance-variables>
         </family>
     </families>
@@ -307,6 +307,8 @@
         <event-sheet>Event sheet Inicio.xml</event-sheet>
         <event-sheet>Event sheet IA.xml</event-sheet>
         <event-sheet>Event sheet Global Variables.xml</event-sheet>
+        <event-sheet>Event sheet Time Azul.xml</event-sheet>
+        <event-sheet>Event sheet Time Verde.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="9">

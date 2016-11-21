@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Time Azul</name>
+    <events>
+        <event-block sid="174053783899755">
+            <conditions>
+                <condition id="0" name="On function" sid="943973395441859" type="Function">
+                    <param id="0" name="Name">&quot;functionTimeAzul&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Call expression" sid="544479286522127" type="Function">
+                    <param id="0" name="Expression">Function.Call(Function.Param(0))</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="904480929642129">
+            <conditions>
+                <condition id="0" name="On function" sid="730610363258228" type="Function">
+                    <param id="0" name="Name">&quot;functionSaqueSimples&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="424179528991554" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeAzul.pct_saque_simples</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="103118319972620">
+            <conditions>
+                <condition id="0" name="On function" sid="403010038486177" type="Function">
+                    <param id="0" name="Name">&quot;functionSaqueMedio&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="331568198718989" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeAzul.pct_saque_medio</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="602273988582686">
+            <conditions>
+                <condition id="0" name="On function" sid="995301262530325" type="Function">
+                    <param id="0" name="Name">&quot;functionRecepcaoSimples&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="862043602594924" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeAzul.pct_recepcao_simples</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="290011376513872">
+            <conditions>
+                <condition id="0" name="On function" sid="187019591462638" type="Function">
+                    <param id="0" name="Name">&quot;functionRecepcaoMedia&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="682773633819186" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeAzul.pct_recepcao_media</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="106224723717271">
+            <conditions>
+                <condition id="0" name="On function" sid="873799221037664" type="Function">
+                    <param id="0" name="Name">&quot;functionRecepcaoAtaque&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="659004976035874" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeAzul.pct_recepcao_ataque</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="372700904332595">
+            <conditions>
+                <condition id="0" name="On function" sid="219835288954717" type="Function">
+                    <param id="0" name="Name">&quot;functionLevantamento&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="708559736847801" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeAzul.pct_levantamento</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="368229977653045">
+            <conditions>
+                <condition id="0" name="On function" sid="513851164644307" type="Function">
+                    <param id="0" name="Name">&quot;functionAtaqueCortada&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="355852950738898" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeAzul.pct_ataque_cortada_1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="131386170085759">
+            <conditions>
+                <condition id="0" name="On function" sid="673549002808667" type="Function">
+                    <param id="0" name="Name">&quot;functionAtaqueEfeito&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="119055940069111" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeAzul.pct_ataque_efeito_1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="985804106747054">
+            <conditions>
+                <condition id="0" name="On function" sid="545464019105383" type="Function">
+                    <param id="0" name="Name">&quot;functionAtaqueBloqueio&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="260828639590617" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeAzul.pct_ataque_bloqueio_1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="629876988965466">
+            <conditions>
+                <condition id="0" name="On function" sid="149938807455088" type="Function">
+                    <param id="0" name="Name">&quot;functionBloqueioAtaque&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="362450487016962" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeAzul.pct_bloqueio_ataque</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="729080999253362">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="703155077910533" type="TimeAzul">
+                    <param id="0" name="Object">Bola</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="780489032783164" type="Bola">
+                    <param id="0" name="Instance variable">team</param>
+                    <param id="1" name="Value">TimeAzul.functionTime</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

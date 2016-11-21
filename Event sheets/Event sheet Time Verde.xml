@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Time Verde</name>
+    <events>
+        <event-block sid="624853322361951">
+            <conditions>
+                <condition id="0" name="On function" sid="978688069151300" type="Function">
+                    <param id="0" name="Name">&quot;functionTimeVerde&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Call expression" sid="386018397305535" type="Function">
+                    <param id="0" name="Expression">Function.Call(Function.Param(0))</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="964402259829447">
+            <conditions>
+                <condition id="0" name="On function" sid="802528245351960" type="Function">
+                    <param id="0" name="Name">&quot;functionSaqueSimples&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="851710817844498" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeVerde.pct_saque_simples</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="283145215028142">
+            <conditions>
+                <condition id="0" name="On function" sid="358632089831419" type="Function">
+                    <param id="0" name="Name">&quot;functionSaqueMedio&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="208745912035830" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeVerde.pct_saque_medio</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="902957886801126">
+            <conditions>
+                <condition id="0" name="On function" sid="342680111168059" type="Function">
+                    <param id="0" name="Name">&quot;functionRecepcaoSimples&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="763048650576574" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeVerde.pct_recepcao_simples</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="873799414920456">
+            <conditions>
+                <condition id="0" name="On function" sid="785279481855203" type="Function">
+                    <param id="0" name="Name">&quot;functionRecepcaoMedia&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="989903725647842" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeVerde.pct_recepcao_media</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="813145857265162">
+            <conditions>
+                <condition id="0" name="On function" sid="728578449219928" type="Function">
+                    <param id="0" name="Name">&quot;functionRecepcaoAtaque&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="855901373658456" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeVerde.pct_recepcao_ataque</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="974032386652458">
+            <conditions>
+                <condition id="0" name="On function" sid="395974075487296" type="Function">
+                    <param id="0" name="Name">&quot;functionLevantamento&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="639045001764265" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeVerde.pct_levantamento</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="907100413284361">
+            <conditions>
+                <condition id="0" name="On function" sid="379380249550750" type="Function">
+                    <param id="0" name="Name">&quot;functionAtaqueCortada&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="312627808985794" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeVerde.pct_ataque_cortada_1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="902494841454680">
+            <conditions>
+                <condition id="0" name="On function" sid="599333683180190" type="Function">
+                    <param id="0" name="Name">&quot;functionAtaqueEfeito&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="166057460885172" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeVerde.pct_ataque_efeito_1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="437003196960402">
+            <conditions>
+                <condition id="0" name="On function" sid="548764780549217" type="Function">
+                    <param id="0" name="Name">&quot;functionAtaqueBloqueio&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="492473481060959" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeVerde.pct_ataque_bloqueio_1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="465713901786411">
+            <conditions>
+                <condition id="0" name="On function" sid="343750183005740" type="Function">
+                    <param id="0" name="Name">&quot;functionBloqueioAtaque&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="217784080590239" type="Function">
+                    <param id="0" name="Value">random(1) &lt;= TimeVerde.pct_bloqueio_ataque</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="351560329425265">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="194373506606199" type="TimeVerde">
+                    <param id="0" name="Object">Bola</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="716284769377581" type="Bola">
+                    <param id="0" name="Instance variable">team</param>
+                    <param id="1" name="Value">TimeVerde.functionTime</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
