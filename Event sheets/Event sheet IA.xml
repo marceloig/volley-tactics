@@ -4,61 +4,6 @@
     <name>Event sheet IA</name>
     <events>
         <include>Event sheet Global Variables</include>
-        <include>Event sheet Partida</include>
-        <include>Event sheet Functions</include>
-        <event-block sid="4384516843332086">
-            <conditions>
-                <condition id="0" name="On function" sid="1677143854138449" type="Function">
-                    <param id="0" name="Name">&quot;functionIA&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="2946204869144715">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="6405068091316061" type="System">
-                            <param id="0" name="Variable">STATE_GAME</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">RECEPCAO</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="2550811139931032" type="Function">
-                            <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;functionRecepcaoBot&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="720814064700183">
-            <conditions>
-                <condition id="0" name="On function" sid="6160175510546006" type="Function">
-                    <param id="0" name="Name">&quot;functionRecepcaoBot&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="9119168838940874" type="TimeAzul">
-                    <param id="0" name="Instance variable">ataq</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="2" name="Call expression" sid="2556333351702787" type="Function">
-                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,LEVANTAMENTO)</param>
-                </action>
-                <action id="0" name="Call function" sid="9452459688390867" type="Function">
-                    <param id="0" name="Name">&quot;functionFundamentoRecepcaoBot&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action id="0" name="Call function" sid="97566836504988" type="Function">
-                    <param id="0" name="Name">&quot;functionHitBot&quot;</param>
-                    <param id="1" name="Parameter {n}">fundamentoBotXXXXXXXXX</param>
-                </action>
-                <action id="0" name="Call function" sid="5266616101077554" type="Function">
-                    <param id="0" name="Name">&quot;functionAction&quot;</param>
-                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}STATE_GAME</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="7592135523576276" title="Funções com os fundamentos de jogadas do Bot">
             <sub-events>
                 <variable constant="0" name="valueSort" sid="8973971085485359" static="0" type="number">0</variable>

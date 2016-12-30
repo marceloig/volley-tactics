@@ -131,7 +131,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="AtacanteBot" uid="4">
+                <instance type="Bot" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -159,7 +159,6 @@
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <ataq>false</ataq>
                         <functionTime>functionTimeAzul</functionTime>
-                        <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -184,14 +183,27 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <hit>0</hit>
+                        <hit>false</hit>
                         <team></team>
+                        <pct_fundamento>0</pct_fundamento>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>433</x>
-                        <y>279</y>
+                        <x>417</x>
+                        <y>286</y>
                         <z>0</z>
                         <width>19</width>
                         <height>19</height>
@@ -202,7 +214,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="AtacanteBot" uid="5">
+                <instance type="Bot" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -230,7 +242,6 @@
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <ataq>false</ataq>
                         <functionTime>functionTimeAzul</functionTime>
-                        <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -247,7 +258,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="AtacanteBot" uid="6">
+                <instance type="Bot" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -275,7 +286,6 @@
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <ataq>false</ataq>
                         <functionTime>functionTimeAzul</functionTime>
-                        <ataque>false</ataque>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

@@ -17,7 +17,7 @@
         <variable constant="1" name="FUNDAMENTO_RECEPCAO_SIMPLES" sid="82651691057474" static="0" type="text">functionRecepcaoSimples</variable>
         <variable constant="1" name="FUNDAMENTO_RECEPCAO_MEDIA" sid="4167766552554176" static="0" type="text">functionRecepcaoMedia</variable>
         <variable constant="1" name="FUNDAMENTO_RECEPCAO_ATAQUE" sid="1659506433136747" static="0" type="text">functionRecepcaoAtaque</variable>
-        <variable constant="1" name="FUNDAMENTO_SAQUE_MEDIO" sid="1930567130824392" static="0" type="text">functionSaqueMedio</variable>
+        <variable constant="1" name="FUNDAMENTO_SAQUE_MEDIO" sid="1930567130824392" static="0" type="text">SaqueMedio</variable>
         <variable constant="1" name="FUNDAMENTO_SAQUE_SIMPLES" sid="8756259567240841" static="0" type="text">functionSaqueSimples</variable>
         <variable constant="1" name="ERRO" sid="9148709054825553" static="0" type="number">0</variable>
         <variable constant="1" name="ACERTO" sid="7664870005551512" static="0" type="number">1</variable>
@@ -33,6 +33,5 @@
         <variable comment="estado representando o saque na partida" constant="1" name="SAQUE" sid="8554473755258839" static="0" type="text">functionSaque</variable>
         <variable comment="Estado do jogo durante a disputa (saque, defesa, ataque, bloqueio)" constant="0" name="STATE_GAME" sid="9993113023338776" static="0" type="text"></variable>
         <variable comment="fundamento escolhido para cada fase da partida" constant="0" name="FUNDAMENTO" sid="6860286309622506" static="0" type="text"></variable>
-        <variable comment="fundamento escolhido pelo bot para cada fase da partida" constant="0" name="fundamentoBotXXXXXXXXX" sid="6828926549258983" static="0" type="text"></variable>
     </events>
 </c2eventsheet>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Botoes</name>
+    <events>
+        <event-group description="" sid="782383183088778" title="Eventos Botoes de Acao">
+            <sub-events>
+                <event-block sid="580234028068334">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="303679616377006" type="Touch">
+                            <param id="0" name="Object">BotaoAcao</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="871045413700515" type="BotaoAcao">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="329492672568664" type="Jogador">
+                            <param id="0" name="Animation">FUNDAMENTO</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="453897715332882" type="Jogador">
+                            <param id="0" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="853772239251198">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="613367446561351" type="Touch">
+                            <param id="0" name="Object">BotaoNormal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="643991282334886" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Value">BotaoNormal.fundamento</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="866440630076847" type="BotaoAcao">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="358739237125851">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="158624088154728" type="Touch">
+                            <param id="0" name="Object">BotaoEspecial1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="719043379332493" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Value">BotaoEspecial1.fundamento</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="227552089131750" type="BotaoAcao">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="775904172123702">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="726723239956820" type="Touch">
+                            <param id="0" name="Object">BotaoEspecial2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="976891385070026" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Value">BotaoEspecial2.fundamento</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="616983252708924" type="BotaoAcao">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

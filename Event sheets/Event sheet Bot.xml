@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet Bot</name>
+    <events>
+        <event-block sid="729080999253362">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="703155077910533" type="TimeAzul">
+                    <param id="0" name="Object">Bola</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="824431222180407">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="131053754363108" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_SAQUE_SIMPLES</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="942562573010003" type="Bola">
+                            <param id="0" name="Instance variable">pct_fundamento</param>
+                            <param id="1" name="Value">TimeAzul.pct_saque_simples</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="688723126151716">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="888446945023246" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_SAQUE_MEDIO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="513565208897420" type="Bola">
+                            <param id="0" name="Instance variable">pct_fundamento</param>
+                            <param id="1" name="Value">TimeAzul.pct_saque_medio</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="270617953770998">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="366970353270249" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_RECEPCAO_SIMPLES</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="915841126277193" type="Bola">
+                            <param id="0" name="Instance variable">pct_fundamento</param>
+                            <param id="1" name="Value">TimeAzul.pct_recepcao_simples</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="605294238016832">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="855101183662436" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_RECEPCAO_MEDIA</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="530776627202232" type="Bola">
+                            <param id="0" name="Instance variable">pct_fundamento</param>
+                            <param id="1" name="Value">TimeAzul.pct_recepcao_media</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="658261090793830">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="971513286257393" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_RECEPCAO_ATAQUE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="106047772671956" type="Bola">
+                            <param id="0" name="Instance variable">pct_fundamento</param>
+                            <param id="1" name="Value">TimeAzul.pct_recepcao_ataque</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="961427494747471">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="834164530865426" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_LEVANTAMENTO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="442034678056284" type="Bola">
+                            <param id="0" name="Instance variable">pct_fundamento</param>
+                            <param id="1" name="Value">TimeAzul.pct_levantamento</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="215959812050166">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="302426589075978" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="419598636933341" type="Bola">
+                            <param id="0" name="Instance variable">pct_fundamento</param>
+                            <param id="1" name="Value"> TimeAzul.pct_ataque_cortada_1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="660803997305355">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="219542992246604" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="521062421626579" type="Bola">
+                            <param id="0" name="Instance variable">pct_fundamento</param>
+                            <param id="1" name="Value">TimeAzul.pct_ataque_efeito_1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="446697399561309">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="934707567853688" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="122708677357600" type="Bola">
+                            <param id="0" name="Instance variable">pct_fundamento</param>
+                            <param id="1" name="Value">TimeAzul.pct_ataque_bloqueio_1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="341711729001879">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="772472130787006" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">FUNDAMENTO_BLOQUEIO_ATAQUE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="532240529447176" type="Bola">
+                            <param id="0" name="Instance variable">pct_fundamento</param>
+                            <param id="1" name="Value">TimeAzul.pct_bloqueio_ataque</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

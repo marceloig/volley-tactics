@@ -17,7 +17,9 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -62,9 +64,23 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="SaqueMedio" pingpong="0" repeatcount="1" repeatto="0" sid="503686709141619" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129">
+                        <collision-poly>
+                            <point x="0.181818" y="0.129032" />
+                            <point x="0.5" y="0" />
+                            <point x="0.818182" y="0.129032" />
+                            <point x="0.954545" y="0.483871" />
+                            <point x="0.818182" y="0.870968" />
+                            <point x="0.5" y="0.967742" />
+                            <point x="0.227273" y="0.83871" />
+                            <point x="0.0454545" y="0.483871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
-        <object-type name="AtacanteBot" sid="2956865179068437">
+        <object-type name="Bot" sid="2956865179068437">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1217636223136615" speed="5">
@@ -94,9 +110,15 @@
         <object-type name="Bola" sid="5193789331711191">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="hit" sid="2450394292597781" type="number" />
+                <instance-variable name="hit" sid="2450394292597781" type="boolean" />
                 <instance-variable name="team" sid="733945790207634" type="string" />
+                <instance-variable name="pct_fundamento" sid="990536678686021" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="923124628764210">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2225951918466541" speed="5">
                     <frame duration="1" hotspotX="0.526316" hotspotY="0.526316" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Balls\ballVolleyball.png">
@@ -238,7 +260,7 @@
     <families>
         <family name="TimeAzul" plugin-id="Sprite" sid="5121456702819963">
             <members>
-                <member>AtacanteBot</member>
+                <member>Bot</member>
             </members>
             <instance-variables>
                 <instance-variable name="pct_saque_simples" sid="9075168115090956" type="number" />
@@ -261,14 +283,6 @@
                 <instance-variable name="pct_bloqueio_defesa" sid="478135141798707" type="number" />
                 <instance-variable name="ataq" sid="7656590097188247" type="boolean" />
                 <instance-variable name="functionTime" sid="808189769472437" type="string" />
-            </instance-variables>
-        </family>
-        <family name="Bot" plugin-id="Sprite" sid="374980030046816">
-            <members>
-                <member>AtacanteBot</member>
-            </members>
-            <instance-variables>
-                <instance-variable name="ataque" sid="359561094896325" type="boolean" />
             </instance-variables>
         </family>
         <family name="TimeVerde" plugin-id="Sprite" sid="961356575358563">
@@ -304,11 +318,11 @@
     <event-folder>
         <event-sheet>Event sheet Partida.xml</event-sheet>
         <event-sheet>Event sheet Functions.xml</event-sheet>
-        <event-sheet>Event sheet Inicio.xml</event-sheet>
         <event-sheet>Event sheet IA.xml</event-sheet>
         <event-sheet>Event sheet Global Variables.xml</event-sheet>
-        <event-sheet>Event sheet Time Azul.xml</event-sheet>
-        <event-sheet>Event sheet Time Verde.xml</event-sheet>
+        <event-sheet>Event sheet Bot.xml</event-sheet>
+        <event-sheet>Event sheet Jogador.xml</event-sheet>
+        <event-sheet>Event sheet Botoes.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="9">

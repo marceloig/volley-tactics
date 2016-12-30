@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet Partida</name>
     <events>
+        <include>Event sheet Botoes</include>
         <include>Event sheet Global Variables</include>
         <include>Event sheet Functions</include>
         <event-block sid="1743589980060297">
@@ -10,200 +11,138 @@
                 <condition id="-25" name="On loader layout complete" sid="9342851651724776" type="System" />
             </conditions>
             <actions>
-                <action id="2" name="Call expression" sid="2084310039314925" type="Function">
-                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,SAQUE,0)</param>
+                <action id="-4" name="Set position to another object" sid="838119997792571" type="Bola">
+                    <param id="0" name="Object">Jogador</param>
+                    <param id="1" name="Image point (optional)">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="2514252078141771" type="BotaoAcao">
+                <action id="-9" name="Set value" sid="528284390943522" type="System">
+                    <param id="0" name="Variable">STATE_GAME</param>
+                    <param id="1" name="Value">SAQUE</param>
+                </action>
+                <action id="-15" name="Set visible" sid="513016647703381" type="BotaoAcao">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="4374317228765692" title="Eventos Botoes">
-            <sub-events>
-                <event-block sid="9346033420171161">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="9822836681641003" type="Touch">
-                            <param id="0" name="Object">BotaoAcao</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="1669197905905838" type="Function">
-                            <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
-                            <param id="1" name="Parameter {n}">STATE_GAME{###}ACAO_JOGADOR</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="1195298612534012" type="BotaoAcao">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2349117911224056">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="1284748873369879" type="Touch">
-                            <param id="0" name="Object">BotaoNormal</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="6299606974329502" type="System">
-                            <param id="0" name="Variable">FUNDAMENTO</param>
-                            <param id="1" name="Value">BotaoNormal.fundamento</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="4460899163136134" type="BotaoAcao">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="325678486410168" type="TextoAcao">
-                            <param id="0" name="Text">BotaoNormal.fundamento</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7581436769757644">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="4028767854222591" type="Touch">
-                            <param id="0" name="Object">BotaoEspecial1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="9033175251260116" type="System">
-                            <param id="0" name="Variable">FUNDAMENTO</param>
-                            <param id="1" name="Value">BotaoEspecial1.fundamento</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="753917378691616" type="BotaoAcao">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="283870400478430" type="TextoAcao">
-                            <param id="0" name="Text">BotaoEspecial1.fundamento</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8116933683993202">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="7477285106085132" type="Touch">
-                            <param id="0" name="Object">BotaoEspecial2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="1863172365782565" type="System">
-                            <param id="0" name="Variable">FUNDAMENTO</param>
-                            <param id="1" name="Value">BotaoEspecial2.fundamento</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="5817076240757012" type="BotaoAcao">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="592171459246932" type="TextoAcao">
-                            <param id="0" name="Text">BotaoEspecial2.fundamento</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-block sid="315527919897952">
+        <event-block sid="551156310664677">
             <conditions>
-                <condition id="0" name="On function" sid="1892259465613649" type="Function">
-                    <param id="0" name="Name">&quot;functionCallbackFlow&quot;</param>
+                <condition id="-14" name="Compare variable" sid="441086849573478" type="System">
+                    <param id="0" name="Variable">STATE_GAME</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">SAQUE</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="2" name="Call expression" sid="1798724475826724" type="Function">
-                    <param id="0" name="Expression">Function.Call(Function.Param(0), Function.Param(1))</param>
+                <action id="-15" name="Set visible" sid="490670707585814" type="BotaoEspecial2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="987394680784800" type="BotaoEspecial1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="942563074842961" type="BotaoNormal">
+                    <param id="0" name="Instance variable">fundamento</param>
+                    <param id="1" name="Value">FUNDAMENTO_SAQUE_SIMPLES</param>
+                </action>
+                <action id="-10" name="Set value" sid="887189699658076" type="BotaoEspecial1">
+                    <param id="0" name="Instance variable">fundamento</param>
+                    <param id="1" name="Value">FUNDAMENTO_SAQUE_MEDIO</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="4411597786622006">
+        <event-block sid="869784458309460">
             <conditions>
-                <condition id="0" name="On function" sid="4741626307529566" type="Function">
-                    <param id="0" name="Name">&quot;functionSaque&quot;</param>
+                <condition id="-14" name="Compare variable" sid="389321142534605" type="System">
+                    <param id="0" name="Variable">STATE_GAME</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">RECEPCAO</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="2" name="Call expression" sid="6984249456828988" type="Function">
-                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,RECEPCAO)</param>
+                <action id="-15" name="Set visible" sid="659471717575432" type="BotaoEspecial2">
+                    <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="0" name="Call function" sid="433229918216538" type="Function">
-                    <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">FUNDAMENTO</param>
+                <action id="-15" name="Set visible" sid="771823970230298" type="BotaoEspecial1">
+                    <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="0" name="Call function" sid="4425094895703245" type="Function">
-                    <param id="0" name="Name">&quot;functionAction&quot;</param>
-                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}STATE_GAME{###}Function.Param(0)</param>
+                <action id="-10" name="Set value" sid="587690062771183" type="BotaoNormal">
+                    <param id="0" name="Instance variable">fundamento</param>
+                    <param id="1" name="Value">FUNDAMENTO_RECEPCAO_MEDIA</param>
+                </action>
+                <action id="-10" name="Set value" sid="167362877129268" type="BotaoEspecial1">
+                    <param id="0" name="Instance variable">fundamento</param>
+                    <param id="1" name="Value">FUNDAMENTO_RECEPCAO_SIMPLES</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2115661073544544">
+        <event-block sid="751493678374952">
             <conditions>
-                <condition id="0" name="On function" sid="5642833646948397" type="Function">
-                    <param id="0" name="Name">&quot;functionRecepcao&quot;</param>
+                <condition id="-14" name="Compare variable" sid="527173741267350" type="System">
+                    <param id="0" name="Variable">STATE_GAME</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">BLOQUEIO</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="2" name="Call expression" sid="669155296583549" type="Function">
-                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,LEVANTAMENTO)</param>
+                <action id="-15" name="Set visible" sid="670007271422067" type="BotaoEspecial1">
+                    <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="0" name="Call function" sid="6614963349635496" type="Function">
-                    <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">FUNDAMENTO</param>
+                <action id="-10" name="Set value" sid="292690456122271" type="BotaoNormal">
+                    <param id="0" name="Instance variable">fundamento</param>
+                    <param id="1" name="Value">FUNDAMENTO_BLOQUEIO_ATAQUE</param>
                 </action>
-                <action id="0" name="Call function" sid="590151289391054" type="Function">
-                    <param id="0" name="Name">&quot;functionAction&quot;</param>
-                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}STATE_GAME{###}Function.Param(0)</param>
+                <action id="-10" name="Set value" sid="619668555557364" type="BotaoEspecial1">
+                    <param id="0" name="Instance variable">fundamento</param>
+                    <param id="1" name="Value">FUNDAMENTO_BLOQUEIO_DEFESA</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2895692248993468">
+        <event-block sid="986772357892440">
             <conditions>
-                <condition id="0" name="On function" sid="343186417069978" type="Function">
-                    <param id="0" name="Name">&quot;functionLevantamento&quot;</param>
+                <condition id="-14" name="Compare variable" sid="218530193861263" type="System">
+                    <param id="0" name="Variable">STATE_GAME</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">ATAQUE</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="2" name="Call expression" sid="951359203630499" type="Function">
-                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,ATAQUE)</param>
+                <action id="-15" name="Set visible" sid="521447176978976" type="BotaoEspecial1">
+                    <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="0" name="Call function" sid="8912095237051717" type="Function">
-                    <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">FUNDAMENTO</param>
+                <action id="-15" name="Set visible" sid="544611275111890" type="BotaoEspecial2">
+                    <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="0" name="Call function" sid="761167897252833" type="Function">
-                    <param id="0" name="Name">&quot;functionAction&quot;</param>
-                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}STATE_GAME{###}Function.Param(0)</param>
+                <action id="-10" name="Set value" sid="687378467130696" type="BotaoNormal">
+                    <param id="0" name="Instance variable">fundamento</param>
+                    <param id="1" name="Value">FUNDAMENTO_ATAQUE_CORTADA</param>
+                </action>
+                <action id="-10" name="Set value" sid="213315601106948" type="BotaoEspecial1">
+                    <param id="0" name="Instance variable">fundamento</param>
+                    <param id="1" name="Value">FUNDAMENTO_ATAQUE_EFEITO</param>
+                </action>
+                <action id="-10" name="Set value" sid="569462898279263" type="BotaoEspecial2">
+                    <param id="0" name="Instance variable">fundamento</param>
+                    <param id="1" name="Value">FUNDAMENTO_ATAQUE_BLOQUEIO</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2348124206610235">
+        <event-block sid="445081752806086">
             <conditions>
-                <condition id="0" name="On function" sid="4275693960700526" type="Function">
-                    <param id="0" name="Name">&quot;functionAtaque&quot;</param>
+                <condition id="-14" name="Compare variable" sid="483129273991001" type="System">
+                    <param id="0" name="Variable">STATE_GAME</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">LEVANTAMENTO</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="2" name="Call expression" sid="6956529278032386" type="Function">
-                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,BLOQUEIO)</param>
+                <action id="-15" name="Set visible" sid="418498701867064" type="BotaoEspecial1">
+                    <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="0" name="Call function" sid="6301778186575082" type="Function">
-                    <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">FUNDAMENTO</param>
+                <action id="-15" name="Set visible" sid="596953255696746" type="BotaoEspecial2">
+                    <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="0" name="Call function" sid="725201690236638" type="Function">
-                    <param id="0" name="Name">&quot;functionAction&quot;</param>
-                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}STATE_GAME{###}Function.Param(0)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8039089355799321">
-            <conditions>
-                <condition id="0" name="On function" sid="7265051967552332" type="Function">
-                    <param id="0" name="Name">&quot;functionBloqueio&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="2" name="Call expression" sid="1986629209695384" type="Function">
-                    <param id="0" name="Expression">Function.Call(&quot;functionStateGame&quot;,RECEPCAO)</param>
-                </action>
-                <action id="0" name="Call function" sid="2184794916141146" type="Function">
-                    <param id="0" name="Name">&quot;functionHit&quot;</param>
-                    <param id="1" name="Parameter {n}">FUNDAMENTO</param>
-                </action>
-                <action id="0" name="Call function" sid="761436730394272" type="Function">
-                    <param id="0" name="Name">&quot;functionAction&quot;</param>
-                    <param id="1" name="Parameter {n}">Function.ReturnValue{###}STATE_GAME{###}Function.Param(0)</param>
+                <action id="-10" name="Set value" sid="160448735160169" type="BotaoNormal">
+                    <param id="0" name="Instance variable">fundamento</param>
+                    <param id="1" name="Value">FUNDAMENTO_LEVANTAMENTO</param>
                 </action>
             </actions>
         </event-block>
