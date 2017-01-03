@@ -97,6 +97,34 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="RecepcaoSimples" pingpong="0" repeatcount="1" repeatto="0" sid="896783806941772" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129">
+                        <collision-poly>
+                            <point x="0.181818" y="0.129032" />
+                            <point x="0.5" y="0" />
+                            <point x="0.818182" y="0.129032" />
+                            <point x="0.954545" y="0.483871" />
+                            <point x="0.818182" y="0.870968" />
+                            <point x="0.5" y="0.967742" />
+                            <point x="0.227273" y="0.83871" />
+                            <point x="0.0454545" y="0.483871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="RecepcaoMedia" pingpong="0" repeatcount="1" repeatto="0" sid="596886240558431" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129">
+                        <collision-poly>
+                            <point x="0.181818" y="0.129032" />
+                            <point x="0.5" y="0" />
+                            <point x="0.818182" y="0.129032" />
+                            <point x="0.954545" y="0.483871" />
+                            <point x="0.818182" y="0.870968" />
+                            <point x="0.5" y="0.967742" />
+                            <point x="0.227273" y="0.83871" />
+                            <point x="0.0454545" y="0.483871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Quadra" sid="3377206322863098">

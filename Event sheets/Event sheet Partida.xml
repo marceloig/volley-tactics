@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet Partida</name>
     <events>
+        <include>Event sheet Bot</include>
+        <include>Event sheet Jogador</include>
         <include>Event sheet Botoes</include>
         <include>Event sheet Global Variables</include>
         <include>Event sheet Functions</include>
@@ -143,6 +145,21 @@
                 <action id="-10" name="Set value" sid="160448735160169" type="BotaoNormal">
                     <param id="0" name="Instance variable">fundamento</param>
                     <param id="1" name="Value">FUNDAMENTO_LEVANTAMENTO</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="377280855226106">
+            <conditions>
+                <condition id="0" name="On function" sid="973507269657731" type="Function">
+                    <param id="0" name="Name">&quot;functionMovimentoBola&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="331957922406942" type="Bola">
+                    <param id="0" name="Angle">Function.Param(0) &gt; 0 ? Function.Param(1) : 0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="276555760439432" type="Bola">
+                    <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>

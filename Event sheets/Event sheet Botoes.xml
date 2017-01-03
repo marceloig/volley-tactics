@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet Botoes</name>
     <events>
-        <event-group description="" sid="782383183088778" title="Eventos Botoes de Acao">
+        <event-group description="" sid="782383183088778" title="Group Botoes de Acao">
             <sub-events>
                 <event-block sid="580234028068334">
                     <conditions>
