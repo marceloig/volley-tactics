@@ -151,17 +151,62 @@
         <event-block sid="377280855226106">
             <conditions>
                 <condition id="0" name="On function" sid="973507269657731" type="Function">
-                    <param id="0" name="Name">&quot;functionMovimentoBola&quot;</param>
+                    <param id="0" name="Name">&quot;functionMoveBolaPorAngulo&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="331957922406942" type="Bola">
-                    <param id="0" name="Angle">Function.Param(0) &gt; 0 ? Function.Param(1) : 0</param>
+                    <param id="0" name="Angle">Bola.acertou &gt; 0 ? Function.Param(0) : 0</param>
                 </action>
                 <action behavior="Bullet" id="5" name="Set enabled" sid="276555760439432" type="Bola">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="927139573529136">
+            <conditions>
+                <condition id="0" name="On function" sid="882367610498114" type="Function">
+                    <param id="0" name="Name">&quot;functionMoveBolaParaMarcacao&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="612017385445828">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="685973519069697" type="Bola">
+                            <param id="0" name="Instance variable">acertou</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="132572799385831" type="Bola">
+                            <param id="0" name="X">MarcaçãoBola.X</param>
+                            <param id="1" name="Y">MarcaçãoBola.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="856458075700496" type="Bola">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="957862529180654">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="233263653530607" type="Bola">
+                            <param id="0" name="Instance variable">acertou</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="511617330191156" type="Bola">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="678553029591082" type="Bola">
+                            <param id="0" name="Angle">-90</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

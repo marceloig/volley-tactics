@@ -202,11 +202,32 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="602609727123744">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="235898186117963" type="System">
+                            <param id="0" name="Variable">STATE_GAME</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">LEVANTAMENTO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="310836519415621" type="System">
+                            <param id="0" name="Variable">FUNDAMENTO</param>
+                            <param id="1" name="Value">FUNDAMENTO_LEVANTAMENTO</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="476960962534860" type="Bot">
+                            <param id="0" name="Animation">FUNDAMENTO</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="204231196608865" type="Bot">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-group description="" sid="190334229062091" title="Group Animacao Fundamento Bot">
             <sub-events>
-                <variable constant="0" name="acertou" sid="493078222506248" static="0" type="number">0</variable>
                 <event-block sid="196790203897605">
                     <conditions>
                         <condition id="4" name="On finished" sid="129040119748824" type="Bot">
@@ -214,13 +235,21 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="804666612892217" type="System">
-                            <param id="0" name="Variable">acertou</param>
+                        <action id="-10" name="Set value" sid="652237846821116" type="Bot">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_RECEPCAO_SIMPLES</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="252860470162102" type="System">
+                            <param id="0" name="Variable">STATE_GAME</param>
+                            <param id="1" name="Value">LEVANTAMENTO</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="216511127519148" type="Bola">
+                            <param id="0" name="Instance variable">acertou</param>
                             <param id="1" name="Value">random(1) &lt;= Bot.pct_recepcao_simples</param>
                         </action>
                         <action id="0" name="Call function" sid="995093304264245" type="Function">
-                            <param id="0" name="Name">&quot;functionMovimentoBola&quot;</param>
-                            <param id="1" name="Parameter {n}">acertou{###}90</param>
+                            <param id="0" name="Name">&quot;functionMoveBolaParaMarcacao&quot;</param>
+                            <param id="1" name="Parameter {n}">Bot.Angle</param>
                         </action>
                     </actions>
                 </event-block>
@@ -231,13 +260,46 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="950554421051534" type="System">
-                            <param id="0" name="Variable">acertou</param>
+                        <action id="-10" name="Set value" sid="391765933742553" type="Bot">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_RECEPCAO_MEDIA</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="847343003517408" type="System">
+                            <param id="0" name="Variable">STATE_GAME</param>
+                            <param id="1" name="Value">LEVANTAMENTO</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="175777368563383" type="Bola">
+                            <param id="0" name="Instance variable">acertou</param>
                             <param id="1" name="Value">random(1) &lt;= Bot.pct_recepcao_media</param>
                         </action>
                         <action id="0" name="Call function" sid="995346668540058" type="Function">
-                            <param id="0" name="Name">&quot;functionMovimentoBola&quot;</param>
-                            <param id="1" name="Parameter {n}">acertou{###}90</param>
+                            <param id="0" name="Name">&quot;functionMoveBolaParaMarcacao&quot;</param>
+                            <param id="1" name="Parameter {n}">Bot.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="864429848687127">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="486596382029938" type="Bot">
+                            <param id="0" name="Animation">FUNDAMENTO_LEVANTAMENTO</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="852945870633924" type="Bot">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_LEVANTAMENTO</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="710621127620205" type="System">
+                            <param id="0" name="Variable">STATE_GAME</param>
+                            <param id="1" name="Value">ATAQUE</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="678118165444009" type="Bola">
+                            <param id="0" name="Instance variable">acertou</param>
+                            <param id="1" name="Value">random(1) &lt;= Bot.pct_levantamento</param>
+                        </action>
+                        <action id="0" name="Call function" sid="833351257225202" type="Function">
+                            <param id="0" name="Name">&quot;functionMoveBolaParaMarcacao&quot;</param>
+                            <param id="1" name="Parameter {n}">90</param>
                         </action>
                     </actions>
                 </event-block>

@@ -177,7 +177,6 @@
         </event-block>
         <event-group description="" sid="294618776308737" title="Group Animacao Fundamento Jogador">
             <sub-events>
-                <variable constant="0" name="acertou" sid="650465546798175" static="0" type="number">0</variable>
                 <event-block sid="514996686609820">
                     <conditions>
                         <condition id="4" name="On finished" sid="810053835683175" type="Jogador">
@@ -185,17 +184,21 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-10" name="Set value" sid="722466580138017" type="Jogador">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_SAQUE_MEDIO</param>
+                        </action>
                         <action id="-9" name="Set value" sid="368016002668582" type="System">
                             <param id="0" name="Variable">STATE_GAME</param>
                             <param id="1" name="Value">RECEPCAO</param>
                         </action>
-                        <action id="-9" name="Set value" sid="492320943490114" type="System">
-                            <param id="0" name="Variable">acertou</param>
+                        <action id="-10" name="Set value" sid="948371874696330" type="Bola">
+                            <param id="0" name="Instance variable">acertou</param>
                             <param id="1" name="Value">random(1) &lt;= Jogador.pct_saque_medio</param>
                         </action>
                         <action id="0" name="Call function" sid="227842496853993" type="Function">
-                            <param id="0" name="Name">&quot;functionMovimentoBola&quot;</param>
-                            <param id="1" name="Parameter {n}">acertou{###}-90</param>
+                            <param id="0" name="Name">&quot;functionMoveBolaPorAngulo&quot;</param>
+                            <param id="1" name="Parameter {n}">-90</param>
                         </action>
                     </actions>
                 </event-block>

@@ -19,6 +19,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -49,6 +50,9 @@
     <object-folder>
         <object-type name="Jogador" sid="947084640736983">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="fundamento" sid="492884974043214" type="string" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7930386769787079" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Green\playerGreen2.png">
@@ -82,6 +86,9 @@
         </object-type>
         <object-type name="Bot" sid="2956865179068437">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="fundamento" sid="756527792808400" type="string" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1217636223136615" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Blue\playerBlue2.png">
@@ -141,10 +148,14 @@
                 <instance-variable name="hit" sid="2450394292597781" type="boolean" />
                 <instance-variable name="team" sid="733945790207634" type="string" />
                 <instance-variable name="pct_fundamento" sid="990536678686021" type="number" />
+                <instance-variable name="acertou" sid="459844293513367" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="923124628764210">
                     <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="593244211949746">
+                    <behavior id="LOS" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -283,6 +294,25 @@
         </object-type>
         <object-type name="TextoAcao" sid="826462901332711">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="MarcaçãoBola" sid="480887904567191">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648991372433418" speed="5">
+                    <frame duration="1" hotspotX="0.470588" hotspotY="0.470588" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Art\Game icons (100 assets)\PNG\Black\1x\target.png">
+                        <collision-poly>
+                            <point x="0.176471" y="0.176471" />
+                            <point x="0.470588" y="0.0294118" />
+                            <point x="0.794118" y="0.147059" />
+                            <point x="0.970588" y="0.470588" />
+                            <point x="0.823529" y="0.823529" />
+                            <point x="0.470588" y="0.970588" />
+                            <point x="0.147059" y="0.794118" />
+                            <point x="0.0294118" y="0.470588" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>

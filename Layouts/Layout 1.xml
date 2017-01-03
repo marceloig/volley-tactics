@@ -72,6 +72,47 @@
             </instances>
             <effects />
         </layer>
+        <layer name="Layer Marcação do Campo" sid="586734695303274">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="MarcaçãoBola" uid="20">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>439</x>
+                        <y>195</y>
+                        <z>0</z>
+                        <width>34</width>
+                        <height>34</height>
+                        <depth>0</depth>
+                        <hotspotX>0.470588237</hotspotX>
+                        <hotspotY>0.470588237</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
         <layer name="Layer Jogo" sid="9198461951952456">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -115,6 +156,7 @@
                         <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <functionTime>functionTimeVerde</functionTime>
+                        <fundamento></fundamento>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -159,6 +201,7 @@
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <ataq>false</ataq>
                         <functionTime>functionTimeAzul</functionTime>
+                        <fundamento></fundamento>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -186,6 +229,7 @@
                         <hit>false</hit>
                         <team></team>
                         <pct_fundamento>0</pct_fundamento>
+                        <acertou>0</acertou>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
@@ -196,6 +240,14 @@
                                 <bounce-off-solids>No</bounce-off-solids>
                                 <set-angle>Yes</set-angle>
                                 <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>10000</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -242,6 +294,7 @@
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <ataq>false</ataq>
                         <functionTime>functionTimeAzul</functionTime>
+                        <fundamento></fundamento>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -286,6 +339,7 @@
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <ataq>false</ataq>
                         <functionTime>functionTimeAzul</functionTime>
+                        <fundamento></fundamento>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -329,6 +383,7 @@
                         <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <functionTime>functionTimeVerde</functionTime>
+                        <fundamento></fundamento>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -372,6 +427,7 @@
                         <pct_bloqueio_ataque>0.6</pct_bloqueio_ataque>
                         <pct_bloqueio_defesa>0.7</pct_bloqueio_defesa>
                         <functionTime>functionTimeVerde</functionTime>
+                        <fundamento></fundamento>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

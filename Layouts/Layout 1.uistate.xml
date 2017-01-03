@@ -23,9 +23,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Layer Jogo" />
+    <active-layer name="Layer Marcação do Campo" />
     <layers>
         <layer locked="1" name="Background" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Layer Marcação do Campo" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Layer Jogo" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="HUD" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Layer Controle" parallax-in-editor="0" visible="1" />
