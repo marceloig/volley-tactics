@@ -33,6 +33,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">SAQUE</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="431259744160591" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="490670707585814" type="BotaoEspecial2">
@@ -58,6 +59,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">RECEPCAO</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="766478258616462" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="659471717575432" type="BotaoEspecial2">
@@ -83,6 +85,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">BLOQUEIO</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="206639402585803" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="670007271422067" type="BotaoEspecial1">
@@ -105,6 +108,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">ATAQUE</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="124296130837830" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="521447176978976" type="BotaoEspecial1">
@@ -134,6 +138,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">LEVANTAMENTO</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="544186698509936" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="418498701867064" type="BotaoEspecial1">
@@ -181,8 +186,8 @@
                     </conditions>
                     <actions>
                         <action id="-22" name="Set angle toward position" sid="132572799385831" type="Bola">
-                            <param id="0" name="X">MarcaçãoBola.X</param>
-                            <param id="1" name="Y">MarcaçãoBola.Y</param>
+                            <param id="0" name="X">MarcacaoBola.X</param>
+                            <param id="1" name="Y">MarcacaoBola.Y</param>
                         </action>
                         <action behavior="Bullet" id="5" name="Set enabled" sid="856458075700496" type="Bola">
                             <param id="0" name="State">1</param>
