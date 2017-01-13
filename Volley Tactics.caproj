@@ -374,7 +374,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="MarcacaoAtaque" sid="680135827542747">
+        <object-type name="MarcacaoAtaqueBot" sid="680135827542747">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="663217119979644" speed="5">

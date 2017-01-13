@@ -44,6 +44,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BotaoEspecial1/" />
         <folder expanded="1" path="animation-folder/BotaoEspecial2/" />
         <folder expanded="1" path="animation-folder/MarcacaoBola/" />
-        <folder expanded="1" path="animation-folder/MarcacaoAtaque/" />
+        <folder expanded="1" path="animation-folder/MarcacaoAtaqueBot/" />
     </folders-expanded>
 </c2uistate>

@@ -110,7 +110,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarcacaoAtaque" uid="21">
+                <instance type="MarcacaoAtaqueBot" uid="21">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -132,7 +132,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarcacaoAtaque" uid="22">
+                <instance type="MarcacaoAtaqueBot" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
