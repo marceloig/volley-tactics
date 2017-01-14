@@ -20,7 +20,7 @@
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="3" name="Start" sid="453897715332882" type="Jogador">
-                            <param id="0" name="From">0</param>
+                            <param id="0" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>

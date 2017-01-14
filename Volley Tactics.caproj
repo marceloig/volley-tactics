@@ -52,7 +52,16 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="fundamento" sid="492884974043214" type="string" />
+                <instance-variable name="levantador" sid="558557752918372" type="boolean" />
+                <instance-variable name="atacante" sid="517106595500276" type="boolean" />
+                <instance-variable name="defensor" sid="601478092527164" type="boolean" />
+                <instance-variable name="turno_ativo" sid="398834175741357" type="boolean" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="420177971833654">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7930386769787079" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Exclusives\Previews (665 assets)\Top-down sports pack (75 assets)\PNG\Green\playerGreen2.png">
@@ -90,6 +99,7 @@
                 <instance-variable name="fundamento" sid="756527792808400" type="string" />
                 <instance-variable name="levantador" sid="213435815488305" type="boolean" />
                 <instance-variable name="atacante" sid="714812664052980" type="boolean" />
+                <instance-variable name="turnoAtivo" sid="642550128424456" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="567418000560464">
@@ -378,6 +388,44 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="663217119979644" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Art\Game icons (100 assets)\PNG\Black\1x\target.png">
+                        <collision-poly>
+                            <point x="0.212419" y="0.212419" />
+                            <point x="0.473856" y="0.0816994" />
+                            <point x="0.761438" y="0.186275" />
+                            <point x="0.9183" y="0.473856" />
+                            <point x="0.787581" y="0.787581" />
+                            <point x="0.473856" y="0.9183" />
+                            <point x="0.186275" y="0.761438" />
+                            <point x="0.0816994" y="0.473856" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MarcacaoAtaqueJogador" sid="461605823381372">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="756684841756110" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Art\Game icons (100 assets)\PNG\Black\1x\target.png">
+                        <collision-poly>
+                            <point x="0.176471" y="0.176471" />
+                            <point x="0.470588" y="0.0294118" />
+                            <point x="0.794118" y="0.147059" />
+                            <point x="0.970588" y="0.470588" />
+                            <point x="0.823529" y="0.823529" />
+                            <point x="0.470588" y="0.970588" />
+                            <point x="0.147059" y="0.794118" />
+                            <point x="0.0294118" y="0.470588" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MarcacaoDefesaJogador" sid="325169725893902">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="924363565543090" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Igor\Google Drive\Kenney Game Assets (version 40)\Art\Game icons (100 assets)\PNG\Black\1x\target.png">
                         <collision-poly>
                             <point x="0.176471" y="0.176471" />

@@ -173,6 +173,14 @@
                 <action behavior="Bullet" id="5" name="Set enabled" sid="865723133350930" type="Bola">
                     <param id="0" name="State">0</param>
                 </action>
+                <action id="-13" name="Set boolean" sid="298833242327009" type="Jogador">
+                    <param id="0" name="Instance variable">turno_ativo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="326688501092964" type="Bot">
+                    <param id="0" name="Instance variable">turnoAtivo</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="294618776308737" title="Group Animacao Fundamento Jogador">
@@ -202,7 +210,229 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="768211468760792">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="700773478315394" type="Jogador">
+                            <param id="0" name="Animation">FUNDAMENTO_BLOQUEIO_ATAQUE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="690764820196396" type="Jogador">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_BLOQUEIO_ATAQUE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="578739243046130" type="System">
+                            <param id="0" name="Variable">STATE_GAME</param>
+                            <param id="1" name="Value">RECEPCAO</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="997613298498882" type="MarcacaoBola">
+                            <param id="0" name="Object">MarcacaoDefesaJogador</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="257595335898055" type="Bola">
+                            <param id="0" name="Instance variable">acertou</param>
+                            <param id="1" name="Value">random(1) &lt;= Jogador.pct_bloqueio_ataque</param>
+                        </action>
+                        <action id="0" name="Call function" sid="343558633630859" type="Function">
+                            <param id="0" name="Name">&quot;functionMoveBolaParaMarcacao&quot;</param>
+                            <param id="1" name="Parameter {n}">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="979173047061451">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="735663457104379" type="Jogador">
+                            <param id="0" name="Animation">FUNDAMENTO_BLOQUEIO_DEFESA</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="364834904082283" type="Jogador">
+                            <param id="0" name="Instance variable">fundamento</param>
+                            <param id="1" name="Value">FUNDAMENTO_BLOQUEIO_DEFESA</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="712305775239674" type="System">
+                            <param id="0" name="Variable">STATE_GAME</param>
+                            <param id="1" name="Value">RECEPCAO</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="876135007729916" type="MarcacaoBola">
+                            <param id="0" name="Object">MarcacaoDefesaJogador</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="222431234017179" type="Bola">
+                            <param id="0" name="Instance variable">acertou</param>
+                            <param id="1" name="Value">random(1) &lt;= Jogador.pct_bloqueio_defesa</param>
+                        </action>
+                        <action id="0" name="Call function" sid="228915152946298" type="Function">
+                            <param id="0" name="Name">&quot;functionMoveBolaParaMarcacao&quot;</param>
+                            <param id="1" name="Parameter {n}">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="165602747204193" title="Group Posicao Jogador">
+                    <sub-events>
+                        <event-block sid="280158264699242">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="675496742027197" type="System">
+                                    <param id="0" name="Object">Jogador</param>
+                                    <param id="1" name="Instance">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="629397223427589" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="393287806013973" type="Jogador">
+                                    <param id="0" name="Instance variable">atacante</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="183329887802972">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="773369484646094" type="System">
+                                    <param id="0" name="Object">Jogador</param>
+                                    <param id="1" name="Instance">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="343828991422979" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="608047649717654" type="Jogador">
+                                    <param id="0" name="Instance variable">defensor</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="691667549435148">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="849271785659914" type="System">
+                                    <param id="0" name="Object">Jogador</param>
+                                    <param id="1" name="Instance">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="709770304772673" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="271583916849935" type="Jogador">
+                                    <param id="0" name="Instance variable">levantador</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="149333845723701" title="Group Movimentacao Jogador">
+                    <sub-events>
+                        <event-block sid="413370822521180">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="745126987739804" type="System">
+                                    <param id="0" name="Variable">STATE_GAME</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">BLOQUEIO</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="686816183477152" type="Jogador">
+                                    <param id="0" name="Instance variable">atacante</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="304066106598428" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="598469932283453" type="Jogador">
+                                    <param id="0" name="X">MarcacaoBola.X</param>
+                                    <param id="1" name="Y">MarcacaoBola.Y</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="661267697876084" type="Jogador">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="737495473058258">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="806916823947958" type="Jogador">
+                                    <param id="0" name="Instance variable">turno_ativo</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="817183701976961" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="913467760976890">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="985492796506473" type="System">
+                                            <param id="0" name="Variable">STATE_GAME</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">RECEPCAO</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="690826976388398" type="Jogador">
+                                            <param id="0" name="Instance variable">defensor</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="737948580907763" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-22" name="Set angle toward position" sid="771502758560302" type="Jogador">
+                                            <param id="0" name="X">MarcacaoBola.X</param>
+                                            <param id="1" name="Y">MarcacaoBola.Y</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="683811552242660" type="Jogador">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="426426308613317">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="235500973818308" type="System">
+                                            <param id="0" name="Variable">STATE_GAME</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">LEVANTAMENTO</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="905091408587171" type="Jogador">
+                                            <param id="0" name="Instance variable">levantador</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="241450939532299" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-22" name="Set angle toward position" sid="677686851172701" type="Jogador">
+                                            <param id="0" name="X">MarcacaoBola.X</param>
+                                            <param id="1" name="Y">MarcacaoBola.Y</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="437493468825119" type="Jogador">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="462802663601589">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="611566097761172" type="System">
+                                            <param id="0" name="Variable">STATE_GAME</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">ATAQUE</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="749774909126521" type="Jogador">
+                                            <param id="0" name="Instance variable">atacante</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="185266616844759" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-22" name="Set angle toward position" sid="518404945058306" type="Jogador">
+                                            <param id="0" name="X">MarcacaoBola.X</param>
+                                            <param id="1" name="Y">MarcacaoBola.Y</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="553898572164944" type="Jogador">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
+        <event-block sid="365276610650088">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="426750716243550" type="Jogador">
+                    <param id="0" name="Object">MarcacaoBola</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="263225928077507" type="Jogador">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
